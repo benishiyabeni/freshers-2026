@@ -848,7 +848,7 @@ function finish() {
         <h2>SEE YOU SOON, VASAVI!</h2>
 
         <p>
-        And don't forget to collect your letter. 💌
+        And don't forget to collect your handwritten letter. 💌
         </p>
 
         <br>
