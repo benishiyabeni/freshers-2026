@@ -4,306 +4,1151 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>For Vasavi ❤️</title>
+<title>Red Hot 🌹 | For Vasavi</title>
 
 <style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+
+/* =====================================================
+   BASIC
+===================================================== */
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
-body {
-    font-family: Georgia, "Times New Roman", serif;
-    background: #fff7f7;
-    color: #351b1b;
+html{
+    scroll-behavior:smooth;
 }
 
-.screen {
-    display: none;
-    min-height: 100vh;
-    padding: 30px 20px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+body{
+    min-height:100vh;
+    overflow-x:hidden;
+
+    font-family:"Trebuchet MS",Arial,sans-serif;
+
+    color:#5a1028;
+
+    background:
+        radial-gradient(circle at 15% 15%,
+        rgba(255,65,110,.22),transparent 25%),
+
+        radial-gradient(circle at 85% 30%,
+        rgba(255,0,70,.18),transparent 25%),
+
+        radial-gradient(circle at 50% 90%,
+        rgba(255,100,160,.15),transparent 30%),
+
+        linear-gradient(
+        135deg,
+        #fff7fa,
+        #ffe4ed,
+        #fff1f5
+        );
 }
 
-.screen.active {
-    display: flex;
+
+/* =====================================================
+   RED HOT BACKGROUND GLOW
+===================================================== */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+
+    background:
+        radial-gradient(circle at center,
+        transparent 35%,
+        rgba(190,0,50,.08));
+
+    pointer-events:none;
+    z-index:-5;
 }
 
-.container {
-    width: 100%;
-    max-width: 800px;
-    margin: auto;
+
+/* =====================================================
+   FLOATING HEARTS
+===================================================== */
+
+.heart{
+    position:fixed;
+    z-index:0;
+
+    color:#e60046;
+
+    font-size:22px;
+
+    opacity:.25;
+
+    pointer-events:none;
+
+    animation:
+        heartFloat 7s ease-in-out infinite;
 }
 
-h1 {
-    color: #8b1e2d;
-    font-size: 55px;
-    margin-bottom: 25px;
+.h1{left:5%;top:15%}
+.h2{right:7%;top:23%;animation-delay:1s}
+.h3{left:12%;bottom:20%;animation-delay:2s}
+.h4{right:13%;bottom:15%;animation-delay:3s}
+.h5{left:45%;top:7%;animation-delay:1.5s}
+.h6{right:35%;bottom:7%;animation-delay:2.5s}
+
+
+/* =====================================================
+   ROSE PETALS
+===================================================== */
+
+.petal{
+    position:fixed;
+
+    top:-30px;
+
+    width:14px;
+    height:21px;
+
+    background:
+        linear-gradient(
+        135deg,
+        #ff315d,
+        #b90035
+        );
+
+    border-radius:
+        100% 0 100% 0;
+
+    opacity:.85;
+
+    z-index:50;
+
+    pointer-events:none;
+
+    animation:
+        fall linear infinite;
 }
 
-h2 {
-    color: #8b1e2d;
-    font-size: 38px;
-    margin-bottom: 25px;
+
+/* Different petals */
+
+.p1{left:4%;animation-duration:8s;animation-delay:0s}
+.p2{left:12%;animation-duration:10s;animation-delay:2s}
+.p3{left:21%;animation-duration:7s;animation-delay:4s}
+.p4{left:30%;animation-duration:11s;animation-delay:1s}
+.p5{left:39%;animation-duration:8s;animation-delay:5s}
+.p6{left:48%;animation-duration:9s;animation-delay:2s}
+.p7{left:57%;animation-duration:12s;animation-delay:0s}
+.p8{left:66%;animation-duration:8s;animation-delay:3s}
+.p9{left:75%;animation-duration:10s;animation-delay:1s}
+.p10{left:84%;animation-duration:7s;animation-delay:4s}
+.p11{left:93%;animation-duration:11s;animation-delay:2s}
+
+
+/* =====================================================
+   SCREEN
+===================================================== */
+
+.screen{
+    display:none;
+
+    min-height:100vh;
+
+    padding:
+        50px 20px;
+
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    position:relative;
 }
 
-p {
-    font-size: 19px;
-    line-height: 1.8;
+.screen.active{
+    display:flex;
+
+    animation:
+        pageIn .7s ease;
 }
 
-.subtitle {
-    max-width: 650px;
-    margin: auto;
-    font-size: 20px;
-    line-height: 1.8;
+.container{
+    width:100%;
+    max-width:760px;
+
+    margin:auto;
+
+    position:relative;
+    z-index:5;
 }
 
-button {
-    margin-top: 30px;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 30px;
-    background: #8b1e2d;
-    color: white;
-    font-size: 16px;
-    font-family: inherit;
-    cursor: pointer;
+
+/* =====================================================
+   HEADINGS
+===================================================== */
+
+h1,
+h2{
+    font-family:Georgia,serif;
+
+    color:#a40032;
+
+    text-shadow:
+        0 3px 15px rgba(190,0,55,.12);
 }
 
-button:hover {
-    background: #64131f;
+h1{
+    font-size:
+        clamp(44px,9vw,78px);
+
+    line-height:1;
+
+    margin-bottom:20px;
 }
 
-.heart {
-    font-size: 60px;
-    margin-bottom: 15px;
+h2{
+    font-size:
+        clamp(32px,7vw,52px);
+
+    margin-bottom:18px;
 }
 
-/* Opening */
+p{
+    font-size:17px;
 
-.opening {
-    background: linear-gradient(135deg, #fff5f5, #ffe5e8);
+    line-height:1.6;
 }
 
-/* Dares */
+.eyebrow{
+    color:#c0003b;
 
-.dare-box {
-    background: white;
-    padding: 45px 30px;
-    border-radius: 25px;
-    max-width: 650px;
-    margin: auto;
-    box-shadow: 0 15px 40px rgba(80,20,30,0.12);
+    font-size:11px;
+
+    letter-spacing:4px;
+
+    font-weight:bold;
+
+    margin-bottom:15px;
 }
 
-.dare-number {
-    color: #b23a48;
-    font-size: 15px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    margin-bottom: 20px;
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+button{
+    border:none;
+
+    margin-top:25px;
+
+    padding:
+        15px 30px;
+
+    border-radius:50px;
+
+    color:white;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+    letter-spacing:.7px;
+
+    cursor:pointer;
+
+    background:
+        linear-gradient(
+        135deg,
+        #ed174f,
+        #9e002d
+        );
+
+    box-shadow:
+        0 12px 30px
+        rgba(170,0,50,.25);
+
+    transition:
+        .25s ease;
 }
 
-.dare-text {
-    font-size: 27px;
-    line-height: 1.6;
+button:hover{
+    transform:
+        translateY(-4px)
+        scale(1.03);
+
+    box-shadow:
+        0 18px 35px
+        rgba(170,0,50,.35);
 }
 
-.progress {
-    margin-top: 25px;
-    color: #8b1e2d;
-    font-size: 14px;
+
+/* =====================================================
+   GLASS CARD
+===================================================== */
+
+.card{
+    background:
+        rgba(255,255,255,.84);
+
+    backdrop-filter:
+        blur(12px);
+
+    border:
+        1px solid
+        rgba(190,0,60,.13);
+
+    border-radius:30px;
+
+    padding:
+        38px 25px;
+
+    box-shadow:
+        0 20px 70px
+        rgba(100,0,35,.13);
 }
 
-/* Passcode */
 
-.passcode-box {
-    background: white;
-    padding: 45px 30px;
-    border-radius: 25px;
-    max-width: 550px;
-    margin: auto;
-    box-shadow: 0 15px 40px rgba(80,20,30,0.12);
+/* =====================================================
+   HEART
+===================================================== */
+
+.big-heart{
+    font-size:72px;
+
+    margin-bottom:10px;
+
+    animation:
+        heartbeat 1.7s infinite;
 }
 
-input {
-    width: 100%;
-    max-width: 300px;
-    padding: 15px;
-    margin-top: 20px;
-    border: 1px solid #d5a1a7;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 20px;
-    letter-spacing: 4px;
+
+/* =====================================================
+   DARES
+===================================================== */
+
+.dare-card{
+    max-width:620px;
+
+    margin:auto;
 }
 
-#error {
-    display: none;
-    margin-top: 15px;
-    color: #b23a48;
+.dare-number{
+    color:#c0003b;
+
+    font-size:12px;
+
+    letter-spacing:4px;
+
+    font-weight:bold;
 }
 
-/* Roses */
+.dare-icon{
+    font-size:55px;
 
-.rose-section {
-    background: #fff0f2;
+    margin:
+        15px 0;
 }
 
-.photo {
-    width: 100%;
-    max-width: 650px;
-    height: 420px;
-    object-fit: cover;
-    border-radius: 25px;
-    margin: 20px auto;
-    display: block;
-    box-shadow: 0 15px 40px rgba(70,20,30,0.18);
+.dare-text{
+    font-size:25px;
+
+    line-height:1.4;
 }
 
-/* Vasavi */
+.progress{
+    margin-top:18px;
 
-.profile {
-    background: #fffafa;
+    color:#a84b67;
+
+    font-size:12px;
 }
 
-.profile-box {
-    background: white;
-    padding: 40px;
-    border-radius: 25px;
-    box-shadow: 0 15px 40px rgba(70,20,30,0.10);
-    text-align: left;
+
+/* =====================================================
+   INPUT
+===================================================== */
+
+input{
+    width:100%;
+
+    max-width:280px;
+
+    padding:15px;
+
+    margin-top:20px;
+
+    border:
+        2px solid
+        #f2a3bb;
+
+    border-radius:15px;
+
+    background:#fffafd;
+
+    text-align:center;
+
+    font-size:21px;
+
+    letter-spacing:6px;
+
+    outline:none;
+
+    color:#9e0030;
 }
 
-.profile-name {
-    text-align: center;
-    color: #8b1e2d;
-    font-size: 40px;
-    margin-bottom: 25px;
+input:focus{
+    border-color:#d50043;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(213,0,67,.08);
 }
 
-/* Memory */
+#error{
+    display:none;
 
-.memory {
-    background: #fff1f2;
+    margin-top:12px;
+
+    color:#c0003b;
+
+    font-size:14px;
 }
 
-.caption {
-    font-style: italic;
-    margin-top: 20px;
+
+/* =====================================================
+   BOUQUET PAGE
+===================================================== */
+
+.bouquet-page{
+    padding-top:30px;
 }
 
-/* Seniors */
 
-.seniors {
-    background: linear-gradient(135deg, #fff8f8, #ffe8eb);
+/* Bouquet */
+
+.bouquet{
+    position:relative;
+
+    width:270px;
+
+    height:290px;
+
+    margin:
+        25px auto 0;
 }
 
-.senior-text {
-    max-width: 700px;
-    margin: auto;
-    font-size: 20px;
-    line-height: 2;
+
+/* stems */
+
+.stem{
+    position:absolute;
+
+    bottom:50px;
+
+    left:50%;
+
+    width:5px;
+
+    height:145px;
+
+    background:
+        linear-gradient(
+        90deg,
+        #397c35,
+        #174d22
+        );
+
+    transform-origin:
+        bottom;
 }
 
-.quote {
-    margin-top: 30px;
-    color: #8b1e2d;
-    font-style: italic;
+.s1{transform:rotate(-24deg)}
+.s2{transform:rotate(-13deg)}
+.s3{transform:rotate(-4deg)}
+.s4{transform:rotate(8deg)}
+.s5{transform:rotate(18deg)}
+.s6{transform:rotate(28deg)}
+
+
+/* leaves */
+
+.leaf{
+    position:absolute;
+
+    width:32px;
+    height:17px;
+
+    background:
+        linear-gradient(
+        135deg,
+        #4c9b45,
+        #1d5e28
+        );
+
+    border-radius:
+        100% 0 100% 0;
 }
 
-/* Letter */
-
-.letter {
-    background: #fff4ef;
+.l1{
+    left:68px;
+    bottom:112px;
+    transform:rotate(-30deg);
 }
 
-.letter-box {
-    background: #fffdf8;
-    padding: 50px 35px;
-    max-width: 650px;
-    margin: auto;
-    border: 1px solid #ead8ca;
-    border-radius: 10px;
-    box-shadow: 0 15px 40px rgba(80,40,20,0.12);
+.l2{
+    right:62px;
+    bottom:135px;
+    transform:rotate(155deg);
 }
 
-.letter-icon {
-    font-size: 55px;
-    margin-bottom: 20px;
+.l3{
+    left:82px;
+    bottom:75px;
+    transform:rotate(15deg);
 }
 
-/* Mobile */
+.l4{
+    right:75px;
+    bottom:82px;
+    transform:rotate(170deg);
+}
 
-@media (max-width: 600px) {
 
-    h1 {
-        font-size: 40px;
+/* roses */
+
+.rose{
+    position:absolute;
+
+    width:65px;
+    height:65px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+        circle at 35% 35%,
+        #ff7890 0%,
+        #f11c4e 25%,
+        #b80034 65%,
+        #76001f 100%
+        );
+
+    box-shadow:
+        inset -7px -7px 10px
+        rgba(80,0,20,.25),
+
+        0 8px 18px
+        rgba(100,0,30,.2);
+
+    z-index:3;
+}
+
+
+/* rose petals inside */
+
+.rose::before{
+    content:"";
+
+    position:absolute;
+
+    width:42px;
+    height:42px;
+
+    top:11px;
+    left:11px;
+
+    border-radius:50%;
+
+    border:
+        5px solid
+        rgba(255,180,190,.45);
+
+    transform:
+        rotate(25deg);
+}
+
+.rose::after{
+    content:"";
+
+    position:absolute;
+
+    width:23px;
+    height:23px;
+
+    top:21px;
+    left:21px;
+
+    border-radius:
+        50% 20% 50% 20%;
+
+    background:
+        #8e0029;
+
+    transform:
+        rotate(-20deg);
+}
+
+
+/* rose positions */
+
+.r1{
+    left:25px;
+    top:72px;
+}
+
+.r2{
+    left:76px;
+    top:30px;
+}
+
+.r3{
+    left:110px;
+    top:76px;
+}
+
+.r4{
+    right:60px;
+    top:35px;
+}
+
+.r5{
+    right:25px;
+    top:82px;
+}
+
+.r6{
+    left:105px;
+    top:0;
+    transform:scale(1.08);
+}
+
+
+/* wrapping paper */
+
+.wrap{
+    position:absolute;
+
+    bottom:15px;
+    left:38px;
+
+    width:195px;
+    height:115px;
+
+    background:
+        linear-gradient(
+        135deg,
+        #ff8fa9,
+        #e92b5d
+        );
+
+    clip-path:
+        polygon(
+        5% 0,
+        95% 0,
+        72% 100%,
+        28% 100%
+        );
+
+    z-index:5;
+
+    box-shadow:
+        0 15px 25px
+        rgba(100,0,30,.18);
+}
+
+
+/* ribbon */
+
+.ribbon{
+    position:absolute;
+
+    bottom:66px;
+
+    left:116px;
+
+    width:42px;
+    height:35px;
+
+    z-index:8;
+}
+
+.ribbon::before,
+.ribbon::after{
+    content:"";
+
+    position:absolute;
+
+    width:22px;
+    height:30px;
+
+    background:#a40032;
+
+    border-radius:
+        50% 10% 50% 10%;
+}
+
+.ribbon::before{
+    left:0;
+
+    transform:
+        rotate(30deg);
+}
+
+.ribbon::after{
+    right:0;
+
+    transform:
+        rotate(-30deg);
+}
+
+.bouquet-button{
+    margin-top:5px;
+}
+
+
+/* =====================================================
+   BOUQUET POPUP
+===================================================== */
+
+.modal{
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:100;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:20px;
+
+    background:
+        rgba(65,0,20,.62);
+}
+
+.modal.show{
+    display:flex;
+
+    animation:
+        fade .3s ease;
+}
+
+.modal-card{
+    width:min(520px,100%);
+
+    padding:
+        35px 25px;
+
+    text-align:center;
+
+    background:
+        linear-gradient(
+        145deg,
+        #fff8fa,
+        #ffe7ef
+        );
+
+    border:
+        3px solid
+        #ffb2c6;
+
+    border-radius:35px;
+
+    box-shadow:
+        0 30px 90px
+        rgba(50,0,20,.45);
+
+    animation:
+        bouquetPop .7s
+        cubic-bezier(.2,1.5,.4,1);
+}
+
+
+/* Popup bouquet bigger */
+
+.popup-bouquet{
+    transform:scale(1.2);
+
+    margin:
+        25px auto 40px;
+}
+
+.popup-title{
+    font-family:cursive;
+
+    font-size:38px;
+
+    color:#a40032;
+}
+
+.popup-text{
+    margin-top:10px;
+
+    color:#7a2945;
+}
+
+
+/* =====================================================
+   VASAVI
+===================================================== */
+
+.vasavi-text{
+    max-width:600px;
+
+    margin:auto;
+
+    font-family:Georgia,serif;
+
+    font-size:20px;
+
+    line-height:1.7;
+}
+
+.red{
+    color:#c0003b;
+
+    font-weight:bold;
+}
+
+
+/* =====================================================
+   SENIORS
+===================================================== */
+
+.seniors{
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:16px;
+
+    margin-top:25px;
+}
+
+.senior{
+    padding:25px 18px;
+
+    background:
+        rgba(255,255,255,.87);
+
+    border-radius:25px;
+
+    border:
+        1px solid
+        #ffc2d1;
+
+    box-shadow:
+        0 12px 35px
+        rgba(100,0,35,.1);
+}
+
+.senior-icon{
+    font-size:40px;
+}
+
+.senior h3{
+    font-family:Georgia,serif;
+
+    color:#a40032;
+
+    font-size:25px;
+
+    margin:10px 0;
+}
+
+.senior p{
+    font-size:15px;
+
+    line-height:1.55;
+}
+
+
+/* =====================================================
+   MEMORY
+===================================================== */
+
+.memory-photo{
+    width:100%;
+
+    max-width:600px;
+
+    height:360px;
+
+    object-fit:cover;
+
+    border-radius:28px;
+
+    margin:
+        20px auto;
+
+    display:block;
+
+    box-shadow:
+        0 20px 50px
+        rgba(80,0,30,.2);
+}
+
+.caption{
+    font-family:Georgia,serif;
+
+    font-style:italic;
+
+    color:#8e3c59;
+}
+
+
+/* =====================================================
+   LETTER
+===================================================== */
+
+.letter{
+    max-width:600px;
+
+    margin:auto;
+
+    padding:40px 25px;
+
+    background:
+        #fffdf8;
+
+    border:
+        2px solid
+        #f3b4c6;
+
+    border-radius:28px;
+
+    box-shadow:
+        0 20px 55px
+        rgba(90,0,30,.12);
+}
+
+.letter-icon{
+    font-size:65px;
+}
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes pageIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
     }
 
-    h2 {
-        font-size: 30px;
-    }
-
-    .dare-text {
-        font-size: 21px;
-    }
-
-    .profile-box,
-    .dare-box,
-    .passcode-box,
-    .letter-box {
-        padding: 30px 20px;
-    }
-
-    .photo {
-        height: 300px;
-    }
-
-    p {
-        font-size: 17px;
+    to{
+        opacity:1;
+        transform:none;
     }
 }
+
+@keyframes heartbeat{
+
+    50%{
+        transform:scale(1.13);
+    }
+}
+
+@keyframes heartFloat{
+
+    0%,100%{
+        transform:
+            translateY(0)
+            rotate(-5deg);
+    }
+
+    50%{
+        transform:
+            translateY(-25px)
+            rotate(8deg);
+    }
+}
+
+@keyframes fall{
+
+    0%{
+        transform:
+            translate3d(0,-40px,0)
+            rotate(0deg);
+    }
+
+    25%{
+        transform:
+            translate3d(30px,25vh,0)
+            rotate(100deg);
+    }
+
+    50%{
+        transform:
+            translate3d(-30px,50vh,0)
+            rotate(210deg);
+    }
+
+    75%{
+        transform:
+            translate3d(35px,75vh,0)
+            rotate(300deg);
+    }
+
+    100%{
+        transform:
+            translate3d(-20px,110vh,0)
+            rotate(420deg);
+    }
+}
+
+@keyframes fade{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+}
+
+@keyframes bouquetPop{
+
+    0%{
+        transform:
+            scale(.2)
+            rotate(-8deg);
+
+        opacity:0;
+    }
+
+    70%{
+        transform:
+            scale(1.05)
+            rotate(2deg);
+    }
+
+    100%{
+        transform:
+            scale(1)
+            rotate(0);
+
+        opacity:1;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:700px){
+
+    .screen{
+        padding:
+            35px 15px;
+    }
+
+    .seniors{
+        grid-template-columns:1fr;
+    }
+
+    .dare-text{
+        font-size:21px;
+    }
+
+    .vasavi-text{
+        font-size:18px;
+    }
+
+    .memory-photo{
+        height:280px;
+    }
+
+    .bouquet{
+        transform:scale(.9);
+    }
+
+}
+
 </style>
 </head>
+
 
 <body>
 
 
-<!-- =========================
-     1. OPENING
-========================= -->
+<!-- =====================================================
+     HEARTS
+===================================================== -->
 
-<section class="screen active opening" id="screen1">
+<div class="heart h1">♥</div>
+<div class="heart h2">❤</div>
+<div class="heart h3">♥</div>
+<div class="heart h4">❤</div>
+<div class="heart h5">♥</div>
+<div class="heart h6">❤</div>
+
+
+<!-- =====================================================
+     FALLING ROSE PETALS
+===================================================== -->
+
+<div class="petal p1"></div>
+<div class="petal p2"></div>
+<div class="petal p3"></div>
+<div class="petal p4"></div>
+<div class="petal p5"></div>
+<div class="petal p6"></div>
+<div class="petal p7"></div>
+<div class="petal p8"></div>
+<div class="petal p9"></div>
+<div class="petal p10"></div>
+<div class="petal p11"></div>
+
+
+
+<!-- =====================================================
+     1. OPENING
+===================================================== -->
+
+<section
+class="screen active"
+id="screen1">
 
 <div class="container">
 
-<div class="heart">❤️</div>
+<div class="big-heart">
+🌹
+</div>
 
-<h1>HEY FRESHER!</h1>
+<div class="eyebrow">
+RED HOT • FROM YOUR SENIORS
+</div>
 
-<p class="subtitle">
+<h1>
+HEY, VASAVI! ❤️
+</h1>
 
-Welcome to a little surprise prepared by your seniors.
+<p>
+A tiny little surprise
+from the people who are
+slightly too excited to be your seniors. 😌
+</p>
 
-<br><br>
+<br>
 
-Before you meet us, you have
-<strong>3 little challenges</strong>
-waiting for you.
-
-<br><br>
-
-Ready, Junior? 👀
-
+<p>
+<strong>
+3 dares.
+1 secret.
+A little chaos.
+</strong>
 </p>
 
 <button onclick="nextScreen()">
-START THE CHALLENGE →
+START THE CHAOS 🌹
 </button>
 
 </div>
@@ -311,36 +1156,44 @@ START THE CHALLENGE →
 </section>
 
 
-<!-- =========================
-     2. DARE 01
-========================= -->
 
-<section class="screen" id="screen2">
+<!-- =====================================================
+     2. DARE 1
+===================================================== -->
+
+<section
+class="screen"
+id="screen2">
 
 <div class="container">
 
-<div class="dare-box">
+<div class="card dare-card">
 
 <div class="dare-number">
 DARE 01
 </div>
 
-<div style="font-size:50px;">💬</div>
+<div class="dare-icon">
+👀
+</div>
 
 <p class="dare-text">
 
 Tell us about your
-<strong>favourite senior</strong>
-so far in college. 👀
+<strong>
+favourite senior
+</strong>
+
+so far.
 
 </p>
 
 <button onclick="nextScreen()">
-✓ CHALLENGE COMPLETED
+DONE 😌
 </button>
 
 <div class="progress">
-1 / 3 completed
+1 / 3
 </div>
 
 </div>
@@ -350,38 +1203,45 @@ so far in college. 👀
 </section>
 
 
-<!-- =========================
-     3. DARE 02
-========================= -->
 
-<section class="screen" id="screen3">
+<!-- =====================================================
+     3. DARE 2
+===================================================== -->
+
+<section
+class="screen"
+id="screen3">
 
 <div class="container">
 
-<div class="dare-box">
+<div class="card dare-card">
 
 <div class="dare-number">
 DARE 02
 </div>
 
-<div style="font-size:50px;">🎶</div>
+<div class="dare-icon">
+🎤
+</div>
 
 <p class="dare-text">
 
-<strong>Sing a song!</strong>
+<strong>
+Sing a song.
+</strong>
 
-<br><br>
+<br>
 
-No excuses. We want to hear it. 😈
+No excuses. 😈
 
 </p>
 
 <button onclick="nextScreen()">
-✓ CHALLENGE COMPLETED
+SURVIVED 🎤
 </button>
 
 <div class="progress">
-2 / 3 completed
+2 / 3
 </div>
 
 </div>
@@ -391,39 +1251,44 @@ No excuses. We want to hear it. 😈
 </section>
 
 
-<!-- =========================
-     4. DARE 03
-========================= -->
 
-<section class="screen" id="screen4">
+<!-- =====================================================
+     4. DARE 3
+===================================================== -->
+
+<section
+class="screen"
+id="screen4">
 
 <div class="container">
 
-<div class="dare-box">
+<div class="card dare-card">
 
 <div class="dare-number">
 DARE 03
 </div>
 
-<div style="font-size:50px;">🤖</div>
+<div class="dare-icon">
+🤖
+</div>
 
 <p class="dare-text">
 
-<strong>Speak like a robot!</strong>
+Speak like a robot
+for <strong>30 seconds.</strong>
 
-<br><br>
+<br>
 
-Keep talking like a robot for the next
-30 seconds. 😂
+Good luck. 😂
 
 </p>
 
 <button onclick="nextScreen()">
-✓ CHALLENGE COMPLETED
+I SURVIVED 🤖
 </button>
 
 <div class="progress">
-3 / 3 completed
+3 / 3
 </div>
 
 </div>
@@ -433,49 +1298,55 @@ Keep talking like a robot for the next
 </section>
 
 
-<!-- =========================
-     5. PASSCODE
-========================= -->
 
-<section class="screen" id="screen5">
+<!-- =====================================================
+     5. SECRET
+===================================================== -->
+
+<section
+class="screen"
+id="screen5">
 
 <div class="container">
 
-<div class="passcode-box">
+<div class="card">
 
-<div class="heart">👀</div>
+<div class="big-heart">
+👀
+</div>
 
-<h2>WAIT… YOU ACTUALLY DID IT?</h2>
+<div class="eyebrow">
+SECRET LEVEL
+</div>
+
+<h2>
+YOU ACTUALLY DID IT?
+</h2>
 
 <p>
-
-All three challenges completed!
-
-<br><br>
-
-But there's still one little secret waiting for you…
-
+Okay Vasavi...
+you earned this. ❤️
 </p>
 
-<h3 style="margin-top:30px;">
-ENTER THE SECRET PASSCODE 🔐
-</h3>
+<p>
+Enter the secret code.
+</p>
 
 <input
-type="password"
 id="passcode"
-placeholder="Enter code"
+type="password"
 maxlength="6"
+placeholder="••••••"
 >
 
 <br>
 
-<button onclick="checkPasscode()">
-UNLOCK →
+<button onclick="checkCode()">
+UNLOCK 🌹
 </button>
 
 <p id="error">
-Wrong passcode. Try again 👀
+Wrong code... try again 👀
 </p>
 
 </div>
@@ -485,47 +1356,66 @@ Wrong passcode. Try again 👀
 </section>
 
 
-<!-- =========================
-     6. ROSES
-========================= -->
 
-<section class="screen rose-section" id="screen6">
+<!-- =====================================================
+     6. BOUQUET
+===================================================== -->
+
+<section
+class="screen bouquet-page"
+id="screen6">
 
 <div class="container">
 
+<div class="eyebrow">
+RED HOT SURPRISE 🌹
+</div>
+
 <h2>
-A LITTLE SOMETHING<br>
-FROM YOUR SENIORS ❤️
-</h2>
-
-<!--
-LATER:
-Upload your rose photo to GitHub
-and name it:
-
-roses.jpg
--->
-
-<img
-src="roses.jpg"
-alt="Red roses"
-class="photo"
->
-
-<p>
-A little something from your seniors. ❤️
-</p>
-
-<h2 style="margin-top:35px;">
-WELCOME, JUNIOR!
+A BOUQUET FOR YOU
 </h2>
 
 <p>
-With love, laughter and lots of memories.
+Okay... this one is actually pretty. ❤️
 </p>
 
-<button onclick="nextScreen()">
-CONTINUE →
+
+<!-- REAL CSS BOUQUET -->
+
+<div class="bouquet">
+
+<div class="stem s1"></div>
+<div class="stem s2"></div>
+<div class="stem s3"></div>
+<div class="stem s4"></div>
+<div class="stem s5"></div>
+<div class="stem s6"></div>
+
+<div class="leaf l1"></div>
+<div class="leaf l2"></div>
+<div class="leaf l3"></div>
+<div class="leaf l4"></div>
+
+<div class="rose r1"></div>
+<div class="rose r2"></div>
+<div class="rose r3"></div>
+<div class="rose r4"></div>
+<div class="rose r5"></div>
+<div class="rose r6"></div>
+
+<div class="wrap"></div>
+
+<div class="ribbon"></div>
+
+</div>
+
+
+<button
+class="bouquet-button"
+onclick="openBouquet()">
+
+TAP THE BOUQUET 💐
+
 </button>
 
 </div>
@@ -533,30 +1423,128 @@ CONTINUE →
 </section>
 
 
-<!-- =========================
-     7. VASAVI
-========================= -->
 
-<section class="screen" id="screen7">
+<!-- =====================================================
+     BOUQUET POPUP
+===================================================== -->
+
+<div
+class="modal"
+id="bouquetModal">
+
+<div class="modal-card">
+
+<div class="eyebrow">
+JUST FOR YOU ❤️
+</div>
+
+
+<!-- POPUP BOUQUET -->
+
+<div
+class="bouquet popup-bouquet">
+
+<div class="stem s1"></div>
+<div class="stem s2"></div>
+<div class="stem s3"></div>
+<div class="stem s4"></div>
+<div class="stem s5"></div>
+<div class="stem s6"></div>
+
+<div class="leaf l1"></div>
+<div class="leaf l2"></div>
+<div class="leaf l3"></div>
+<div class="leaf l4"></div>
+
+<div class="rose r1"></div>
+<div class="rose r2"></div>
+<div class="rose r3"></div>
+<div class="rose r4"></div>
+<div class="rose r5"></div>
+<div class="rose r6"></div>
+
+<div class="wrap"></div>
+<div class="ribbon"></div>
+
+</div>
+
+
+<div class="popup-title">
+This is for you, Vasavi. ❤️
+</div>
+
+<p class="popup-text">
+A little red-hot bouquet
+from your seniors. 🌹
+</p>
+
+<button onclick="closeBouquet()">
+AWWW 🥹 →
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- =====================================================
+     7. ABOUT VASAVI
+===================================================== -->
+
+<section
+class="screen"
+id="screen7">
 
 <div class="container">
 
-<h1>HEY, VASAVI! 👋</h1>
+<div class="big-heart">
+🌹
+</div>
 
-<p class="subtitle">
+<div class="eyebrow">
+A LITTLE ABOUT YOU
+</div>
 
-We know you're the fresher who has been waiting
-to see what your seniors have planned for you...
+<h2>
+HEY, VASAVI 🎀
+</h2>
+
+<p class="vasavi-text">
+
+We’ve known you since your
+first year at Manipal.
+
+You’re
+
+<span class="red">
+energetic, curious
+</span>
+
+and always ready to learn.
 
 <br><br>
 
-So, before we tell you about us,
-let's talk about <strong>YOU.</strong> ❤️
+And yes...
+
+<strong>
+a little hyperactive too. 😂
+</strong>
+
+<br><br>
+
+Even before IRC,
+you were already thinking
+about data collection.
+
+<br><br>
+
+Keep that energy, Vasavi. ❤️
 
 </p>
 
 <button onclick="nextScreen()">
-MEET VASAVI →
+MEET YOUR SENIORS 🌹
 </button>
 
 </div>
@@ -564,41 +1552,205 @@ MEET VASAVI →
 </section>
 
 
-<!-- =========================
-     8. VASAVI PROFILE
-========================= -->
 
-<section class="screen profile" id="screen8">
+<!-- =====================================================
+     8. SENIORS
+===================================================== -->
+
+<section
+class="screen"
+id="screen8">
 
 <div class="container">
 
-<div class="profile-box">
-
-<div class="profile-name">
-🌸 VASAVI
+<div class="eyebrow">
+REMEMBER THESE PEOPLE
 </div>
+
+<h2>
+YOUR SENIORS 🌹
+</h2>
+
+<p>
+You may need them someday. 😂
+</p>
+
+
+<div class="seniors">
+
+
+<!-- SUJITHA -->
+
+<div class="senior">
+
+<div class="senior-icon">
+📚🌹
+</div>
+
+<h3>
+Sujitha
+</h3>
 
 <p>
 
-We’ve known you from our first year, ever since you joined
-Manipal for your internship. You’ve always had such a nice
-and energetic personality, especially in an environment that
-can sometimes be a little rude. 😄 The way you speak so nicely
-with all your seniors has definitely earned you a special place
-here. You’re always so eager to learn and try new things, and
-honestly, you’re a little hyperactive too! 😂 Even before IRC,
-you were already busy thinking about data collection.
+You can probably find her
+<strong>
+searching for books
+in the library.
+</strong>
 
-Keep that curiosity, energy and enthusiasm, Vasavi —
-we’re really happy to have you around, and we’re looking
-forward to all the memories you’re going to make with us. ❤️
+<br><br>
+
+Data collection?
+
+<strong>
+Find Sujitha.
+</strong>
+
+<br><br>
+
+Study doubts?
+
+You can always find her.
+
+<br><br>
+
+Basically...
+
+<strong>
+“Pathukkalam” senior. 😌
+</strong>
 
 </p>
 
 </div>
 
+
+
+<!-- SNEGA -->
+
+<div class="senior">
+
+<div class="senior-icon">
+📖🌷
+</div>
+
+<h3>
+Senior Snega
+</h3>
+
+<p>
+
+Have doubts related to
+
+<strong>
+studies?
+</strong>
+
+<br><br>
+
+Or something about
+
+<strong>
+data collection?
+</strong>
+
+<br><br>
+
+Find Senior Snega.
+
+She has probably
+seen it before. 😂
+
+</p>
+
+</div>
+
+
+
+<!-- BENISHIYA -->
+
+<div class="senior">
+
+<div class="senior-icon">
+🔬🌹
+</div>
+
+<h3>
+Benishiya
+</h3>
+
+<p>
+
+<strong>
+Prospective study
+people only.
+</strong>
+
+<br><br>
+
+If you're in that world...
+
+you know whom to find. 😌
+
+</p>
+
+</div>
+
+
+
+<!-- NETHISH -->
+
+<div class="senior">
+
+<div class="senior-icon">
+💻🔥
+</div>
+
+<h3>
+Nethish
+</h3>
+
+<p>
+
+Your senior Nethish...
+
+<br><br>
+
+The person who can somehow
+
+<strong>
+lose the entire protocol
+after deleting it
+instead of saving it. 😭
+</strong>
+
+<br><br>
+
+And if you want an
+
+<strong>
+IABP posting,
+</strong>
+
+you can accompany
+your senior Nethish. 😂
+
+<br><br>
+
+Especially useful on the
+<strong>last night before the deadline.</strong>
+
+</p>
+
+</div>
+
+
+</div>
+
+
 <button onclick="nextScreen()">
-ONE MORE THING →
+ONE LAST MEMORY 📸
 </button>
 
 </div>
@@ -606,38 +1758,61 @@ ONE MORE THING →
 </section>
 
 
-<!-- =========================
-     9. MEMORY PHOTO
-========================= -->
 
-<section class="screen memory" id="screen9">
+<!-- =====================================================
+     9. MEMORY
+===================================================== -->
+
+<section
+class="screen"
+id="screen9">
 
 <div class="container">
 
-<h2>A MEMORY OF US 📸</h2>
+<div class="eyebrow">
+KEEP THIS MEMORY ❤️
+</div>
 
-<!--
-LATER:
-Upload Vasavi's photo to GitHub
-and name it:
+<h2>
+A MEMORY OF US
+</h2>
 
-vasavi-memory.jpg
--->
 
 <img
 src="vasavi-memory.jpg"
-alt="A memory with Vasavi"
-class="photo"
->
+class="memory-photo"
+alt="Memory with Vasavi"
+onerror="
+this.style.display='none';
+document.getElementById('photoMessage').style.display='block';
+">
+
+
+<p
+id="photoMessage"
+style="display:none">
+
+Upload your photo as
+
+<strong>
+vasavi-memory.jpg
+</strong>
+
+🌹
+
+</p>
+
 
 <p class="caption">
 
-“One picture today, a memory we'll keep for a long time.” ❤️
+“One picture today,
+a memory we'll keep for a long time.” ❤️
 
 </p>
 
+
 <button onclick="nextScreen()">
-CONTINUE →
+ONE LAST THING 💌
 </button>
 
 </div>
@@ -645,88 +1820,57 @@ CONTINUE →
 </section>
 
 
-<!-- =========================
-     10. SENIORS
-========================= -->
 
-<section class="screen seniors" id="screen10">
+<!-- =====================================================
+     10. LETTER
+===================================================== -->
 
-<div class="container">
-
-<h2>FROM YOUR SENIORS ❤️</h2>
-
-<p class="senior-text">
-
-We are the people behind your three dares. 😈
-
-<br><br>
-
-You may know our faces already, but now you know that
-we are also the people who wanted to give you a little
-memory to take with you.
-
-</p>
-
-<p class="quote">
-
-“I think you'll remember this forever. ❤️”
-
-<br><br>
-
-— Your Seniors
-
-</p>
-
-<button onclick="nextScreen()">
-ONE LAST THING →
-</button>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     11. HANDWRITTEN LETTER
-========================= -->
-
-<section class="screen letter" id="screen11">
+<section
+class="screen"
+id="screen10">
 
 <div class="container">
 
-<div class="letter-box">
+<div class="letter">
 
 <div class="letter-icon">
 💌
 </div>
 
-<h2>A LITTLE LETTER FOR YOU</h2>
+<div class="eyebrow">
+DON'T WORRY... NOT A PDF 😂
+</div>
+
+<h2>
+A LITTLE LETTER
+</h2>
 
 <p>
 
-You made it till the end…
+You actually made it
+all the way here. 🥹
 
 <br><br>
 
-So here's something you can keep.
+So there's something
+waiting for you...
 
 <br><br>
 
 <strong>
-There's a handwritten letter waiting for you
+A handwritten letter
 from your seniors.
 </strong>
 
 <br><br>
 
-Something written especially for you —
-not on a screen, but something you can actually
-hold onto. ❤️
+Something you can
+actually hold onto. ❤️
 
 </p>
 
 <button onclick="finish()">
-SEE YOU SOON →
+SEE YOU SOON 🌹
 </button>
 
 </div>
@@ -736,82 +1880,189 @@ SEE YOU SOON →
 </section>
 
 
+
+<!-- =====================================================
+     11. FINAL
+===================================================== -->
+
+<section
+class="screen"
+id="screen11">
+
+<div class="container">
+
+<div class="big-heart">
+🌹
+</div>
+
+<div class="eyebrow">
+RED HOT MEMORIES
+</div>
+
+<h2>
+SEE YOU SOON, VASAVI! ❤️
+</h2>
+
+<p>
+
+Don't forget to collect
+your handwritten letter. 💌
+
+</p>
+
+<br>
+
+<p>
+
+Keep that energy alive. 🌹
+
+<br><br>
+
+<strong>
+— Your Seniors ❤️
+</strong>
+
+</p>
+
+</div>
+
+</section>
+
+
+
 <script>
+
+/* =====================================================
+   SCREEN CONTROL
+===================================================== */
 
 let currentScreen = 1;
 
 
-/* MOVE TO NEXT SCREEN */
+function nextScreen(){
 
-function nextScreen() {
+    const current =
+        document.getElementById(
+            "screen" + currentScreen
+        );
 
-    document
-        .getElementById("screen" + currentScreen)
-        .classList.remove("active");
+    if(current){
+        current.classList.remove("active");
+    }
+
 
     currentScreen++;
 
-    document
-        .getElementById("screen" + currentScreen)
-        .classList.add("active");
 
-    window.scrollTo(0, 0);
+    const next =
+        document.getElementById(
+            "screen" + currentScreen
+        );
+
+    if(next){
+        next.classList.add("active");
+    }
+
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
 }
 
 
-/* CHECK PASSCODE */
+/* =====================================================
+   PASSCODE
+===================================================== */
 
-function checkPasscode() {
+function checkCode(){
 
     const code =
-        document.getElementById("passcode").value;
+        document.getElementById(
+            "passcode"
+        ).value;
 
     const error =
-        document.getElementById("error");
+        document.getElementById(
+            "error"
+        );
 
-    if (code === "031026") {
 
-        error.style.display = "none";
+    if(code === "031026"){
+
+        error.style.display =
+            "none";
 
         nextScreen();
 
-    } else {
+    }
 
-        error.style.display = "block";
+    else{
+
+        error.style.display =
+            "block";
 
     }
+
 }
 
 
-/* FINAL MESSAGE */
+/* =====================================================
+   BOUQUET
+===================================================== */
 
-function finish() {
+function openBouquet(){
 
-    document.querySelector(".letter-box").innerHTML = `
+    document
+        .getElementById(
+            "bouquetModal"
+        )
+        .classList.add("show");
 
-        <div class="letter-icon">
-        ❤️
-        </div>
+}
 
-        <h2>SEE YOU SOON, VASAVI!</h2>
 
-        <p>
-        Don't forget to collect your handwritten letter. 💌
-        </p>
+function closeBouquet(){
 
-        <br>
+    document
+        .getElementById(
+            "bouquetModal"
+        )
+        .classList.remove("show");
 
-        <p>
-        Keep that energy alive! 😄
-        </p>
+    nextScreen();
 
-        <br>
+}
 
-        <strong>
-        — Your Seniors ❤️
-        </strong>
 
-    `;
+/* =====================================================
+   FINAL
+===================================================== */
+
+function finish(){
+
+    document
+        .getElementById(
+            "screen10"
+        )
+        .classList.remove("active");
+
+
+    document
+        .getElementById(
+            "screen11"
+        )
+        .classList.add("active");
+
+
+    currentScreen = 11;
+
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
 
 }
 
