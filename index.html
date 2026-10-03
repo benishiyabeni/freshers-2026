@@ -3,55 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Freshers 2026 ❤️</title>
 
 <style>
-
-/* =========================
-   RESET
-========================= */
-
 *{
+    box-sizing:border-box;
     margin:0;
     padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
 }
 
 body{
-    margin:0;
     font-family:Georgia,"Times New Roman",serif;
-    background:linear-gradient(135deg,#28050f,#160308,#080104);
+    background:linear-gradient(135deg,#28050f 0%,#160308 45%,#080104 100%);
     color:#ffe9ee;
     overflow-x:hidden;
+    min-height:100vh;
 }
 
-
-/* =========================
-   PAGES
-========================= */
-
 .page{
+    display:none;
     min-height:100vh;
     width:100%;
-    display:none;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:35px 18px;
+    padding:40px 20px;
     position:relative;
-    overflow:hidden;
-
-    background:linear-gradient(135deg,#28050f,#160308,#080104);
+    background:linear-gradient(135deg,#28050f 0%,#160308 45%,#080104 100%);
+    text-align:center;
+    animation:fadeIn .8s ease;
 }
 
 .page.active{
     display:flex;
-    animation:fadeIn .6s ease;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 }
 
 @keyframes fadeIn{
@@ -65,157 +49,86 @@ body{
     }
 }
 
-.container{
-    width:min(1000px,95%);
-    margin:auto;
-    position:relative;
-    z-index:5;
-}
-
-
-/* =========================
-   TEXT
-========================= */
-
 h1{
-    font-size:clamp(2.3rem,6vw,5rem);
-    color:#fff0f3;
+    font-size:clamp(2rem,5vw,4rem);
     margin-bottom:20px;
+    color:#fff0f3;
+    text-shadow:0 0 20px rgba(255,80,110,.35);
 }
 
 h2{
-    font-size:clamp(2rem,5vw,3.5rem);
-    color:#ffe1e8;
-    margin-bottom:18px;
+    font-size:clamp(1.7rem,4vw,3rem);
+    margin-bottom:20px;
+    color:#ffe8ed;
 }
 
 h3{
-    color:#8d1830;
+    color:#ffd8df;
     margin-bottom:12px;
 }
 
 p{
-    font-size:1.12rem;
     line-height:1.8;
+    font-size:clamp(1rem,2vw,1.15rem);
 }
 
-
-/* =========================
-   FALLING PETALS
-========================= */
-
-.petals{
-    position:fixed;
-    inset:0;
-    pointer-events:none;
-    overflow:hidden;
-    z-index:9999;
+button{
+    border:none;
+    outline:none;
+    cursor:pointer;
+    font-family:inherit;
+    background:#8d1830;
+    color:white;
+    padding:14px 28px;
+    border-radius:30px;
+    font-size:1rem;
+    box-shadow:0 8px 25px rgba(0,0,0,.4);
+    transition:.3s ease;
 }
+
+button:hover{
+    transform:translateY(-3px) scale(1.03);
+    background:#a51f3a;
+}
+
+.next-btn{
+    margin-top:30px;
+}
+
+/* Falling petals */
 
 .petal{
-    position:absolute;
-    top:-40px;
-
+    position:fixed;
+    top:-30px;
     width:12px;
     height:18px;
-
-    background:linear-gradient(
-        135deg,
-        #9e1836,
-        #5e0a20,
-        #23030d
-    );
-
-    border-radius:80% 20% 80% 20%;
-
-    opacity:.7;
-
-    animation:
-        fall linear infinite,
-        swing ease-in-out infinite alternate;
+    background:#8d1830;
+    border-radius:100% 0 100% 0;
+    opacity:.75;
+    pointer-events:none;
+    z-index:100;
+    animation:fall linear infinite;
 }
 
 @keyframes fall{
-    from{
-        transform:translateY(-50px) rotate(0deg);
+    0%{
+        transform:translateY(-30px) rotate(0deg);
     }
-    to{
-        transform:translate(100px,110vh) rotate(720deg);
-    }
-}
-
-@keyframes swing{
-    from{
-        margin-left:-30px;
-    }
-    to{
-        margin-left:30px;
+    100%{
+        transform:translateY(110vh) rotate(720deg);
     }
 }
 
-
-/* =========================
-   BUTTONS
-========================= */
-
-button{
-    font-family:inherit;
-}
-
-.next-btn,
-.complete-btn,
-.password-btn{
-
-    border:none;
-
-    background:#8d1830;
-    color:white;
-
-    padding:13px 28px;
-
-    border-radius:30px;
-
-    font-size:1rem;
-
-    cursor:pointer;
-
-    margin-top:25px;
-
-    box-shadow:0 8px 20px rgba(0,0,0,.45);
-
-    transition:.3s;
-}
-
-.next-btn:hover,
-.complete-btn:hover,
-.password-btn:hover{
-    background:#a91d3b;
-    transform:translateY(-3px);
-}
-
-
-/* =========================
-   PAGE 1
-========================= */
+/* PAGE 1 */
 
 .welcome-image{
-
-    width:min(300px,80vw);
-    height:210px;
-
+    width:min(260px,70vw);
+    height:260px;
     object-fit:cover;
-
-    border-radius:22px;
-
+    border-radius:50%;
+    border:5px solid rgba(255,220,228,.7);
+    box-shadow:0 0 40px rgba(255,80,110,.3);
     margin-bottom:25px;
-
-    box-shadow:0 15px 40px rgba(0,0,0,.65);
-}
-
-.small-intro{
-    color:#e2a5b4;
-    font-size:1.15rem;
-    margin-bottom:10px;
 }
 
 .names{
@@ -223,18 +136,15 @@ button{
     flex-wrap:wrap;
     justify-content:center;
     gap:12px;
-    margin:25px auto;
+    max-width:800px;
+    margin:20px auto;
 }
 
 .name{
     padding:10px 18px;
-
-    border-radius:30px;
-
-    background:rgba(255,255,255,.07);
-
-    border:1px solid rgba(255,200,215,.2);
-
+    border-radius:25px;
+    background:rgba(141,24,48,.5);
+    border:1px solid rgba(255,220,228,.25);
     animation:floatName 3s ease-in-out infinite;
 }
 
@@ -254,1821 +164,955 @@ button{
     0%,100%{
         transform:translateY(0);
     }
-
     50%{
         transform:translateY(-8px);
     }
 }
 
-
-/* =========================
-   BOUQUET PAGE
-========================= */
+/* BOUQUET */
 
 .bouquet-area{
-    height:470px;
+    width:min(650px,95vw);
+    min-height:500px;
     display:flex;
-    justify-content:center;
+    flex-direction:column;
     align-items:center;
-    margin:10px auto;
+    justify-content:center;
 }
 
-#bouquetSvg{
-    width:min(600px,95vw);
-    height:460px;
-
-    transform:scale(.65);
-    opacity:.1;
-
-    transition:1.8s ease;
+.tap-text{
+    margin-bottom:25px;
+    font-size:1.4rem;
+    color:#ffdce4;
 }
 
-#bouquetSvg.bloom{
-    transform:scale(1);
-    opacity:1;
+.bouquet-button{
+    background:transparent;
+    box-shadow:none;
+    padding:0;
 }
 
-.stem{
-    stroke:#2e6b38;
-    stroke-width:7;
-    fill:none;
-    stroke-linecap:round;
-    stroke-dasharray:350;
-    stroke-dashoffset:350;
+.bouquet-button:hover{
+    background:transparent;
 }
 
-.bloom .stem{
-    animation:growStem 1.5s ease forwards;
+.bouquet{
+    width:min(500px,90vw);
+    height:420px;
+    transition:transform 1.5s ease;
 }
 
-@keyframes growStem{
-    to{
-        stroke-dashoffset:0;
-    }
+.bouquet.grow{
+    transform:scale(1.08);
 }
 
-.leaf{
-    opacity:0;
-}
-
-.bloom .leaf{
-    animation:leafAppear .8s ease forwards;
-}
-
-@keyframes leafAppear{
-    from{
-        opacity:0;
-        transform:scale(0);
-    }
-
-    to{
-        opacity:1;
-        transform:scale(1);
-    }
-}
-
-.rose{
-    opacity:0;
-    transform-box:fill-box;
-    transform-origin:center;
-    transform:scale(.05);
-}
-
-.bloom .rose{
-    animation:roseBloom 1s ease forwards;
-}
-
-@keyframes roseBloom{
-    0%{
-        opacity:0;
-        transform:scale(.05);
-    }
-
-    70%{
-        transform:scale(1.08);
-    }
-
-    100%{
-        opacity:1;
-        transform:scale(1);
-    }
-}
-
-.bouquet-message{
-    opacity:0;
-    transform:translateY(15px);
-    transition:1s;
-}
-
-.bouquet-message.show{
-    opacity:1;
-    transform:translateY(0);
-}
-
-.tap{
-    border:none;
-
-    padding:14px 32px;
-
-    border-radius:30px;
-
-    background:rgba(255,255,255,.08);
-
-    border:1px solid rgba(255,200,215,.25);
-
-    color:#ffe4ea;
-
-    font-size:1.05rem;
-
-    cursor:pointer;
-}
-
-.tap:hover{
-    transform:scale(1.05);
-}
-
-.bouquet-note{
-    color:#d99aa9;
-    margin-bottom:5px;
-}
-
-
-/* =========================
-   PASSWORD
-========================= */
+/* PASSWORD */
 
 .password-box{
-
-    width:min(450px,95%);
-
-    padding:40px 30px;
-
-    background:rgba(255,255,255,.06);
-
-    border:1px solid rgba(255,255,255,.15);
-
-    backdrop-filter:blur(10px);
-
+    width:min(400px,90vw);
+    padding:35px 25px;
     border-radius:25px;
-
-    box-shadow:0 20px 60px rgba(0,0,0,.65);
+    background:rgba(80,5,20,.55);
+    border:1px solid rgba(255,220,228,.2);
+    box-shadow:0 20px 50px rgba(0,0,0,.45);
 }
 
-.password-box h2{
-    color:white;
-}
-
-.password-input{
-
+.password-box input{
     width:100%;
-
-    padding:14px;
-
-    margin-top:20px;
-
+    padding:14px 18px;
     border:none;
-
-    border-radius:12px;
-
-    outline:none;
-
+    border-radius:25px;
+    margin:15px 0;
     text-align:center;
-
-    font-size:1rem;
+    font-size:1.1rem;
+    outline:none;
 }
 
-.password-error{
-    color:#ffd1db;
+.error{
+    color:#ff9aaa;
     margin-top:12px;
-    min-height:25px;
+    display:none;
 }
 
+/* CONTENT */
 
-/* =========================
-   DARES
-========================= */
+.content-box{
+    width:min(900px,95%);
+    padding:35px;
+    border-radius:25px;
+    background:rgba(55,3,15,.55);
+    border:1px solid rgba(255,220,228,.15);
+    box-shadow:0 20px 50px rgba(0,0,0,.45);
+}
 
 .dare-box{
-
-    width:min(720px,95%);
-
-    margin:30px auto;
-
-    padding:35px 25px;
-
-    min-height:240px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    background:rgba(0,0,0,.25);
-
-    border:1px solid rgba(255,210,220,.18);
-
-    border-radius:24px;
-
-    box-shadow:0 15px 40px rgba(0,0,0,.45);
+    width:min(850px,95%);
+    margin:10px auto;
+    padding:18px 22px;
+    border-radius:18px;
+    background:rgba(141,24,48,.28);
+    border:1px solid rgba(255,220,228,.15);
+    text-align:left;
 }
 
-.dare-number{
-    color:#d990a1;
-    letter-spacing:3px;
-    margin-bottom:20px;
+.about-text{
+    margin-top:25px;
+    text-align:left;
 }
 
-.dare-text{
-    color:white;
-    font-size:clamp(1.2rem,3vw,1.6rem);
-    line-height:1.7;
-}
-
-.completed-message{
-    margin-top:15px;
-    color:#dff8e3;
-    min-height:25px;
-}
-
-.dare-progress{
-    display:flex;
-    justify-content:center;
-    gap:8px;
-}
-
-.dot{
-    width:9px;
-    height:9px;
-    border-radius:50%;
-    background:#582432;
-}
-
-.dot.active{
-    background:#d77c91;
-}
-
-
-/* =========================
-   ABOUT
-========================= */
-
-.about-box{
-
-    width:min(800px,95%);
-
-    padding:40px;
-
-    background:rgba(0,0,0,.25);
-
-    border:1px solid rgba(255,210,220,.18);
-
-    border-radius:25px;
-
-    box-shadow:0 15px 40px rgba(0,0,0,.45);
-}
-
-.about-name{
-    font-size:2.3rem;
-    color:#ffd0db;
-    margin-bottom:20px;
-}
-
-
-/* =========================
-   SENIORS
-========================= */
+/* SENIORS */
 
 .senior-grid{
-
+    width:min(1000px,95%);
     display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:18px;
-
-    margin-top:30px;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
 }
 
 .senior-card{
-
-    background:#fff5f7;
-
-    color:#3b101b;
-
-    border-radius:20px;
-
-    padding:25px 18px;
-
-    box-shadow:0 12px 30px rgba(0,0,0,.55);
-
-    transition:.3s;
-}
-
-.senior-card:hover{
-    transform:translateY(-7px);
+    padding:25px;
+    border-radius:22px;
+    background:rgba(55,3,15,.65);
+    border:1px solid rgba(255,220,228,.15);
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+    text-align:left;
 }
 
 .senior-card h3{
-    color:#8d1830;
-}
-
-.senior-card p{
-    color:#54202d;
-    font-size:1rem;
+    font-size:1.5rem;
 }
 
 .tag{
-
     display:inline-block;
-
-    font-size:.75rem;
-
-    color:#a32443;
-
-    background:#fbe2e7;
-
-    padding:6px 10px;
-
+    padding:6px 12px;
+    margin-bottom:12px;
     border-radius:20px;
-
-    margin-bottom:15px;
+    background:#8d1830;
+    font-size:.8rem;
 }
 
+/* PHOTOS */
 
-/* =========================
-   MEMORIES
-========================= */
-
-.memory-grid{
-
+.photo-grid{
+    width:min(1000px,95%);
     display:grid;
-
     grid-template-columns:repeat(3,1fr);
-
     gap:18px;
-
-    margin-top:30px;
+    margin-top:25px;
 }
 
-.memory-card{
-
-    background:#fff5f7;
-
-    padding:10px;
-
-    border-radius:18px;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.55);
-}
-
-.memory-card img{
-
+.photo-grid img{
     width:100%;
-
-    aspect-ratio:4/3;
-
+    aspect-ratio:1/1;
     object-fit:cover;
-
-    border-radius:12px;
+    border-radius:20px;
+    border:2px solid rgba(255,220,228,.2);
+    box-shadow:0 12px 30px rgba(0,0,0,.45);
+    transition:.4s ease;
 }
 
+.photo-grid img:hover{
+    transform:scale(1.03);
+}
 
-/* =========================
-   VIDEO
-========================= */
+/* VIDEO */
 
 .video-box{
-
-    width:min(850px,95%);
-
+    width:min(900px,95%);
     margin:30px auto;
-
-    padding:10px;
-
-    background:#000;
-
-    border-radius:20px;
-
+    background:#050103;
+    padding:12px;
+    border-radius:22px;
     box-shadow:0 20px 50px rgba(0,0,0,.7);
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     overflow:hidden;
 }
 
 .video-box video{
-
     display:block;
-
-    width:100%;
-
-    max-width:850px;
-
+    width:auto;
+    max-width:100%;
     max-height:70vh;
-
+    border-radius:15px;
     background:#000;
-
-    border-radius:14px;
-
     object-fit:contain;
 }
 
+/* FINAL */
 
-/* =========================
-   FINAL BOX
-========================= */
-
-.final-box{
-
-    width:min(650px,95%);
-
-    padding:35px 30px;
-
-    background:#fff5f7;
-
-    color:#3b101b;
-
-    border-radius:24px;
-
-    box-shadow:0 15px 40px rgba(0,0,0,.6);
+.final-message{
+    width:min(700px,95%);
+    padding:35px 25px;
+    border-radius:25px;
+    background:rgba(55,3,15,.65);
+    border:1px solid rgba(255,220,228,.18);
 }
 
-.final-box h2{
-    color:#7b1026;
-}
-
-.final-box p{
-    color:#54202d;
+.signature{
+    margin-top:25px;
+    line-height:2;
+    font-size:1.1rem;
 }
 
 .heart{
     font-size:2rem;
-    margin-top:15px;
+    margin-top:20px;
 }
 
+/* RESPONSIVE */
 
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:850px){
-
-    .senior-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .memory-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-}
-
-@media(max-width:600px){
+@media(max-width:700px){
 
     .page{
-        padding:30px 14px;
+        padding:30px 15px;
     }
 
-    p{
-        font-size:1.03rem;
+    .content-box{
+        padding:25px 18px;
     }
 
-    .senior-grid,
-    .memory-grid{
+    .senior-grid{
         grid-template-columns:1fr;
     }
 
-    .about-box{
-        padding:28px 20px;
-    }
-
-    .dare-box{
-        padding:28px 20px;
+    .photo-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 
     .bouquet-area{
-        height:390px;
-    }
-
-    #bouquetSvg{
-        height:370px;
-    }
-
-    .welcome-image{
-        height:180px;
-    }
-
-    .video-box{
-        padding:6px;
-    }
-
-    .video-box video{
-        width:100%;
-        max-width:100%;
-        max-height:65vh;
+        min-height:430px;
     }
 }
 
+@media(max-width:450px){
+
+    .photo-grid{
+        grid-template-columns:1fr;
+    }
+
+    .welcome-image{
+        width:210px;
+        height:210px;
+    }
+
+    button{
+        padding:12px 22px;
+    }
+}
 </style>
 </head>
 
-
 <body>
 
+<!-- FALLING PETALS -->
+<div class="petal" style="left:5%;animation-duration:8s;"></div>
+<div class="petal" style="left:15%;animation-duration:11s;animation-delay:2s;"></div>
+<div class="petal" style="left:27%;animation-duration:9s;animation-delay:1s;"></div>
+<div class="petal" style="left:39%;animation-duration:12s;animation-delay:3s;"></div>
+<div class="petal" style="left:51%;animation-duration:8s;animation-delay:4s;"></div>
+<div class="petal" style="left:63%;animation-duration:10s;animation-delay:2s;"></div>
+<div class="petal" style="left:75%;animation-duration:13s;animation-delay:1s;"></div>
+<div class="petal" style="left:88%;animation-duration:9s;animation-delay:3s;"></div>
 
-<!-- =========================
-     FALLING PETALS
-========================= -->
+<!-- PAGE 1 -->
 
-<div class="petals" id="petals"></div>
+<section class="page active" id="page1">
 
+    <img src="./photo1.jpg"
+         class="welcome-image"
+         alt="Freshers">
 
-<!-- =========================
-     PAGE 1
-========================= -->
+    <h1>Welcome, Juniors ❤️</h1>
 
-<section class="page active" id="welcome">
+    <p>
+        A little something from your seniors...
+    </p>
 
-<div class="container">
+    <div class="names">
+        <div class="name">Vasavi 🌹</div>
+        <div class="name">Vinutha 🌹</div>
+        <div class="name">Geetanjali 🌹</div>
+        <div class="name">Samuksha 🌹</div>
+    </div>
 
-<img
-    src="./photo1.jpg"
-    alt="Freshers Welcome"
-    class="welcome-image"
->
-
-<div class="small-intro">
-    A little surprise from your seniors
-</div>
-
-<h1>
-    Welcome, Freshers! ❤️
-</h1>
-
-<p>
-    Four new faces, four new stories,
-    and a whole lot of memories waiting to happen.
-</p>
-
-<div class="names">
-
-<span class="name">Vasavi 🌹</span>
-<span class="name">Vinutha 🌸</span>
-<span class="name">Geetanjali 🌷</span>
-<span class="name">Samuksha 🌺</span>
-
-</div>
-
-<button
-    class="next-btn"
-    onclick="showPage('bouquetPage')"
->
-    There's something for you →
-</button>
-
-</div>
+    <button class="next-btn" onclick="nextPage()">
+        Let's Begin ❤️
+    </button>
 
 </section>
 
 
-<!-- =========================
-     PAGE 2 BOUQUET
-========================= -->
+<!-- PAGE 2 BOUQUET -->
 
-<section class="page" id="bouquetPage">
+<section class="page" id="page2">
 
-<div class="container">
+    <div class="bouquet-area">
 
-<h2>
-    A Little Something For You 🌹
-</h2>
+        <h2>A Little Something For You 🌹</h2>
 
-<p class="bouquet-note">
-    Tap the button and watch your bouquet bloom.
-</p>
+        <p class="tap-text">
+            Tap the roses...
+        </p>
 
-<div class="bouquet-area">
+        <button class="bouquet-button" onclick="growBouquet()">
 
-<svg
-    id="bouquetSvg"
-    viewBox="0 0 600 500"
-    xmlns="http://www.w3.org/2000/svg"
->
+            <svg class="bouquet"
+                 id="bouquet"
+                 viewBox="0 0 500 420"
+                 xmlns="http://www.w3.org/2000/svg">
 
-<defs>
+                <!-- stems -->
+                <path d="M250 410 C240 320 220 220 190 100"
+                      stroke="#245c2a"
+                      stroke-width="10"
+                      fill="none"/>
 
-<radialGradient id="roseRed">
-    <stop offset="0%" stop-color="#ff667f"/>
-    <stop offset="45%" stop-color="#d91f43"/>
-    <stop offset="100%" stop-color="#70091e"/>
-</radialGradient>
+                <path d="M250 410 C255 320 280 220 310 100"
+                      stroke="#245c2a"
+                      stroke-width="10"
+                      fill="none"/>
 
-<linearGradient id="leafGreen">
-    <stop offset="0%" stop-color="#76a95d"/>
-    <stop offset="100%" stop-color="#174e29"/>
-</linearGradient>
+                <path d="M250 410 C225 310 180 230 130 150"
+                      stroke="#245c2a"
+                      stroke-width="8"
+                      fill="none"/>
 
-<linearGradient id="paper">
-    <stop offset="0%" stop-color="#fff0f3"/>
-    <stop offset="55%" stop-color="#efb7c3"/>
-    <stop offset="100%" stop-color="#c87589"/>
-</linearGradient>
+                <path d="M250 410 C280 310 335 220 375 145"
+                      stroke="#245c2a"
+                      stroke-width="8"
+                      fill="none"/>
 
-</defs>
+                <!-- leaves -->
 
+                <ellipse cx="185" cy="260"
+                         rx="65" ry="25"
+                         transform="rotate(-25 185 260)"
+                         fill="#245c2a"/>
 
-<!-- STEMS -->
+                <ellipse cx="320" cy="270"
+                         rx="65" ry="25"
+                         transform="rotate(25 320 270)"
+                         fill="#245c2a"/>
 
-<path class="stem" d="M300 390 Q275 300 180 145"/>
-<path class="stem" d="M305 390 Q315 290 300 105"/>
-<path class="stem" d="M310 390 Q360 280 425 145"/>
-<path class="stem" d="M300 390 Q230 270 105 220"/>
-<path class="stem" d="M315 390 Q390 285 500 225"/>
-<path class="stem" d="M305 390 Q270 250 230 70"/>
-<path class="stem" d="M310 390 Q340 230 370 75"/>
+                <ellipse cx="145" cy="205"
+                         rx="55" ry="22"
+                         transform="rotate(-35 145 205)"
+                         fill="#31743a"/>
 
+                <ellipse cx="355" cy="205"
+                         rx="55" ry="22"
+                         transform="rotate(35 355 205)"
+                         fill="#31743a"/>
 
-<!-- LEAVES -->
+                <!-- roses -->
 
-<g class="leaf">
-<ellipse
-    cx="210"
-    cy="245"
-    rx="18"
-    ry="38"
-    fill="url(#leafGreen)"
-    transform="rotate(-55 210 245)"
-/>
-</g>
+                <g transform="translate(125 105)">
+                    <circle r="55" fill="#6f061c"/>
+                    <circle r="40" fill="#9d1530"/>
+                    <circle r="27" fill="#6f061c"/>
+                    <path d="M-30,-10 C-5,-50 35,-35 30,-5 C25,25 -20,30 -30,-10Z"
+                          fill="#b51f3d"/>
+                    <path d="M-10,-15 C0,-35 20,-20 10,0 C5,10 -10,5 -10,-15Z"
+                          fill="#d13a55"/>
+                </g>
 
-<g class="leaf">
-<ellipse
-    cx="385"
-    cy="255"
-    rx="18"
-    ry="38"
-    fill="url(#leafGreen)"
-    transform="rotate(55 385 255)"
-/>
-</g>
+                <g transform="translate(250 70)">
+                    <circle r="62" fill="#70061c"/>
+                    <circle r="47" fill="#a11631"/>
+                    <circle r="30" fill="#6b061a"/>
+                    <path d="M-35,-5 C-10,-55 40,-35 32,0 C20,35 -25,32 -35,-5Z"
+                          fill="#b8203d"/>
+                    <path d="M-12,-15 C0,-40 25,-22 12,2 C5,13 -10,7 -12,-15Z"
+                          fill="#d53b55"/>
+                </g>
 
-<g class="leaf">
-<ellipse
-    cx="155"
-    cy="275"
-    rx="17"
-    ry="34"
-    fill="url(#leafGreen)"
-    transform="rotate(-65 155 275)"
-/>
-</g>
+                <g transform="translate(375 110)">
+                    <circle r="54" fill="#6f061c"/>
+                    <circle r="40" fill="#9d1530"/>
+                    <circle r="26" fill="#680619"/>
+                    <path d="M-30,-8 C-5,-45 35,-32 30,-2 C24,28 -20,27 -30,-8Z"
+                          fill="#b51f3d"/>
+                    <path d="M-10,-13 C0,-32 20,-18 10,2 C4,10 -9,5 -10,-13Z"
+                          fill="#d13a55"/>
+                </g>
 
-<g class="leaf">
-<ellipse
-    cx="455"
-    cy="285"
-    rx="17"
-    ry="34"
-    fill="url(#leafGreen)"
-    transform="rotate(65 455 285)"
-/>
-</g>
+                <g transform="translate(180 150)">
+                    <circle r="45" fill="#7d0921"/>
+                    <circle r="33" fill="#a91935"/>
+                    <circle r="22" fill="#69061a"/>
+                </g>
 
+                <g transform="translate(320 155)">
+                    <circle r="45" fill="#7d0921"/>
+                    <circle r="33" fill="#a91935"/>
+                    <circle r="22" fill="#69061a"/>
+                </g>
 
-<!-- ROSES -->
+                <!-- ribbon -->
 
-<g class="rose">
-<circle cx="180" cy="145" r="48" fill="url(#roseRed)"/>
-<ellipse cx="180" cy="150" rx="32" ry="42" fill="#a80d2d"/>
-<ellipse cx="162" cy="135" rx="26" ry="35" fill="#e42b4c"/>
-<ellipse cx="198" cy="135" rx="26" ry="35" fill="#bd1536"/>
-<ellipse cx="180" cy="160" rx="22" ry="28" fill="#ff526c"/>
-<circle cx="180" cy="155" r="10" fill="#79081e"/>
-</g>
+                <path d="M180 365 Q250 395 320 365"
+                      stroke="#c58b94"
+                      stroke-width="15"
+                      fill="none"/>
 
-<g class="rose">
-<circle cx="300" cy="105" r="52" fill="url(#roseRed)"/>
-<ellipse cx="300" cy="110" rx="34" ry="44" fill="#a70b2b"/>
-<ellipse cx="280" cy="94" rx="28" ry="37" fill="#e72b4d"/>
-<ellipse cx="320" cy="94" rx="28" ry="37" fill="#bd1637"/>
-<ellipse cx="300" cy="118" rx="23" ry="30" fill="#ff5c73"/>
-<circle cx="300" cy="112" r="10" fill="#72081c"/>
-</g>
+            </svg>
 
-<g class="rose">
-<circle cx="425" cy="145" r="48" fill="url(#roseRed)"/>
-<ellipse cx="425" cy="150" rx="31" ry="42" fill="#a90c2c"/>
-<ellipse cx="407" cy="135" rx="26" ry="35" fill="#e32a4c"/>
-<ellipse cx="443" cy="135" rx="26" ry="35" fill="#bd1537"/>
-<ellipse cx="425" cy="160" rx="22" ry="28" fill="#ff536e"/>
-<circle cx="425" cy="155" r="10" fill="#75081e"/>
-</g>
+        </button>
 
-<g class="rose">
-<circle cx="105" cy="220" r="43" fill="url(#roseRed)"/>
-<ellipse cx="105" cy="225" rx="28" ry="37" fill="#a60b2b"/>
-<ellipse cx="90" cy="210" rx="23" ry="30" fill="#e52b4d"/>
-<ellipse cx="120" cy="210" rx="23" ry="30" fill="#bd1637"/>
-<ellipse cx="105" cy="235" rx="19" ry="24" fill="#ff536e"/>
-<circle cx="105" cy="230" r="8" fill="#72081c"/>
-</g>
+        <button class="next-btn" onclick="nextPage()">
+            Continue ❤️
+        </button>
 
-<g class="rose">
-<circle cx="500" cy="225" r="43" fill="url(#roseRed)"/>
-<ellipse cx="500" cy="230" rx="28" ry="37" fill="#a60b2b"/>
-<ellipse cx="485" cy="215" rx="23" ry="30" fill="#e52b4d"/>
-<ellipse cx="515" cy="215" rx="23" ry="30" fill="#bd1637"/>
-<ellipse cx="500" cy="240" rx="19" ry="24" fill="#ff536e"/>
-<circle cx="500" cy="235" r="8" fill="#72081c"/>
-</g>
-
-<g class="rose">
-<circle cx="230" cy="70" r="42" fill="url(#roseRed)"/>
-<ellipse cx="230" cy="75" rx="27" ry="36" fill="#a70b2b"/>
-<ellipse cx="215" cy="60" rx="22" ry="29" fill="#e52c4e"/>
-<ellipse cx="245" cy="60" rx="22" ry="29" fill="#bd1637"/>
-<ellipse cx="230" cy="83" rx="18" ry="23" fill="#ff536e"/>
-<circle cx="230" cy="78" r="8" fill="#72081c"/>
-</g>
-
-<g class="rose">
-<circle cx="370" cy="75" r="42" fill="url(#roseRed)"/>
-<ellipse cx="370" cy="80" rx="27" ry="36" fill="#a70b2b"/>
-<ellipse cx="355" cy="65" rx="22" ry="29" fill="#e52c4e"/>
-<ellipse cx="385" cy="65" rx="22" ry="29" fill="#bd1637"/>
-<ellipse cx="370" cy="88" rx="18" ry="23" fill="#ff536e"/>
-<circle cx="370" cy="83" r="8" fill="#72081c"/>
-</g>
-
-
-<!-- WRAP -->
-
-<g class="wrap">
-
-<path
-    d="M205 345 L395 345 L350 475 L250 475 Z"
-    fill="url(#paper)"
-    stroke="#bd7183"
-    stroke-width="2"
-/>
-
-<path
-    d="M270 392 Q300 410 330 392"
-    fill="none"
-    stroke="#8d1830"
-    stroke-width="13"
-    stroke-linecap="round"
-/>
-
-</g>
-
-</svg>
-
-</div>
-
-
-<div
-    class="bouquet-message"
-    id="bouquetMessage"
->
-
-<p>
-    A little bouquet to begin your journey with us. ❤️
-</p>
-
-<button
-    class="next-btn"
-    onclick="showPage('passwordPage')"
->
-    Continue →
-</button>
-
-</div>
-
-
-<button
-    class="tap"
-    id="tapBouquet"
-    onclick="bloomBouquet()"
->
-    TAP ME 🌹
-</button>
-
-</div>
+    </div>
 
 </section>
 
 
-<!-- =========================
-     PASSWORD
-========================= -->
+<!-- PAGE 3 PASSWORD -->
 
-<section class="page" id="passwordPage">
+<section class="page" id="page3">
 
-<div class="password-box">
+    <div class="password-box">
 
-<h2>
-    One Little Secret 🔐
-</h2>
+        <h2>Before We Begin ❤️</h2>
 
-<p>
-    Enter the password given to you by your seniors.
-</p>
+        <p>
+            Enter the password to continue.
+        </p>
 
-<input
-    type="password"
-    id="passwordInput"
-    class="password-input"
-    placeholder="Enter password"
->
+        <input
+            type="password"
+            id="password"
+            placeholder="Enter password">
 
-<button
-    class="password-btn"
-    onclick="checkPassword()"
->
-    ENTER ❤️
-</button>
+        <button onclick="checkPassword()">
+            Enter
+        </button>
 
-<div
-    class="password-error"
-    id="passwordError"
-></div>
+        <p class="error" id="error">
+            Wrong password. Try again ❤️
+        </p>
 
-</div>
+    </div>
 
 </section>
 
 
-<!-- =========================
-     MSC FAMILY
-========================= -->
+<!-- PAGE 4 MSc FAMILY -->
 
-<section class="page" id="familyPage">
+<section class="page" id="page4">
 
-<div class="container">
+    <div class="content-box">
 
-<h1>
-    Welcome to the MSc Family ❤️
-</h1>
+        <h1>Welcome to the MSc Family ❤️</h1>
 
-<p>
-    You are officially part of our little MSc family now.
-    There will be studies, clinicals, deadlines, laughter,
-    stress, crazy moments and a lot of memories.
-</p>
+        <p>
+            Welcome to our little MSc family!
+            <br><br>
+            You are officially part of us now. 🌹
+            <br>
+            So, before you get too comfortable...
+        </p>
 
-<p style="margin-top:15px;">
-    And before we continue...
-    we have something special planned for you. 👀
-</p>
+        <button class="next-btn" onclick="nextPage()">
+            Continue ❤️
+        </button>
 
-<button
-    class="next-btn"
-    onclick="showPage('dareIntroPage')"
->
-    Let's begin →
-</button>
-
-</div>
+    </div>
 
 </section>
 
 
-<!-- =========================
-     DARE INTRO
-========================= -->
+<!-- PAGE 5 DARES INTRO -->
 
-<section class="page" id="dareIntroPage">
+<section class="page" id="page5">
 
-<div class="container">
+    <div class="content-box">
 
-<h2>
-    Okay Freshers... 👀
-</h2>
+        <h1>Now Comes The Fun Part 😈</h1>
 
-<p>
-    You will have some dares to complete.
-</p>
+        <p>
+            You will have some dares to complete!
+            <br><br>
+            Don't worry... they're completely harmless.
+            Probably. 👀😂
+        </p>
 
-<p style="margin-top:12px;">
-    Don't worry... they're not too difficult. 😂
-</p>
+        <button class="next-btn" onclick="nextPage()">
+            Bring It On 😈
+        </button>
 
-<p style="margin-top:12px;">
-    Complete each dare one by one.
-    Once you finish a dare, press
-    <b>COMPLETED ✓</b>
-    to unlock the next one.
-</p>
-
-<button
-    class="next-btn"
-    onclick="startJunior(0)"
->
-    I'm Ready 😈
-</button>
-
-</div>
+    </div>
 
 </section>
 
 
-<!-- =========================
-     JUNIOR DARE PAGES
-========================= -->
+<!-- PAGE 6 VASAVI -->
 
-<section class="page" id="vasaviDarePage">
+<section class="page" id="page6">
 
-<div class="container">
+    <div class="content-box">
 
-<h2>Vasavi ❤️</h2>
+        <h2>Vasavi 🌹</h2>
 
-<div class="dare-box">
+        <div class="dare-box">
+            Tell us about your favourite senior so far in college. 👀
+        </div>
 
-<div class="dare-number" id="vasaviDareNumber"></div>
+        <div class="dare-box">
+            Sing a song! No excuses. We want to hear it. 😈🎤
+        </div>
 
-<div class="dare-text" id="vasaviDareText"></div>
+        <div class="dare-box">
+            Speak like a robot for 30 seconds! 😂
+        </div>
 
-<button
-    class="complete-btn"
-    id="vasaviCompleteBtn"
-    onclick="completeDare('vasavi')"
->
-    COMPLETED ✓
-</button>
+        <div class="about-text">
 
-<div
-    class="completed-message"
-    id="vasaviCompleted"
-></div>
+            <h3>A Little About You ❤️</h3>
 
-</div>
+            <p>
+                We’ve known you since your first year at Manipal.
+                You’re energetic, curious and always ready to learn.
+                And yes... a little hyperactive too! 😂
+                Even before IRC, you were already thinking about data collection.
+                Keep that energy, Vasavi. ❤️
+            </p>
 
-<div
-    class="dare-progress"
-    id="vasaviProgress"
-></div>
+        </div>
 
-</div>
+        <button class="next-btn" onclick="nextPage()">
+            Next ❤️
+        </button>
 
-</section>
-
-
-<section class="page" id="vinuthaDarePage">
-
-<div class="container">
-
-<h2>Vinutha ❤️</h2>
-
-<div class="dare-box">
-
-<div class="dare-number" id="vinuthaDareNumber"></div>
-
-<div class="dare-text" id="vinuthaDareText"></div>
-
-<button
-    class="complete-btn"
-    id="vinuthaCompleteBtn"
-    onclick="completeDare('vinutha')"
->
-    COMPLETED ✓
-</button>
-
-<div
-    class="completed-message"
-    id="vinuthaCompleted"
-></div>
-
-</div>
-
-<div
-    class="dare-progress"
-    id="vinuthaProgress"
-></div>
-
-</div>
+    </div>
 
 </section>
 
 
-<section class="page" id="geetanjaliDarePage">
+<!-- PAGE 7 VINUTHA -->
 
-<div class="container">
+<section class="page" id="page7">
 
-<h2>Geetanjali ❤️</h2>
+    <div class="content-box">
 
-<div class="dare-box">
+        <h2>Vinutha 🌹</h2>
 
-<div class="dare-number" id="geetanjaliDareNumber"></div>
+        <div class="dare-box">
+            Show us your favourite dance step! No shyness allowed. 💃
+        </div>
 
-<div class="dare-text" id="geetanjaliDareText"></div>
+        <div class="dare-box">
+            Convince one of your favourite seniors to sing a song for you! 😂🎤
+        </div>
 
-<button
-    class="complete-btn"
-    id="geetanjaliCompleteBtn"
-    onclick="completeDare('geetanjali')"
->
-    COMPLETED ✓
-</button>
+        <div class="dare-box">
+            Act out something without speaking. Everyone else has to guess what it is! 👀
+        </div>
 
-<div
-    class="completed-message"
-    id="geetanjaliCompleted"
-></div>
+        <div class="about-text">
 
-</div>
+            <h3>A Little About You ❤️</h3>
 
-<div
-    class="dare-progress"
-    id="geetanjaliProgress"
-></div>
+            <p>
+                From the very first day, you’ve been with us —
+                always so calm, but secretly super energetic! ❤️
+                And when it comes to clinicals, we see a completely different Vinutha. 😂
+                8 o’clock duty? For Vinutha, that's 7:30! ⏰
+                Always punctual, always ready. 🌹
+            </p>
 
-</div>
+        </div>
 
-</section>
+        <button class="next-btn" onclick="nextPage()">
+            Next ❤️
+        </button>
 
-
-<section class="page" id="samukshaDarePage">
-
-<div class="container">
-
-<h2>Samuksha ❤️</h2>
-
-<div class="dare-box">
-
-<div class="dare-number" id="samukshaDareNumber"></div>
-
-<div class="dare-text" id="samukshaDareText"></div>
-
-<button
-    class="complete-btn"
-    id="samukshaCompleteBtn"
-    onclick="completeDare('samuksha')"
->
-    COMPLETED ✓
-</button>
-
-<div
-    class="completed-message"
-    id="samukshaCompleted"
-></div>
-
-</div>
-
-<div
-    class="dare-progress"
-    id="samukshaProgress"
-></div>
-
-</div>
+    </div>
 
 </section>
 
 
-<!-- =========================
-     ABOUT JUNIORS
-========================= -->
+<!-- PAGE 8 GEETANJALI -->
 
-<section class="page" id="vasaviAboutPage">
+<section class="page" id="page8">
 
-<div class="container">
+    <div class="content-box">
 
-<div class="about-box">
+        <h2>Geetanjali 🌹</h2>
 
-<div class="about-name">
-    About Vasavi 🌹
-</div>
+        <div class="dare-box">
+            Compliment the best-looking man in the entire group. 👀❤️
+        </div>
 
-<p>
-    We’ve known you since your first year at Manipal.
-    You’re energetic, curious and always ready to learn.
-    And yes... a little hyperactive too! 😂
-    Even before IRC, you were already thinking about data collection.
-    Keep that energy, Vasavi. ❤️
-</p>
+        <div class="dare-box">
+            Talk in slow motion for 30 seconds. 😂🐌
+        </div>
 
-<button
-    class="next-btn"
-    onclick="startJunior(1)"
->
-    Meet Vinutha →
-</button>
+        <div class="dare-box">
+            Tell us about your favourite and most hated staff member at Manipal. 👀☕
+        </div>
 
-</div>
+        <div class="about-text">
 
-</div>
+            <h3>A Little About You ❤️</h3>
 
-</section>
+            <p>
+                Honestly... we don't know much about you yet. 👀
+                But we have a feeling you might have hated us a little... 😂
+                Maybe because we told you “Freshers is in the Simulation Lab.” 😭
+                And somehow, you were the first one to be happy when we said
+                “Hakuna Matata”! 😂
+                You seem like a super-chill person, so we guess we'll get to know
+                much more about you in the days ahead. ❤️
+            </p>
 
+        </div>
 
-<section class="page" id="vinuthaAboutPage">
+        <button class="next-btn" onclick="nextPage()">
+            Next ❤️
+        </button>
 
-<div class="container">
-
-<div class="about-box">
-
-<div class="about-name">
-    About Vinutha 🌸
-</div>
-
-<p>
-    From the very first day, you’ve been with us —
-    always so calm, but secretly super energetic! ❤️
-    And when it comes to clinicals, we see a completely
-    different Vinutha. 😂
-    8 o’clock duty? For Vinutha, that's 7:30! ⏰
-    Always punctual, always ready. 🌹
-</p>
-
-<button
-    class="next-btn"
-    onclick="startJunior(2)"
->
-    Meet Geetanjali →
-</button>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
 
-<section class="page" id="geetanjaliAboutPage">
+<!-- PAGE 9 SAMUKSHA -->
 
-<div class="container">
+<section class="page" id="page9">
 
-<div class="about-box">
+    <div class="content-box">
 
-<div class="about-name">
-    About Geetanjali 🌷
-</div>
+        <h2>Samuksha 🌹</h2>
 
-<p>
-    Honestly... we don't know much about you yet. 👀
-    But we have a feeling you might have hated us a little... 😂
-    Maybe because we told you “Freshers is in the Simulation Lab.” 😭
-    And somehow, you were the first one to be happy when we said
-    “Hakuna Matata”! 😂
-    You seem like a super-chill person, so we guess we'll get to
-    know much more about you in the days ahead. ❤️
-</p>
+        <div class="dare-box">
+            Compliment the most good-looking girl in the entire team. 👀❤️
+        </div>
 
-<button
-    class="next-btn"
-    onclick="startJunior(3)"
->
-    Meet Samuksha →
-</button>
+        <div class="dare-box">
+            Sing a sad song in the happiest way possible! 😂🎵
+        </div>
 
-</div>
+        <div class="dare-box">
+            Dance to a song for 30 seconds! 🔥💃
+        </div>
 
-</div>
+        <div class="about-text">
 
-</section>
+            <h3>A Little About You ❤️</h3>
 
+            <p>
+                Before you even entered Manipal as a PG, your friend Vasavi
+                had already given us a favourite introduction about you! 😂❤️
+                From what we heard, you were a super-chill and enthusiastic person —
+                and honestly, you were very worried about the freshers! 😂
+                You started asking about the freshers from Day 1 itself! 👀
+                We still have a lot to know about you, but we're sure we'll discover
+                much more in the coming days. ❤️🌹
+            </p>
 
-<section class="page" id="samukshaAboutPage">
+        </div>
 
-<div class="container">
+        <button class="next-btn" onclick="nextPage()">
+            Next ❤️
+        </button>
 
-<div class="about-box">
-
-<div class="about-name">
-    About Samuksha 🌺
-</div>
-
-<p>
-    Before you even entered Manipal as a PG,
-    your friend Vasavi had already given us a favourite
-    introduction about you! 😂❤️
-    From what we heard, you were a super-chill and enthusiastic
-    person — and honestly, you were very worried about the freshers! 😂
-    You started asking about the freshers from Day 1 itself! 👀
-    We still have a lot to know about you, but we're sure we'll
-    discover much more in the coming days. ❤️🌹
-</p>
-
-<button
-    class="next-btn"
-    onclick="showPage('seniorsPage')"
->
-    Now Meet Your Seniors →
-</button>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
 
-<!-- =========================
-     SENIORS
-========================= -->
+<!-- PAGE 10 SENIORS -->
 
-<section class="page" id="seniorsPage">
+<section class="page" id="page10">
 
-<div class="container">
+    <h2>About Your Seniors ❤️</h2>
 
-<h2>
-    About Your Seniors ❤️
-</h2>
+    <div class="senior-grid">
 
-<p>
-    The people who are going to be around
-    for the journey. 🌹
-</p>
+        <div class="senior-card">
 
-<div class="senior-grid">
+            <span class="tag">
+                THE LIBRARY GIRL 📚
+            </span>
 
-<div class="senior-card">
+            <h3>Sujitha</h3>
 
-<span class="tag">
-    THE LIBRARY GIRL 📚
-</span>
+            <p>
+                Looking for books?
+                You'll probably find Sujitha searching for them in the library. 📚
+                Anything about data collection?
+                You know who to find. ❤️
+            </p>
 
-<h3>Sujitha</h3>
-
-<p>
-    Looking for books?
-    You'll probably find Sujitha searching for them
-    in the library. 📚
-    Anything about data collection?
-    You know who to find. ❤️
-</p>
-
-</div>
+        </div>
 
 
-<div class="senior-card">
+        <div class="senior-card">
 
-<span class="tag">
-    STUDY SUPPORT ❤️
-</span>
+            <span class="tag">
+                STUDY SUPPORT ❤️
+            </span>
 
-<h3>Snega</h3>
+            <h3>Snega</h3>
 
-<p>
-    Have doubts related to studies?
-    You can always find Snega.
-    Need help with data collection?
-    She's there too. 🌹
-    And yes... She's the "pathukkalam"
-    kind of senior. 😂
-</p>
+            <p>
+                Have doubts related to studies?
+                You can always find Snega.
+                Need help with data collection?
+                She's there too. 🌹
+                And yes... She's the "pathukkalam" kind of senior. 😂
+            </p>
 
-</div>
-
-
-<div class="senior-card">
-
-<span class="tag">
-    CREATIVE & COLOURFUL 🎨
-</span>
-
-<h3>Benishiya</h3>
-
-<p>
-    She can make anything creative and colourful...
-    except her enthusiasm for clinical posting. 😂
-    Prospective study people only —
-    please find Benishiya. 👀❤️
-</p>
-
-</div>
+        </div>
 
 
-<div class="senior-card">
+        <div class="senior-card">
 
-<span class="tag">
-    DEADLINE SPECIALIST 😂
-</span>
+            <span class="tag">
+                CREATIVE & COLOURFUL 🎨
+            </span>
 
-<h3>Nethish</h3>
+            <h3>Benishiya</h3>
 
-<p>
-    Need an IABP posting?
-    You can accompany your senior Nethish. ❤️
-    And always the last-night person before the end date. 😂
-    He might even lose the entire protocol
-    instead of saving the file. 💀
-</p>
+            <p>
+                She can make anything creative and colourful...
+                except her enthusiasm for clinical posting. 😂
+                Prospective study people only —
+                please find Benishiya. 👀❤️
+            </p>
 
-</div>
+        </div>
 
-</div>
 
-<button
-    class="next-btn"
-    onclick="showPage('memoriesPage')"
->
-    Memories With You Guys →
-</button>
+        <div class="senior-card">
 
-</div>
+            <span class="tag">
+                DEADLINE SPECIALIST 😂
+            </span>
+
+            <h3>Nethish</h3>
+
+            <p>
+                Need an IABP posting?
+                You can accompany your senior Nethish. ❤️
+                And always the last-night person before the end date. 😂
+                He might even lose the entire protocol instead of saving the file. 💀
+            </p>
+
+        </div>
+
+    </div>
+
+    <button class="next-btn" onclick="nextPage()">
+        Continue ❤️
+    </button>
 
 </section>
 
 
-<!-- =========================
-     MEMORIES
-========================= -->
+<!-- PAGE 11 MEMORIES -->
 
-<section class="page" id="memoriesPage">
+<section class="page" id="page11">
 
-<div class="container">
+    <div class="content-box">
 
-<h2>
-    Memories With You Guys ❤️
-</h2>
+        <h2>Memories With You Guys ❤️</h2>
 
-<p>
-    Some moments we already have...
-    and many more to come.
-</p>
+        <p>
+            From the little moments to the random conversations,
+            we're already collecting memories with you.
+            <br><br>
+            And we're sure there are many more to come. 🌹
+        </p>
 
-<div class="memory-grid">
+        <div class="photo-grid">
 
-<div class="memory-card">
-<img src="./photo1.jpg" alt="Memory 1">
-</div>
+            <img src="./photo2.jpg" alt="Memory">
+            <img src="./photo3.jpg" alt="Memory">
+            <img src="./photo4.jpg" alt="Memory">
+            <img src="./photo5.jpg" alt="Memory">
+            <img src="./photo6.jpg" alt="Memory">
 
-<div class="memory-card">
-<img src="./photo2.jpg" alt="Memory 2">
-</div>
+        </div>
 
-<div class="memory-card">
-<img src="./photo3.jpg" alt="Memory 3">
-</div>
+        <button class="next-btn" onclick="nextPage()">
+            One More Memory ❤️
+        </button>
 
-<div class="memory-card">
-<img src="./photo4.jpg" alt="Memory 4">
-</div>
-
-<div class="memory-card">
-<img src="./photo5.jpg" alt="Memory 5">
-</div>
-
-<div class="memory-card">
-<img src="./photo6.jpg" alt="Memory 6">
-</div>
-
-</div>
-
-<button
-    class="next-btn"
-    onclick="showPage('memoryOfUsPage')"
->
-    One More Thing →
-</button>
-
-</div>
+    </div>
 
 </section>
 
 
-<!-- =========================
-     MEMORY OF US VIDEO
-========================= -->
+<!-- PAGE 12 MEMORY OF US -->
 
-<section class="page" id="memoryOfUsPage">
+<section class="page" id="page12">
 
-<div class="container">
+    <div class="content-box">
 
-<h2>
-    Memory of Us ❤️
-</h2>
+        <h2>Memory of Us ❤️</h2>
 
-<p>
-    And now... a little memory of all of us.
-</p>
+        <p>
+            And now... a little memory for all of us. 🌹
+        </p>
 
-<div class="video-box">
+        <div class="video-box">
 
-<video
-    id="memoryVideo"
-    controls
-    playsinline
-    preload="metadata"
->
+            <video
+                id="memoryVideo"
+                controls
+                playsinline
+                preload="metadata">
 
-<source
-    src="./freshers.mp4"
-    type="video/mp4"
->
+                <source src="./freshers.mp4" type="video/mp4">
 
-Your browser does not support HTML5 video.
+                Your browser does not support HTML5 video.
 
-</video>
+            </video>
 
-</div>
+        </div>
 
-<button
-    class="next-btn"
-    onclick="showPage('collegePage')"
->
-    Continue →
-</button>
+        <button class="next-btn" onclick="nextPage()">
+            Continue ❤️
+        </button>
 
-</div>
+    </div>
 
 </section>
 
 
-<!-- =========================
-     COLLEGE MESSAGE
-========================= -->
+<!-- PAGE 13 ENJOY COLLEGE -->
 
-<section class="page" id="collegePage">
+<section class="page" id="page13">
 
-<div class="container">
+    <div class="content-box">
 
-<h2>
-    Enjoy Your College Days 🌹
-</h2>
+        <h2>Enjoy Your College Days ❤️</h2>
 
-<p>
-    Enjoy every little moment.
-</p>
+        <p>
+            Enjoy every moment of your college days.
+            <br><br>
+            Make mistakes, learn new things,
+            laugh a lot, make memories,
+            and don't forget to enjoy the journey.
+            🌹
+            <br><br>
+            This is just a small glimpse of us...
+            <br>
+            There is so much more to come. ❤️
+        </p>
 
-<p style="margin-top:12px;">
-    Make mistakes, learn new things,
-    laugh a lot, take pictures,
-    survive the deadlines,
-    and make memories that you'll remember
-    long after college is over.
-</p>
+        <button class="next-btn" onclick="nextPage()">
+            Final Message ❤️
+        </button>
 
-<p style="margin-top:15px;">
-    This is just a small glimpse of us...
-    there's a lot more waiting for you. ❤️
-</p>
-
-<button
-    class="next-btn"
-    onclick="showPage('finalPage')"
->
-    One Last Message →
-</button>
-
-</div>
+    </div>
 
 </section>
 
 
-<!-- =========================
-     FINAL
-========================= -->
+<!-- PAGE 14 FINAL -->
 
-<section class="page" id="finalPage">
+<section class="page" id="page14">
 
-<div class="final-box">
+    <div class="final-message">
 
-<h2>
-    To Our Freshers ❤️
-</h2>
+        <h2>With Love ❤️</h2>
 
-<p>
-    Welcome once again to our MSc family.
-</p>
+        <p>
+            Welcome once again to the MSc family.
+            <br><br>
+            We hope this little surprise made you smile.
+            <br><br>
+            Here's to all the memories we're going to make together. 🌹
+        </p>
 
-<p style="margin-top:12px;">
-    We hope these little moments become
-    the beginning of many beautiful memories together.
-</p>
+        <div class="signature">
 
-<p style="margin-top:12px;">
-    Keep smiling, keep learning,
-    and most importantly...
-    enjoy the journey. 🌹
-</p>
+            With love, your seniors ❤️
 
-<div class="heart">
-    ❤️ 🌹 ❤️
-</div>
+            <br><br>
 
-<p style="margin-top:15px;font-size:.9rem;color:#8d1830;">
-    With love, your seniors
-</p>
+            Snega<br>
+            Benishiya<br>
+            Nethish<br>
+            Sujitha
 
-</div>
+        </div>
+
+        <div class="heart">
+            ❤️
+        </div>
+
+    </div>
 
 </section>
 
 
 <script>
 
-/* =========================
-   PAGE NAVIGATION
-========================= */
+let currentPage = 1;
 
-function showPage(pageId){
+function showPage(pageNumber){
 
-    document.querySelectorAll(".page").forEach(function(page){
+    document.querySelectorAll(".page").forEach(page=>{
         page.classList.remove("active");
     });
 
-    const page = document.getElementById(pageId);
+    const page = document.getElementById("page" + pageNumber);
 
     if(page){
         page.classList.add("active");
-        window.scrollTo(0,0);
+        currentPage = pageNumber;
+        window.scrollTo({
+            top:0,
+            behavior:"smooth"
+        });
     }
 }
 
+function nextPage(){
 
-/* =========================
-   PETALS
-========================= */
-
-const petals = document.getElementById("petals");
-
-for(let i=0;i<35;i++){
-
-    const petal = document.createElement("span");
-
-    petal.className = "petal";
-
-    petal.style.left =
-        Math.random()*100 + "%";
-
-    const size =
-        8 + Math.random()*10;
-
-    petal.style.width =
-        size + "px";
-
-    petal.style.height =
-        size*1.4 + "px";
-
-    petal.style.animationDuration =
-        (6 + Math.random()*8) + "s," +
-        (2 + Math.random()*3) + "s";
-
-    petal.style.animationDelay =
-        (-Math.random()*10) + "s," +
-        (-Math.random()*3) + "s";
-
-    petals.appendChild(petal);
+    if(currentPage < 14){
+        showPage(currentPage + 1);
+    }
 }
-
-
-/* =========================
-   BOUQUET
-========================= */
-
-function bloomBouquet(){
-
-    const bouquet =
-        document.getElementById("bouquetSvg");
-
-    const button =
-        document.getElementById("tapBouquet");
-
-    const message =
-        document.getElementById("bouquetMessage");
-
-    bouquet.classList.add("bloom");
-
-    button.style.display="none";
-
-    setTimeout(function(){
-
-        message.classList.add("show");
-
-    },2500);
-}
-
-
-/* =========================
-   PASSWORD
-========================= */
 
 function checkPassword(){
 
-    const input =
-        document.getElementById("passwordInput").value.trim();
+    const password =
+        document.getElementById("password").value.trim();
 
     const error =
-        document.getElementById("passwordError");
+        document.getElementById("error");
 
-    if(input === "031026"){
+    if(password === "031026"){
 
-        error.textContent = "";
+        error.style.display = "none";
 
-        showPage("familyPage");
+        showPage(4);
 
     }else{
 
-        error.textContent =
-            "Wrong password... try again ❤️";
+        error.style.display = "block";
+
     }
 }
 
+function growBouquet(){
 
-document
-.getElementById("passwordInput")
-.addEventListener("keydown",function(event){
+    const bouquet =
+        document.getElementById("bouquet");
 
-    if(event.key === "Enter"){
-        checkPassword();
-    }
+    bouquet.classList.add("grow");
 
-});
-
-
-/* =========================
-   DARES
-========================= */
-
-const juniorDares = {
-
-    vasavi:[
-        "Tell us about your favourite senior so far in college. 👀",
-        "Sing a song! No excuses. We want to hear it. 😈🎤",
-        "Speak like a robot for 30 seconds! 😂"
-    ],
-
-    vinutha:[
-        "Show us your favourite dance step! No shyness allowed. 💃",
-        "Convince one of your favourite seniors to sing a song for you! 😂🎤",
-        "Act out something without speaking. Everyone else has to guess what it is! 👀"
-    ],
-
-    geetanjali:[
-        "Compliment the best-looking man in the entire group. 👀❤️",
-        "Talk in slow motion for 30 seconds. 😂🐌",
-        "Tell us about your favourite and most hated staff member at Manipal. 👀☕"
-    ],
-
-    samuksha:[
-        "Compliment the most good-looking girl in the entire team. 👀❤️",
-        "Sing a sad song in the happiest way possible! 😂🎵",
-        "Dance to a song for 30 seconds! 🔥💃"
-    ]
-
-};
-
-
-const dareIndex = {
-
-    vasavi:0,
-    vinutha:0,
-    geetanjali:0,
-    samuksha:0
-
-};
-
-
-const juniorDarePages = {
-
-    vasavi:"vasaviDarePage",
-    vinutha:"vinuthaDarePage",
-    geetanjali:"geetanjaliDarePage",
-    samuksha:"samukshaDarePage"
-
-};
-
-
-const juniorAboutPages = {
-
-    vasavi:"vasaviAboutPage",
-    vinutha:"vinuthaAboutPage",
-    geetanjali:"geetanjaliAboutPage",
-    samuksha:"samukshaAboutPage"
-
-};
-
-
-/* =========================
-   START JUNIOR
-========================= */
-
-function startJunior(number){
-
-    const juniors = [
-        "vasavi",
-        "vinutha",
-        "geetanjali",
-        "samuksha"
-    ];
-
-    const junior = juniors[number];
-
-    dareIndex[junior] = 0;
-
-    loadDare(junior);
-
-    showPage(juniorDarePages[junior]);
-}
-
-
-/* =========================
-   LOAD DARE
-========================= */
-
-function loadDare(junior){
-
-    const index = dareIndex[junior];
-
-    document.getElementById(
-        junior+"DareText"
-    ).textContent =
-        juniorDares[junior][index];
-
-    document.getElementById(
-        junior+"DareNumber"
-    ).textContent =
-        "DARE " + (index+1) + " OF 3";
-
-    document.getElementById(
-        junior+"Completed"
-    ).textContent = "";
-
-    document.getElementById(
-        junior+"CompleteBtn"
-    ).style.display = "inline-block";
-
-
-    const progress =
-        document.getElementById(
-            junior+"Progress"
-        );
-
-    progress.innerHTML = "";
-
-    for(let i=0;i<3;i++){
-
-        const dot =
-            document.createElement("span");
-
-        dot.className =
-            i === index
-            ? "dot active"
-            : "dot";
-
-        progress.appendChild(dot);
-    }
-}
-
-
-/* =========================
-   COMPLETE DARE
-========================= */
-
-function completeDare(junior){
-
-    document.getElementById(
-        junior+"Completed"
-    ).textContent =
-        "Dare completed! ❤️";
-
-    document.getElementById(
-        junior+"CompleteBtn"
-    ).style.display = "none";
-
-
-    setTimeout(function(){
-
-        if(dareIndex[junior] < 2){
-
-            dareIndex[junior]++;
-
-            loadDare(junior);
-
-        }else{
-
-            showPage(
-                juniorAboutPages[junior]
-            );
-        }
-
-    },800);
-}
-
-
-/* =========================
-   VIDEO ERROR MESSAGE
-========================= */
-
-const memoryVideo =
-    document.getElementById("memoryVideo");
-
-if(memoryVideo){
-
-    memoryVideo.addEventListener("error",function(){
-
-        console.log(
-            "Video error. Check that freshers.mp4 exists in the same folder as index.html."
-        );
-
-    });
-
+    setTimeout(()=>{
+        bouquet.classList.remove("grow");
+    },1500);
 }
 
 </script>
