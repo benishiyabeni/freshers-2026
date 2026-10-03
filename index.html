@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Red Hot Freshers ❤️</title>
+<title>Welcome Juniors ❤️</title>
 
 <style>
 
-/* ==============================
+/* =====================================================
    BASIC
-================================ */
+===================================================== */
 
 *{
     box-sizing:border-box;
@@ -23,20 +23,20 @@ html,body{
 }
 
 body{
-    font-family:Arial, sans-serif;
+    font-family:Arial,sans-serif;
     color:white;
     overflow-x:hidden;
 
     background:
-        radial-gradient(circle at 20% 20%, #ff174f55, transparent 30%),
-        radial-gradient(circle at 80% 30%, #ff4f9155, transparent 28%),
-        radial-gradient(circle at 50% 100%, #ff003d55, transparent 35%),
-        linear-gradient(135deg,#26000b,#690018,#a80032,#41000e);
+        radial-gradient(circle at 20% 20%,#ff174f55,transparent 30%),
+        radial-gradient(circle at 80% 30%,#ff4f9155,transparent 30%),
+        radial-gradient(circle at 50% 100%,#ff003d55,transparent 35%),
+        linear-gradient(135deg,#180006,#45000f,#82001f,#260006);
 }
 
-/* ==============================
+/* =====================================================
    FALLING ROSE PETALS
-================================ */
+===================================================== */
 
 #petals{
     position:fixed;
@@ -50,19 +50,18 @@ body{
     position:absolute;
     top:-50px;
 
-    width:16px;
-    height:23px;
+    width:14px;
+    height:20px;
 
     background:
-        radial-gradient(circle at 35% 30%,#ffb0c2 0 5%,transparent 6%),
-        linear-gradient(135deg,#ff315b,#b4002d);
+        radial-gradient(circle at 35% 30%,#ffccd9 0 5%,transparent 7%),
+        linear-gradient(135deg,#ff315b,#9e0028);
 
     border-radius:100% 0 100% 0;
 
-    opacity:.85;
+    opacity:.7;
 
-    filter:
-        drop-shadow(0 2px 3px rgba(0,0,0,.35));
+    filter:drop-shadow(0 2px 4px rgba(0,0,0,.35));
 
     animation:fallPetal linear infinite;
 }
@@ -70,46 +69,36 @@ body{
 @keyframes fallPetal{
 
     0%{
-        transform:
-            translate3d(0,-80px,0)
-            rotate(0deg);
+        transform:translate3d(0,-80px,0) rotate(0deg);
     }
 
     25%{
-        transform:
-            translate3d(50px,25vh,0)
-            rotate(120deg);
+        transform:translate3d(50px,25vh,0) rotate(120deg);
     }
 
     50%{
-        transform:
-            translate3d(-50px,50vh,0)
-            rotate(240deg);
+        transform:translate3d(-50px,50vh,0) rotate(240deg);
     }
 
     75%{
-        transform:
-            translate3d(60px,75vh,0)
-            rotate(330deg);
+        transform:translate3d(60px,75vh,0) rotate(330deg);
     }
 
     100%{
-        transform:
-            translate3d(-20px,110vh,0)
-            rotate(480deg);
+        transform:translate3d(-20px,110vh,0) rotate(480deg);
     }
 }
 
-/* ==============================
+/* =====================================================
    FLOATING HEARTS
-================================ */
+===================================================== */
 
 .heart{
     position:fixed;
-    z-index:1;
     pointer-events:none;
+    z-index:2;
 
-    color:#ff6c9c;
+    color:#ff7da4;
     opacity:.35;
 
     animation:heartFloat 6s ease-in-out infinite;
@@ -133,41 +122,9 @@ body{
 .h5{left:45%;top:10%;font-size:20px}
 .h6{right:35%;top:55%;font-size:32px}
 
-/* ==============================
-   ROSE DECORATION
-================================ */
-
-.cornerRose{
-    position:fixed;
-    z-index:1;
-    font-size:55px;
-    opacity:.35;
-    pointer-events:none;
-}
-
-.r1{
-    top:15px;
-    left:10px;
-}
-
-.r2{
-    top:15px;
-    right:10px;
-}
-
-.r3{
-    bottom:15px;
-    left:10px;
-}
-
-.r4{
-    bottom:15px;
-    right:10px;
-}
-
-/* ==============================
+/* =====================================================
    APP
-================================ */
+===================================================== */
 
 #app{
     position:relative;
@@ -175,9 +132,9 @@ body{
     min-height:100vh;
 }
 
-/* ==============================
-   SCREEN
-================================ */
+/* =====================================================
+   SCREENS
+===================================================== */
 
 .screen{
     display:none;
@@ -194,15 +151,14 @@ body{
 
 .screen.active{
     display:flex;
-
-    animation:appear .6s ease;
+    animation:appear .7s ease;
 }
 
 @keyframes appear{
 
     from{
         opacity:0;
-        transform:translateY(20px);
+        transform:translateY(25px);
     }
 
     to{
@@ -211,28 +167,28 @@ body{
     }
 }
 
-/* ==============================
+/* =====================================================
    CARD
-================================ */
+===================================================== */
 
 .card{
-    width:min(720px,94vw);
+    width:min(760px,94vw);
 
-    padding:42px 28px;
+    padding:45px 28px;
 
     border-radius:35px;
 
     background:
         linear-gradient(
             145deg,
-            rgba(255,255,255,.12),
+            rgba(255,255,255,.13),
             rgba(255,255,255,.04)
         );
 
     border:1px solid rgba(255,255,255,.22);
 
     box-shadow:
-        0 30px 80px rgba(0,0,0,.4),
+        0 30px 80px rgba(0,0,0,.45),
         inset 0 1px 0 rgba(255,255,255,.15);
 
     backdrop-filter:blur(18px);
@@ -251,10 +207,9 @@ body{
 }
 
 h1{
-    margin:0 0 18px;
+    margin:0 0 20px;
 
-    font-size:
-        clamp(45px,10vw,82px);
+    font-size:clamp(45px,10vw,82px);
 
     line-height:.95;
 
@@ -267,9 +222,12 @@ h1{
 h2{
     margin:0 0 20px;
 
-    font-size:
-        clamp(34px,7vw,58px);
+    font-size:clamp(34px,7vw,58px);
 
+    font-family:Georgia,serif;
+}
+
+h3{
     font-family:Georgia,serif;
 }
 
@@ -284,7 +242,7 @@ h2{
 }
 
 .subtitle{
-    max-width:600px;
+    max-width:650px;
 
     margin:0 auto;
 
@@ -303,9 +261,9 @@ h2{
     line-height:1.9;
 }
 
-/* ==============================
+/* =====================================================
    BUTTON
-================================ */
+===================================================== */
 
 button{
     margin-top:25px;
@@ -345,36 +303,139 @@ button:hover{
         scale(1.03);
 }
 
-/* ==============================
-   DARES
-================================ */
+/* =====================================================
+   WELCOME IMAGE
+===================================================== */
 
-.dareNo{
-    color:#ffb2c8;
+.welcomeImage{
+    width:140px;
+    height:140px;
 
-    font-family:cursive;
+    margin:0 auto 25px;
 
-    font-size:35px;
+    border-radius:50%;
+
+    overflow:hidden;
+
+    border:5px solid rgba(255,255,255,.8);
+
+    box-shadow:
+        0 15px 45px rgba(0,0,0,.4);
+
+    background:
+        radial-gradient(circle,#ffb6c9,#d4003b);
 }
 
-.dareText{
-    max-width:650px;
+.welcomeImage img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
 
-    margin:25px auto;
+/* =====================================================
+   FLOATING JUNIOR NAMES
+===================================================== */
+
+.nameCloud{
+    position:relative;
+
+    width:100%;
+    height:220px;
+
+    margin:20px auto;
+}
+
+.floatingName{
+    position:absolute;
+
+    padding:12px 20px;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.1);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+
+    color:#ffd7e2;
 
     font-family:Georgia,serif;
 
-    font-size:
-        clamp(28px,6vw,45px);
-
-    line-height:1.25;
+    animation:nameFloat 4s ease-in-out infinite;
 }
 
-/* ==============================
-   PASSWORD
-================================ */
+.n1{
+    left:5%;
+    top:20%;
+}
 
-input{
+.n2{
+    right:5%;
+    top:10%;
+    animation-delay:1s;
+}
+
+.n3{
+    left:15%;
+    bottom:20%;
+    animation-delay:2s;
+}
+
+.n4{
+    right:15%;
+    bottom:10%;
+    animation-delay:3s;
+}
+
+@keyframes nameFloat{
+
+    0%,100%{
+        transform:translateY(0) rotate(-2deg);
+    }
+
+    50%{
+        transform:translateY(-15px) rotate(2deg);
+    }
+}
+
+/* =====================================================
+   CONFETTI
+===================================================== */
+
+.confetti{
+    position:fixed;
+
+    width:8px;
+    height:15px;
+
+    top:-30px;
+
+    z-index:100;
+
+    pointer-events:none;
+
+    animation:confettiFall 4s linear forwards;
+}
+
+@keyframes confettiFall{
+
+    0%{
+        transform:translateY(-50px) rotate(0deg);
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(110vh) rotate(720deg);
+        opacity:0;
+    }
+}
+
+/* =====================================================
+   PASSWORD
+===================================================== */
+
+.passwordBox input{
     width:min(380px,90%);
 
     padding:17px;
@@ -398,279 +459,45 @@ input{
     outline:none;
 }
 
-input::placeholder{
+.passwordBox input::placeholder{
     color:#ffc2d3;
     letter-spacing:2px;
 }
 
-/* ==============================
-   BOUQUET
-================================ */
+/* =====================================================
+   DAres
+===================================================== */
 
-.bouquetBox{
-    width:350px;
-    height:430px;
+.dareNo{
+    color:#ffb2c8;
 
-    margin:0 auto;
+    font-family:cursive;
 
-    position:relative;
+    font-size:35px;
 }
 
-.bouquet{
-    width:100%;
-    height:100%;
+.dareText{
+    max-width:650px;
 
-    position:relative;
+    margin:30px auto;
 
-    transform:scale(.8);
+    font-family:Georgia,serif;
 
-    transition:
-        transform 1s cubic-bezier(.2,1.5,.4,1);
+    font-size:clamp(28px,6vw,45px);
+
+    line-height:1.3;
 }
 
-.bouquet.open{
-    transform:
-        scale(1.12)
-        rotate(-1deg);
-}
-
-/* ROSES */
-
-.rose{
-    position:absolute;
-
-    width:82px;
-    height:82px;
-
-    border-radius:50%;
-
-    background:
-        radial-gradient(
-            circle at 40% 35%,
-            #ff91aa 0 5%,
-            transparent 6%
-        ),
-        radial-gradient(
-            circle,
-            #ff2455 0 27%,
-            #d40036 50%,
-            #720018 80%
-        );
-
-    box-shadow:
-        inset 8px 8px 15px rgba(255,255,255,.2),
-        inset -12px -12px 15px rgba(0,0,0,.3),
-        0 10px 25px rgba(0,0,0,.35);
-}
-
-.rose:before{
-    content:"";
-
-    position:absolute;
-
-    inset:14px;
-
-    border:6px solid rgba(255,100,140,.55);
-
-    border-radius:50%;
-
-    transform:rotate(25deg);
-}
-
-.rose:after{
-    content:"";
-
-    position:absolute;
-
-    inset:25px;
-
-    border:5px solid rgba(255,160,180,.45);
-
-    border-radius:50%;
-
-    transform:rotate(-30deg);
-}
-
-.a{left:135px;top:25px}
-.b{left:70px;top:85px;transform:scale(.85)}
-.c{left:200px;top:85px;transform:scale(.9)}
-.d{left:35px;top:145px;transform:scale(.7)}
-.e{left:132px;top:135px;transform:scale(1.05)}
-.f{left:235px;top:145px;transform:scale(.72)}
-.g{left:80px;top:190px;transform:scale(.8)}
-.h{left:185px;top:190px;transform:scale(.8)}
-
-/* STEMS */
-
-.stem{
-    position:absolute;
-
-    width:8px;
-    height:180px;
-
-    background:
-        linear-gradient(
-            90deg,
-            #0d3517,
-            #3b9949,
-            #123b1c
-        );
-
-    border-radius:10px;
-
-    transform-origin:top;
-}
-
-.s1{left:170px;top:155px}
-.s2{left:115px;top:175px;transform:rotate(-13deg)}
-.s3{left:215px;top:175px;transform:rotate(13deg)}
-.s4{left:78px;top:210px;transform:rotate(-22deg)}
-.s5{left:250px;top:210px;transform:rotate(22deg)}
-
-/* LEAVES */
-
-.leaf{
-    position:absolute;
-
-    width:45px;
-    height:20px;
-
-    border-radius:100% 0 100% 0;
-
-    background:
-        linear-gradient(
-            135deg,
-            #49a950,
-            #123d19
-        );
-}
-
-.l1{left:105px;top:250px;transform:rotate(-30deg)}
-.l2{left:205px;top:250px;transform:rotate(35deg)}
-.l3{left:65px;top:290px;transform:rotate(-40deg)}
-.l4{left:250px;top:290px;transform:rotate(45deg)}
-
-/* WRAPPER */
-
-.wrapper{
-    position:absolute;
-
-    left:65px;
-    bottom:0;
-
-    width:220px;
-    height:140px;
-
-    clip-path:
-        polygon(
-            7% 0,
-            93% 0,
-            100% 100%,
-            0 100%
-        );
-
-    background:
-        linear-gradient(
-            135deg,
-            #fff3f7,
-            #f7a5bd,
-            #fff
-        );
-
-    filter:
-        drop-shadow(
-            0 15px 15px rgba(0,0,0,.35)
-        );
-}
-
-.wrapper:after{
-    content:"";
-
-    position:absolute;
-
-    left:101px;
-    top:0;
-
-    width:18px;
-    height:140px;
-
-    background:#c60039;
-}
-
-.ribbon{
-    position:absolute;
-
-    left:145px;
-    bottom:28px;
-
-    width:60px;
-    height:22px;
-
-    background:#c7003b;
-
-    border-radius:20px;
-
-    z-index:3;
-}
-
-.ribbon:before,
-.ribbon:after{
-
-    content:"";
-
-    position:absolute;
-
-    width:38px;
-    height:38px;
-
-    border:6px solid #c7003b;
-
-    border-radius:50%;
-
-    top:-9px;
-}
-
-.ribbon:before{
-    left:-30px;
-}
-
-.ribbon:after{
-    right:-30px;
-}
-
-/* ==============================
-   ABOUT
-================================ */
-
-.about{
-    margin-top:20px;
-
-    padding:28px;
-
-    border-radius:25px;
-
-    background:rgba(255,255,255,.07);
-
-    border:
-        1px solid
-        rgba(255,255,255,.15);
-
-    line-height:1.9;
-
-    color:#ffe4ed;
-}
-
-/* ==============================
+/* =====================================================
    SENIORS
-================================ */
+===================================================== */
 
 .seniors{
-    width:min(1000px,95vw);
+    width:min(1050px,95vw);
 
     display:grid;
 
-    grid-template-columns:
-        repeat(2,1fr);
+    grid-template-columns:repeat(2,1fr);
 
     gap:20px;
 
@@ -698,8 +525,6 @@ input::placeholder{
 .seniorCard h3{
     margin:0 0 10px;
 
-    font-family:Georgia,serif;
-
     font-size:30px;
 }
 
@@ -723,17 +548,16 @@ input::placeholder{
     text-transform:uppercase;
 }
 
-/* ==============================
+/* =====================================================
    PHOTOS
-================================ */
+===================================================== */
 
 .photos{
     width:min(1000px,95vw);
 
     display:grid;
 
-    grid-template-columns:
-        repeat(3,1fr);
+    grid-template-columns:repeat(3,1fr);
 
     gap:20px;
 
@@ -752,19 +576,10 @@ input::placeholder{
             #ff7aaa
         );
 
-    border:
-        5px solid white;
+    border:5px solid white;
 
     box-shadow:
         0 15px 40px rgba(0,0,0,.35);
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    font-size:35px;
 
     overflow:hidden;
 }
@@ -772,37 +587,413 @@ input::placeholder{
 .photo img{
     width:100%;
     height:100%;
+
     object-fit:cover;
 }
 
-/* ==============================
-   VIDEO
-================================ */
+/* =====================================================
+   MEMORY OF US
+===================================================== */
 
-.video{
-    width:min(850px,94vw);
+.memoryQuote{
+    margin:30px auto;
 
-    margin:25px auto;
+    padding:30px;
 
-    border-radius:25px;
+    max-width:700px;
 
-    overflow:hidden;
+    border-left:4px solid #ff5d89;
 
-    border:5px solid white;
+    background:rgba(255,255,255,.06);
 
-    box-shadow:
-        0 20px 60px rgba(0,0,0,.4);
+    border-radius:0 25px 25px 0;
+
+    color:#ffe3eb;
+
+    font-family:Georgia,serif;
+
+    font-size:23px;
+
+    line-height:1.7;
 }
 
-.video video{
-    width:100%;
+/* =====================================================
+   BOUQUET EXPERIENCE
+===================================================== */
+
+.bouquetScreen{
+    overflow:hidden;
+}
+
+.bouquetIntro{
+    transition:opacity .5s ease;
+}
+
+.tapRose{
+    font-size:70px;
 
     display:block;
+
+    margin:20px auto;
+
+    animation:rosePulse 1.8s ease-in-out infinite;
+
+    cursor:pointer;
 }
 
-/* ==============================
+@keyframes rosePulse{
+
+    0%,100%{
+        transform:scale(1) rotate(-3deg);
+    }
+
+    50%{
+        transform:scale(1.12) rotate(3deg);
+    }
+}
+
+/* bouquet scene */
+
+.bouquetScene{
+    position:relative;
+
+    width:min(500px,100vw);
+
+    height:650px;
+
+    margin:0 auto;
+
+    overflow:hidden;
+}
+
+.bouquetObject{
+    position:absolute;
+
+    left:50%;
+
+    bottom:-600px;
+
+    transform:
+        translateX(-50%)
+        scale(.35);
+
+    transition:
+        bottom 3s cubic-bezier(.2,.8,.2,1),
+        transform 3s cubic-bezier(.2,.8,.2,1);
+
+    width:360px;
+
+    height:600px;
+}
+
+.bouquetObject.show{
+    bottom:-40px;
+
+    transform:
+        translateX(-50%)
+        scale(1.25);
+}
+
+/* hand */
+
+.hand{
+    position:absolute;
+
+    bottom:0;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:180px;
+
+    height:260px;
+
+    background:
+        linear-gradient(
+            100deg,
+            #c98268,
+            #f0b39b 48%,
+            #b96852
+        );
+
+    border-radius:
+        80px 80px 55px 55px;
+
+    box-shadow:
+        inset -12px -15px 20px rgba(80,20,10,.25),
+        0 20px 40px rgba(0,0,0,.35);
+}
+
+/* fingers */
+
+.finger{
+    position:absolute;
+
+    background:
+        linear-gradient(
+            90deg,
+            #bd765e,
+            #efad94,
+            #c16f58
+        );
+
+    border-radius:40px;
+
+    box-shadow:
+        inset -5px -5px 10px rgba(80,20,10,.2);
+}
+
+.f1{
+    width:48px;
+    height:150px;
+    left:5px;
+    top:-60px;
+    transform:rotate(-12deg);
+}
+
+.f2{
+    width:48px;
+    height:165px;
+    left:45px;
+    top:-85px;
+    transform:rotate(-3deg);
+}
+
+.f3{
+    width:48px;
+    height:165px;
+    left:90px;
+    top:-80px;
+    transform:rotate(5deg);
+}
+
+.f4{
+    width:48px;
+    height:145px;
+    left:132px;
+    top:-50px;
+    transform:rotate(14deg);
+}
+
+/* bouquet */
+
+.realisticBouquet{
+    position:absolute;
+
+    top:0;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:330px;
+
+    height:390px;
+}
+
+/* roses */
+
+.realRose{
+    position:absolute;
+
+    width:105px;
+    height:105px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            #ff758f 0 7%,
+            #d40038 18%,
+            #8c001e 42%,
+            #50000f 70%
+        );
+
+    box-shadow:
+        inset 8px 8px 12px rgba(255,255,255,.22),
+        inset -12px -15px 20px rgba(0,0,0,.4),
+        0 15px 25px rgba(0,0,0,.35);
+}
+
+.realRose:before,
+.realRose:after{
+    content:"";
+
+    position:absolute;
+
+    inset:15px;
+
+    border-radius:50%;
+
+    border:
+        8px solid rgba(255,90,120,.45);
+
+    transform:rotate(30deg);
+}
+
+.realRose:after{
+    inset:27px;
+
+    border:
+        6px solid rgba(255,160,180,.35);
+
+    transform:rotate(-25deg);
+}
+
+.rA{left:110px;top:5px;transform:scale(1.1)}
+.rB{left:30px;top:70px}
+.rC{right:25px;top:65px;transform:scale(.9)}
+.rD{left:75px;top:130px;transform:scale(.95)}
+.rE{right:70px;top:140px;transform:scale(.85)}
+.rF{left:115px;top:195px;transform:scale(.9)}
+
+/* leaves */
+
+.realLeaf{
+    position:absolute;
+
+    width:80px;
+    height:35px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #4ca64e,
+            #123e18
+        );
+
+    border-radius:100% 0 100% 0;
+
+    box-shadow:
+        inset -5px -5px 8px rgba(0,0,0,.25);
+}
+
+.leafA{
+    left:20px;
+    top:190px;
+    transform:rotate(-30deg);
+}
+
+.leafB{
+    right:10px;
+    top:200px;
+    transform:rotate(35deg);
+}
+
+.leafC{
+    left:20px;
+    top:260px;
+    transform:rotate(-45deg);
+}
+
+.leafD{
+    right:5px;
+    top:270px;
+    transform:rotate(45deg);
+}
+
+/* stems */
+
+.realStem{
+    position:absolute;
+
+    width:10px;
+    height:230px;
+
+    left:155px;
+    top:180px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #0c3514,
+            #3e9144,
+            #0d3215
+        );
+
+    border-radius:10px;
+
+    transform-origin:top;
+}
+
+/* wrapper */
+
+.wrap{
+    position:absolute;
+
+    bottom:0;
+
+    left:55px;
+
+    width:220px;
+
+    height:160px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff,
+            #f3a4bb,
+            #fff0f5
+        );
+
+    clip-path:
+        polygon(
+            8% 0,
+            92% 0,
+            100% 100%,
+            0 100%
+        );
+
+    box-shadow:
+        0 20px 30px rgba(0,0,0,.35);
+}
+
+.wrap:after{
+    content:"";
+
+    position:absolute;
+
+    left:100px;
+
+    top:0;
+
+    width:20px;
+
+    height:160px;
+
+    background:#c60039;
+}
+
+.ribbon{
+    position:absolute;
+
+    bottom:25px;
+
+    left:140px;
+
+    width:65px;
+
+    height:22px;
+
+    background:#c60039;
+
+    border-radius:20px;
+
+    z-index:4;
+}
+
+.bouquetMessage{
+    display:none;
+
+    animation:appear 1s ease;
+}
+
+/* =====================================================
    FINAL
-================================ */
+===================================================== */
 
 .bigHeart{
     font-size:90px;
@@ -827,9 +1018,9 @@ input::placeholder{
     color:#ffc3d5;
 }
 
-/* ==============================
+/* =====================================================
    MOBILE
-================================ */
+===================================================== */
 
 @media(max-width:700px){
 
@@ -845,6 +1036,21 @@ input::placeholder{
         grid-template-columns:1fr 1fr;
     }
 
+    .nameCloud{
+        height:200px;
+    }
+
+    .floatingName{
+        font-size:13px;
+        padding:10px 14px;
+    }
+
+    .bouquetScene{
+        height:600px;
+        transform:scale(.9);
+        margin-left:auto;
+        margin-right:auto;
+    }
 }
 
 @media(max-width:450px){
@@ -853,26 +1059,31 @@ input::placeholder{
         grid-template-columns:1fr;
     }
 
-    .bouquetBox{
-        transform:scale(.85);
-        margin-left:-5px;
+    .bouquetScene{
+        transform:scale(.75);
+        transform-origin:top center;
+        margin-bottom:-130px;
     }
 
+    h1{
+        font-size:50px;
+    }
+
+    h2{
+        font-size:36px;
+    }
 }
 
 </style>
 </head>
 
-
 <body>
 
-
-<!-- FALLING PETALS -->
+<!-- =====================================================
+     BACKGROUND
+===================================================== -->
 
 <div id="petals"></div>
-
-
-<!-- FLOATING HEARTS -->
 
 <div class="heart h1">♥</div>
 <div class="heart h2">♥</div>
@@ -882,24 +1093,23 @@ input::placeholder{
 <div class="heart h6">♥</div>
 
 
-<!-- CORNER ROSES -->
-
-<div class="cornerRose r1">🌹</div>
-<div class="cornerRose r2">🌹</div>
-<div class="cornerRose r3">🌹</div>
-<div class="cornerRose r4">🌹</div>
-
-
 <div id="app">
 
 
-<!-- ==========================
-     OPENING
-=========================== -->
+<!-- =====================================================
+     1. WELCOME
+===================================================== -->
 
-<section class="screen active" id="opening">
+<section class="screen active" id="welcomePage">
 
 <div class="card">
+
+<div class="welcomeImage">
+
+    <!-- CHANGE THIS TO YOUR WELCOME IMAGE -->
+    <img src="welcome.jpg"
+         onerror="this.style.display='none';">
+</div>
 
 <div class="small">
 A LITTLE SOMETHING FROM YOUR SENIORS
@@ -915,15 +1125,33 @@ Red Hot Freshers 🌹
 </div>
 
 <p class="subtitle">
-
 A little fun.<br>
 A few challenges.<br>
 A few surprises.<br>
 And lots of love. ❤️
-
 </p>
 
-<button onclick="startJunior(0)">
+<div class="nameCloud">
+
+<div class="floatingName n1">
+VASAVI 🌹
+</div>
+
+<div class="floatingName n2">
+VINUTHA 🌹
+</div>
+
+<div class="floatingName n3">
+GEETANJALI 🌹
+</div>
+
+<div class="floatingName n4">
+SAMUKSHA 🌹
+</div>
+
+</div>
+
+<button onclick="startWelcome()">
 LET'S BEGIN ❤️
 </button>
 
@@ -932,62 +1160,127 @@ LET'S BEGIN ❤️
 </section>
 
 
-<!-- ==========================
-     WELCOME
-=========================== -->
+<!-- =====================================================
+     2. BOUQUET
+===================================================== -->
 
-<section class="screen" id="welcome">
+<section class="screen bouquetScreen" id="bouquetPage">
 
 <div class="card">
 
-<div class="small" id="juniorNumber"></div>
+<div id="bouquetIntro" class="bouquetIntro">
 
-<h1 id="juniorName"></h1>
+<div class="small">
+A LITTLE SURPRISE FOR YOU
+</div>
+
+<h2>
+FROM YOUR SENIORS 🌹
+</h2>
 
 <p class="subtitle">
-Ready for a little senior challenge? 🌹
+Before we begin...<br>
+there's something we want to give you.
 </p>
 
-<button onclick="startDare()">
-LET'S BEGIN ❤️
+<div class="tapRose"
+     onclick="startBouquet()">
+🌹
+</div>
+
+<h2 style="font-size:30px;">
+TAP ME 🌹
+</h2>
+
+</div>
+
+
+<div id="bouquetExperience"
+     style="display:none;">
+
+<div class="bouquetScene">
+
+<div class="bouquetObject"
+     id="bouquetObject">
+
+<div class="realisticBouquet">
+
+<!-- ROSES -->
+
+<div class="realRose rA"></div>
+<div class="realRose rB"></div>
+<div class="realRose rC"></div>
+<div class="realRose rD"></div>
+<div class="realRose rE"></div>
+<div class="realRose rF"></div>
+
+<!-- LEAVES -->
+
+<div class="realLeaf leafA"></div>
+<div class="realLeaf leafB"></div>
+<div class="realLeaf leafC"></div>
+<div class="realLeaf leafD"></div>
+
+<!-- STEM -->
+
+<div class="realStem"></div>
+
+<!-- WRAPPER -->
+
+<div class="wrap"></div>
+
+<div class="ribbon"></div>
+
+</div>
+
+
+<!-- HAND -->
+
+<div class="hand">
+
+<div class="finger f1"></div>
+<div class="finger f2"></div>
+<div class="finger f3"></div>
+<div class="finger f4"></div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="bouquetMessage"
+     id="bouquetMessage">
+
+<div class="script">
+A bouquet for our beautiful juniors ❤️
+</div>
+
+<p class="subtitle">
+A small welcome from all of us.<br>
+Now let's begin the real surprise...
+</p>
+
+<button onclick="showScreen('passwordPage')">
+CONTINUE ❤️
 </button>
+
+</div>
+
+</div>
 
 </div>
 
 </section>
 
 
-<!-- ==========================
-     DARE
-=========================== -->
+<!-- =====================================================
+     3. PASSWORD
+===================================================== -->
 
-<section class="screen" id="dare">
+<section class="screen" id="passwordPage">
 
-<div class="card">
-
-<div class="dareNo" id="dareNumber">
-DARE 01
-</div>
-
-<div class="dareText" id="dareText">
-</div>
-
-<button onclick="nextDare()">
-DONE ❤️
-</button>
-
-</div>
-
-</section>
-
-
-<!-- ==========================
-     PASSWORD
-=========================== -->
-
-<section class="screen" id="password">
-
-<div class="card">
+<div class="card passwordBox">
 
 <div class="small">
 ONE LAST THING...
@@ -1002,9 +1295,9 @@ Enter the password to unlock your surprise.
 </p>
 
 <input
-id="passwordInput"
-type="password"
-placeholder="PASSWORD"
+    id="passwordInput"
+    type="password"
+    placeholder="PASSWORD"
 >
 
 <br>
@@ -1013,14 +1306,12 @@ placeholder="PASSWORD"
 UNLOCK ❤️
 </button>
 
-<p
-id="wrongPassword"
-style="
-display:none;
-color:#ffb5c9;
-margin-top:20px;
-"
->
+<p id="wrongPassword"
+   style="
+   display:none;
+   color:#ffb5c9;
+   margin-top:20px;
+   ">
 Not quite... try again 👀
 </p>
 
@@ -1029,114 +1320,118 @@ Not quite... try again 👀
 </section>
 
 
-<!-- ==========================
-     BOUQUET
-=========================== -->
+<!-- =====================================================
+     4. MSc FAMILY
+===================================================== -->
 
-<section class="screen" id="bouquet">
+<section class="screen" id="familyPage">
 
 <div class="card">
 
 <div class="small">
-A LITTLE SURPRISE
+FROM YOUR SENIORS ❤️
 </div>
 
-<h2>
-YOUR BOUQUET 💐
-</h2>
+<h1>
+WELCOME TO<br>
+MSc FAMILY
+</h1>
 
-
-<div class="bouquetBox">
-
-<div class="bouquet" id="flowerBouquet">
-
-
-<div class="rose a"></div>
-<div class="rose b"></div>
-<div class="rose c"></div>
-<div class="rose d"></div>
-<div class="rose e"></div>
-<div class="rose f"></div>
-<div class="rose g"></div>
-<div class="rose h"></div>
-
-
-<div class="stem s1"></div>
-<div class="stem s2"></div>
-<div class="stem s3"></div>
-<div class="stem s4"></div>
-<div class="stem s5"></div>
-
-
-<div class="leaf l1"></div>
-<div class="leaf l2"></div>
-<div class="leaf l3"></div>
-<div class="leaf l4"></div>
-
-
-<div class="wrapper"></div>
-
-<div class="ribbon"></div>
-
-
+<div class="script">
+You are officially one of us. 🌹
 </div>
 
-</div>
+<p class="message">
 
+To our amazing juniors,
 
-<button onclick="openBouquet()">
-TAP FOR YOUR BOUQUET 💐
-</button>
+<br><br>
 
+Your journey with us has just begun.
 
-<div
-id="bouquetMessage"
-style="display:none;"
->
+<br><br>
 
-<div
-class="script"
-id="bouquetText"
-style="margin-top:20px;"
->
-</div>
+College is not only about classes,
+postings, assignments and deadlines.
 
-<p class="subtitle">
-This is your little welcome from us. ❤️🌹
+<br><br>
+
+It's about the people you meet,
+the memories you make,
+the laughter you share,
+and all the little moments
+you will remember later.
+
+<br><br>
+
+So welcome to our little MSc family. ❤️
+
+<br><br>
+
+And now...
+
+<br>
+
+<strong>
+let's see if you're ready for a few challenges. 👀
+</strong>
+
 </p>
 
-<button onclick="showAbout()">
-A LITTLE SOMETHING ABOUT YOU ❤️
+<button onclick="showScreen('dareIntroPage')">
+LET'S GO 🌹
 </button>
-
-</div>
 
 </div>
 
 </section>
 
 
-<!-- ==========================
-     ABOUT
-=========================== -->
+<!-- =====================================================
+     5. DARE INTRO
+===================================================== -->
 
-<section class="screen" id="about">
+<section class="screen" id="dareIntroPage">
 
 <div class="card">
 
 <div class="small">
-A LITTLE SOMETHING ABOUT YOU
+A LITTLE WARNING...
 </div>
 
-<h2 id="aboutName"></h2>
+<h1>
+YOU HAVE<br>
+SOME DARES! 👀
+</h1>
 
-<div class="about" id="aboutText">
-</div>
+<p class="subtitle">
 
-<button onclick="nextJunior()">
-<span id="nextText">
-NEXT JUNIOR 🌹
-</span>
+We have prepared a few little challenges
+for each of you.
+
+<br><br>
+
+Nothing too serious...
+
+<br>
+
+Maybe. 😂
+
+<br><br>
+
+Complete your dare,
+then we'll move on to the next junior.
+
+<br><br>
+
+<strong>
+Ready, juniors? 🌹
+</strong>
+
+</p>
+
+<button onclick="startJunior(0)">
+JUNIOR 1 — LET'S GO ❤️
 </button>
 
 </div>
@@ -1144,15 +1439,51 @@ NEXT JUNIOR 🌹
 </section>
 
 
-<!-- ==========================
-     SENIORS
-=========================== -->
+<!-- =====================================================
+     6. JUNIOR DARE
+===================================================== -->
+
+<section class="screen" id="darePage">
+
+<div class="card">
+
+<div class="small"
+     id="juniorNumber">
+JUNIOR 1 OF 4
+</div>
+
+<h2 id="juniorName">
+HEY! ❤️
+</h2>
+
+<div class="dareNo"
+     id="dareNumber">
+DARE 01
+</div>
+
+<div class="dareText"
+     id="dareText">
+</div>
+
+<button onclick="nextDare()">
+DONE ❤️
+</button>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     7. ABOUT SENIORS
+===================================================== -->
 
 <section class="screen" id="seniorSection">
 
 <div style="width:100%;">
 
-<div class="card" style="margin:auto;">
+<div class="card"
+     style="margin:auto;">
 
 <div class="small">
 YOU MADE IT THROUGH ALL FOUR ❤️
@@ -1164,8 +1495,16 @@ SENIORS 🌹
 </h1>
 
 <p class="subtitle">
-Now you know the juniors...<br>
-it's time to know your seniors. ❤️
+
+Now you know the juniors...
+
+<br>
+
+It's time to know the seniors
+who are going to disturb,
+help, tease and support you
+through this journey. ❤️
+
 </p>
 
 </div>
@@ -1173,6 +1512,7 @@ it's time to know your seniors. ❤️
 
 <div class="seniors">
 
+<!-- SENIOR 1 -->
 
 <div class="seniorCard">
 
@@ -1196,12 +1536,16 @@ searching for them in the library. 📚
 Anything about
 <strong>data collection?</strong>
 
+<br>
+
 You know who to find. ❤️
 
 </p>
 
 </div>
 
+
+<!-- SENIOR 2 -->
 
 <div class="seniorCard">
 
@@ -1217,17 +1561,23 @@ Senior Snega 🌹
 
 Have doubts related to studies?
 
+<br>
+
 You can always find Snega.
 
 <br><br>
 
 Need help with data collection?
 
+<br>
+
 She's there too. 🌹
 
 <br><br>
 
 And yes...
+
+<br>
 
 <strong>
 She's the "pathukkalam"
@@ -1238,6 +1588,8 @@ kind of senior. 😂
 
 </div>
 
+
+<!-- SENIOR 3 -->
 
 <div class="seniorCard">
 
@@ -1254,7 +1606,7 @@ Benishiya 🌹
 She can make anything
 <strong>creative and colourful...</strong>
 
-<br>
+<br><br>
 
 except her enthusiasm for
 <strong>clinical posting.</strong> 😂
@@ -1262,12 +1614,19 @@ except her enthusiasm for
 <br><br>
 
 Prospective study people only —
-<strong>please find Benishiya.</strong> 👀❤️
+
+<br>
+
+<strong>
+please find Benishiya. 👀❤️
+</strong>
 
 </p>
 
 </div>
 
+
+<!-- SENIOR 4 -->
 
 <div class="seniorCard">
 
@@ -1282,6 +1641,8 @@ Senior Nethish 🌹
 <p>
 
 Need an <strong>IABP posting?</strong>
+
+<br>
 
 You can accompany your
 senior Nethish. ❤️
@@ -1302,39 +1663,56 @@ saving the file. 💀
 
 </div>
 
-
 </div>
 
 
-<button onclick="showMemories()">
+<div style="text-align:center;">
+
+<button onclick="showScreen('memoriesPage')">
 OUR MEMORIES 📸❤️
 </button>
+
+</div>
 
 </div>
 
 </section>
 
 
-<!-- ==========================
-     MEMORIES
-=========================== -->
+<!-- =====================================================
+     8. MEMORIES WITH YOU GUYS
+===================================================== -->
 
-<section class="screen" id="memories">
+<section class="screen" id="memoriesPage">
 
 <div style="width:100%;">
 
-<div class="card" style="margin:auto;">
+<div class="card"
+     style="margin:auto;">
 
 <div class="small">
 A FEW MEMORIES
 </div>
 
 <h1>
-MEMORY WALL ❤️
+MEMORIES<br>
+WITH YOU GUYS ❤️
 </h1>
 
 <p class="subtitle">
-A few moments with your seniors. 🌹
+
+A few moments with our juniors.
+
+<br>
+
+Some funny moments.
+Some random moments.
+Some moments we'll always remember.
+
+<br><br>
+
+And this is only the beginning. 🌹
+
 </p>
 
 </div>
@@ -1342,104 +1720,113 @@ A few moments with your seniors. 🌹
 
 <div class="photos">
 
-
 <div class="photo">
 <img src="photo1.jpg"
-onerror="this.style.display='none';this.parentElement.innerHTML='🌹❤️🌹'">
+onerror="this.style.display='none';">
 </div>
-
 
 <div class="photo">
 <img src="photo2.jpg"
-onerror="this.style.display='none';this.parentElement.innerHTML='❤️🌸❤️'">
+onerror="this.style.display='none';">
 </div>
-
 
 <div class="photo">
 <img src="photo3.jpg"
-onerror="this.style.display='none';this.parentElement.innerHTML='🌹💗🌹'">
+onerror="this.style.display='none';">
 </div>
-
 
 <div class="photo">
 <img src="photo4.jpg"
-onerror="this.style.display='none';this.parentElement.innerHTML='💐❤️💐'">
+onerror="this.style.display='none';">
 </div>
-
 
 <div class="photo">
 <img src="photo5.jpg"
-onerror="this.style.display='none';this.parentElement.innerHTML='🌹💕🌹'">
+onerror="this.style.display='none';">
 </div>
-
 
 <div class="photo">
 <img src="photo6.jpg"
-onerror="this.style.display='none';this.parentElement.innerHTML='❤️🌹❤️'">
+onerror="this.style.display='none';">
+</div>
+
 </div>
 
 
-</div>
+<div style="text-align:center;">
 
-
-<button onclick="showVideo()">
-A MESSAGE FROM YOUR SENIORS 🎥
+<button onclick="showScreen('memoryUsPage')">
+A MEMORY OF US ❤️
 </button>
+
+</div>
 
 </div>
 
 </section>
 
 
-<!-- ==========================
-     VIDEO
-=========================== -->
+<!-- =====================================================
+     9. MEMORY OF US
+===================================================== -->
 
-<section class="screen" id="videoSection">
+<section class="screen" id="memoryUsPage">
 
-<div style="width:100%;">
-
-<div class="card" style="margin:auto;">
+<div class="card">
 
 <div class="small">
-FROM YOUR SENIORS ❤️
+SOMETHING WE WANT TO SAY
 </div>
 
 <h1>
-A LITTLE<br>
-MESSAGE 🎥
+A MEMORY<br>
+OF US ❤️
 </h1>
 
-<p class="subtitle">
+<div class="memoryQuote">
 
-We couldn't leave you
-with only dares and bouquets...
+Maybe one day,
+when all of this is over,
 
-Here's something from all of us. 🌹
+you'll look back at these days
+and smile.
+
+The postings,
+the laughter,
+the silly moments,
+the stress,
+the last-minute work,
+the random conversations...
+
+All of it will become memories.
+
+And we're really happy
+that you guys are now
+a part of ours. ❤️
+
+</div>
+
+<p class="message">
+
+We may not remember
+every single day...
+
+<br><br>
+
+but we'll remember
+the people who made
+those days special.
+
+<br><br>
+
+And you guys have already
+become a small part
+of our MSc memories. 🌹
 
 </p>
 
-</div>
-
-
-<div class="video">
-
-<video controls playsinline>
-
-<source
-src="seniors-video.mp4"
-type="video/mp4"
->
-
-Your browser does not support video.
-
-</video>
-
-</div>
-
-
-<button onclick="showFinal()">
-FINAL MESSAGE ❤️
+<button onclick="showScreen('collegePage')">
+KEEP GOING ❤️
 </button>
 
 </div>
@@ -1447,11 +1834,83 @@ FINAL MESSAGE ❤️
 </section>
 
 
-<!-- ==========================
-     FINAL
-=========================== -->
+<!-- =====================================================
+     10. ENJOY COLLEGE DAYS
+===================================================== -->
 
-<section class="screen" id="final">
+<section class="screen" id="collegePage">
+
+<div class="card">
+
+<div class="small">
+A MESSAGE FROM YOUR SENIORS
+</div>
+
+<h1>
+ENJOY YOUR<br>
+COLLEGE DAYS ❤️
+</h1>
+
+<p class="message">
+
+We also want you guys
+to enjoy your college days.
+
+<br><br>
+
+Don't spend the whole journey
+thinking only about assignments,
+postings, protocols and deadlines.
+
+<br><br>
+
+Go out.
+
+Laugh together.
+
+Make stupid memories.
+
+Take pictures.
+
+Help each other.
+
+Celebrate the small things.
+
+<br><br>
+
+Because someday,
+these ordinary days
+will become the memories
+you miss the most.
+
+<br><br>
+
+This is just a small glimpse
+of us...
+
+<br><br>
+
+<strong>
+Now it's your turn
+to create your own memories. ❤️🌹
+</strong>
+
+</p>
+
+<button onclick="showScreen('finalPage')">
+ONE LAST THING ❤️
+</button>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     11. FINAL MESSAGE
+===================================================== -->
+
+<section class="screen" id="finalPage">
 
 <div class="card">
 
@@ -1472,17 +1931,21 @@ JUNIORS 🌹
 
 We may tease you.
 
-<br>
+<br><br>
 
-We may give you impossible dares.
+We may give you
+impossible dares.
 
-<br>
+<br><br>
 
-We may disturb you when you're busy. 😂
+We may disturb you
+when you're busy. 😂
 
 <br><br>
 
 But whenever you need us,
+
+<br>
 
 <strong>
 your seniors are here. ❤️
@@ -1490,12 +1953,26 @@ your seniors are here. ❤️
 
 <br><br>
 
+You have officially become
+a part of our little family.
+
+<br><br>
+
+So laugh a lot.
+
+Make memories.
+
+Enjoy your college days.
+
+And don't forget us. 🌹
+
+<br><br>
+
 <strong>
-WELCOME TO OUR LITTLE FAMILY. 🌹
+WELCOME TO OUR LITTLE FAMILY. ❤️
 </strong>
 
 </p>
-
 
 <div class="signature">
 
@@ -1514,307 +1991,251 @@ Your Seniors ❤️
 
 <script>
 
-/* ======================================
+/* =====================================================
    JUNIOR DATA
-====================================== */
+===================================================== */
 
-var juniors = [
+const juniors = [
 
 {
-name:"VASAVI",
+    name:"VASAVI",
 
-password:"031026",
+    dares:[
+        "Tell us about your favourite senior so far in college. 👀",
 
-dares:[
+        "Sing a song! No excuses. We want to hear it. 😈🎤",
 
-"Tell us about your favourite senior so far in college. 👀",
-
-"Sing a song! No excuses. We want to hear it. 😈🎤",
-
-"Speak like a robot for 30 seconds! 😂"
-
-],
-
-about:
-"We’ve known you since your first year at Manipal. " +
-"You’re energetic, curious and always ready to learn. " +
-"And yes... a little hyperactive too! 😂 " +
-"Even before IRC, you were already thinking about data collection. " +
-"Keep that energy, Vasavi. ❤️"
-
+        "Speak like a robot for 30 seconds! 😂"
+    ]
 },
 
-
 {
-name:"VINUTHA",
+    name:"VINUTHA",
 
-password:"031026",
+    dares:[
+        "Show us your favourite dance step! No shyness allowed. 💃",
 
-dares:[
+        "Convince one of your favourite seniors to sing a song for you! 😂🎤",
 
-"Show us your favourite dance step! No shyness allowed. 💃",
-
-"Convince one of your favourite seniors to sing a song for you! 😂🎤",
-
-"Act out something without speaking. Everyone else has to guess what it is! 👀"
-
-],
-
-about:
-"From the very first day, you’ve been with us — " +
-"always so calm, but secretly super energetic! ❤️ " +
-"And when it comes to clinicals, we see a completely different Vinutha. 😂 " +
-"8 o’clock duty? For Vinutha, that's 7:30! ⏰ " +
-"Always punctual, always ready. 🌹"
-
+        "Act out something without speaking. Everyone else has to guess what it is! 👀"
+    ]
 },
 
-
 {
-name:"GEETANJALI",
+    name:"GEETANJALI",
 
-password:"031026",
+    dares:[
+        "Compliment the best-looking man in the entire group. 👀❤️",
 
-dares:[
+        "Talk in slow motion for 30 seconds. 😂🐌",
 
-"Compliment the best-looking man in the entire group. 👀❤️",
-
-"Talk in slow motion for 30 seconds. 😂🐌",
-
-"Tell us about your favourite and most hated staff member at Manipal. 👀☕"
-
-],
-
-about:
-"Honestly... we don't know much about you yet. 👀 " +
-"But we have a feeling you might have hated us a little... 😂 " +
-"Maybe because we told you “Freshers is in the Simulation Lab.” 😭 " +
-"And somehow, you were the first one to be happy when we said “Hakuna Matata”! 😂 " +
-"You seem like a super-chill person, so we guess we'll get to know much more about you in the days ahead. ❤️"
-
+        "Tell us about your favourite and most hated staff member at Manipal. 👀☕"
+    ]
 },
 
-
 {
-name:"SAMUKSHA",
+    name:"SAMUKSHA",
 
-password:"031026",
+    dares:[
+        "Compliment the most good-looking girl in the entire team. 👀❤️",
 
-dares:[
+        "Sing a sad song in the happiest way possible! 😂🎵",
 
-"Compliment the most good-looking girl in the entire team. 👀❤️",
-
-"Sing a sad song in the happiest way possible! 😂🎵",
-
-"Dance to a song for 30 seconds! 🔥💃"
-
-],
-
-about:
-"Before you even entered Manipal as a PG, your friend Vasavi had already given us a favourite introduction about you! 😂❤️ " +
-"From what we heard, you were a super-chill and enthusiastic person — " +
-"and honestly, you were very worried about the freshers! 😂 " +
-"You started asking about the freshers from Day 1 itself! 👀 " +
-"We still have a lot to know about you, but we're sure we'll discover much more in the coming days. ❤️🌹"
-
+        "Dance to a song for 30 seconds! 🔥💃"
+    ]
 }
 
 ];
 
 
-/* ======================================
-   CURRENT JUNIOR
-====================================== */
+/* =====================================================
+   VARIABLES
+===================================================== */
 
-var currentJunior = 0;
+let currentJunior = 0;
 
-var currentDare = 0;
+let currentDare = 0;
 
 
-/* ======================================
-   CREATE MANY PETALS
-====================================== */
+/* =====================================================
+   CREATE PETALS
+===================================================== */
 
-var petalBox =
+const petalBox =
 document.getElementById("petals");
 
-for(var i=0;i<85;i++){
+for(let i=0;i<75;i++){
 
-    var petal =
+    const petal =
     document.createElement("div");
 
     petal.className="petal";
 
     petal.style.left =
-    Math.random()*100 + "%";
+    Math.random()*100+"%";
 
     petal.style.animationDuration =
-    (5 + Math.random()*9) + "s";
+    (5+Math.random()*9)+"s";
 
     petal.style.animationDelay =
-    (-Math.random()*14) + "s";
+    (-Math.random()*14)+"s";
 
-    var size =
-    9 + Math.random()*14;
+    const size =
+    9+Math.random()*14;
 
-    petal.style.width =
-    size + "px";
+    petal.style.width=size+"px";
 
-    petal.style.height =
-    (size*1.45) + "px";
-
-    petal.style.opacity =
-    .45 + Math.random()*.5;
+    petal.style.height=
+    (size*1.45)+"px";
 
     petalBox.appendChild(petal);
 }
 
 
-/* ======================================
+/* =====================================================
    SCREEN CHANGE
-====================================== */
+===================================================== */
 
 function showScreen(id){
 
-    var screens =
+    const screens =
     document.querySelectorAll(".screen");
 
-    for(var i=0;i<screens.length;i++){
-
-        screens[i].classList.remove("active");
-
-    }
+    screens.forEach(screen=>{
+        screen.classList.remove("active");
+    });
 
     document
     .getElementById(id)
     .classList.add("active");
 
-    window.scrollTo(0,0);
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
 }
 
 
-/* ======================================
-   START JUNIOR
-====================================== */
+/* =====================================================
+   WELCOME
+===================================================== */
 
-function startJunior(index){
+function startWelcome(){
 
-    currentJunior=index;
+    createConfetti();
 
-    currentDare=0;
+    setTimeout(()=>{
 
-    var junior =
-    juniors[currentJunior];
+        showScreen("bouquetPage");
 
-    document
-    .getElementById("juniorNumber")
-    .innerHTML =
-    "JUNIOR " +
-    (currentJunior+1) +
-    " OF " +
-    juniors.length;
-
-    document
-    .getElementById("juniorName")
-    .innerHTML =
-    "HEY, " +
-    junior.name +
-    "! ❤️";
-
-    showScreen("welcome");
+    },700);
 }
 
 
-/* ======================================
-   START DARE
-====================================== */
+/* =====================================================
+   CONFETTI
+===================================================== */
 
-function startDare(){
+function createConfetti(){
 
-    currentDare=0;
+    for(let i=0;i<80;i++){
 
-    showDare();
+        const c =
+        document.createElement("div");
 
-}
+        c.className="confetti";
 
+        c.style.left =
+        Math.random()*100+"%";
 
-/* ======================================
-   SHOW DARE
-====================================== */
+        c.style.animationDelay =
+        Math.random()*1.5+"s";
 
-function showDare(){
+        c.style.transform =
+        "rotate("+Math.random()*360+"deg)";
 
-    var junior =
-    juniors[currentJunior];
+        const colors=[
+            "#ff315b",
+            "#ff8eae",
+            "#ffffff",
+            "#ffd1dd"
+        ];
 
-    document
-    .getElementById("dareNumber")
-    .innerHTML =
-    "DARE " +
-    (currentDare+1) +
-    " 🌹";
+        c.style.background =
+        colors[Math.floor(Math.random()*colors.length)];
 
-    document
-    .getElementById("dareText")
-    .innerHTML =
-    junior.dares[currentDare];
+        document.body.appendChild(c);
 
-    showScreen("dare");
-
-}
-
-
-/* ======================================
-   NEXT DARE
-====================================== */
-
-function nextDare(){
-
-    currentDare++;
-
-    var junior =
-    juniors[currentJunior];
-
-    if(currentDare < junior.dares.length){
-
-        showDare();
-
-    }else{
-
-        document
-        .getElementById("passwordInput")
-        .value="";
-
-        document
-        .getElementById("wrongPassword")
-        .style.display="none";
-
-        showScreen("password");
+        setTimeout(()=>{
+            c.remove();
+        },5000);
     }
-
 }
 
 
-/* ======================================
+/* =====================================================
+   BOUQUET
+===================================================== */
+
+function startBouquet(){
+
+    document
+    .getElementById("bouquetIntro")
+    .style.display="none";
+
+    document
+    .getElementById("bouquetExperience")
+    .style.display="block";
+
+    setTimeout(()=>{
+
+        document
+        .getElementById("bouquetObject")
+        .classList.add("show");
+
+    },200);
+
+    setTimeout(()=>{
+
+        document
+        .getElementById("bouquetMessage")
+        .style.display="block";
+
+    },3300);
+}
+
+
+/* =====================================================
    PASSWORD
-====================================== */
+===================================================== */
+
+/*
+   ONE PASSWORD FOR THE WHOLE WEBSITE
+
+   Current password:
+   031026
+
+   Change it here if you want.
+*/
+
+const WEBSITE_PASSWORD="031026";
+
 
 function checkPassword(){
 
-    var entered =
+    const entered =
     document
     .getElementById("passwordInput")
     .value
     .trim();
 
-    /*
-       ALL FOUR JUNIORS USE:
-       031026
-    */
+    if(entered === WEBSITE_PASSWORD){
 
-    if(entered === "031026"){
+        document
+        .getElementById("wrongPassword")
+        .style.display="none";
 
-        showScreen("bouquet");
+        showScreen("familyPage");
 
     }else{
 
@@ -1823,221 +2244,108 @@ function checkPassword(){
         .style.display="block";
 
     }
+}
+
+
+/* =====================================================
+   JUNIOR DARES
+===================================================== */
+
+function startJunior(index){
+
+    currentJunior=index;
+
+    currentDare=0;
+
+    showDare();
 
 }
 
 
-/* ======================================
-   BOUQUET
-====================================== */
+function showDare(){
 
-function openBouquet(){
-
-    document
-    .getElementById("flowerBouquet")
-    .classList.add("open");
-
-
-    var name =
-    juniors[currentJunior].name;
-
-
-    document
-    .getElementById("bouquetText")
-    .innerHTML =
-    "THIS IS FOR YOU, " +
-    name +
-    ". ❤️";
-
-
-    document
-    .getElementById("bouquetMessage")
-    .style.display="block";
-
-
-    heartExplosion();
-
-}
-
-
-/* ======================================
-   HEART EXPLOSION
-====================================== */
-
-function heartExplosion(){
-
-    for(var i=0;i<25;i++){
-
-        var heart =
-        document.createElement("div");
-
-        heart.innerHTML =
-        Math.random()>.5
-        ? "❤️"
-        : "🌹";
-
-        heart.style.position="fixed";
-
-        heart.style.left="50%";
-        heart.style.top="50%";
-
-        heart.style.zIndex="100";
-
-        heart.style.fontSize =
-        (15+Math.random()*25)+"px";
-
-        document.body.appendChild(heart);
-
-
-        var x =
-        (Math.random()-.5)*600;
-
-        var y =
-        (Math.random()-.5)*600;
-
-
-        heart.animate(
-
-        [
-
-        {
-        transform:
-        "translate(-50%,-50%) scale(.3)",
-
-        opacity:1
-        },
-
-        {
-        transform:
-        "translate("+
-        x+
-        "px,"+
-        y+
-        "px) scale(1.3)",
-
-        opacity:0
-        }
-
-        ],
-
-        {
-
-        duration:1200,
-
-        easing:"ease-out"
-
-        }
-
-        );
-
-
-        setTimeout(
-        function(h){
-            return function(){
-                h.remove();
-            };
-        }(heart),
-        1250
-        );
-
-    }
-
-}
-
-
-/* ======================================
-   ABOUT
-====================================== */
-
-function showAbout(){
-
-    var junior =
+    const junior =
     juniors[currentJunior];
 
     document
-    .getElementById("aboutName")
-    .innerHTML =
-    junior.name + " ❤️";
-
+    .getElementById("juniorNumber")
+    .innerHTML=
+    "JUNIOR "+
+    (currentJunior+1)+
+    " OF "+
+    juniors.length;
 
     document
-    .getElementById("aboutText")
-    .innerHTML =
-    junior.about;
+    .getElementById("juniorName")
+    .innerHTML=
+    "HEY, "+
+    junior.name+
+    "! ❤️";
+
+    document
+    .getElementById("dareNumber")
+    .innerHTML=
+    "DARE "+
+    String(currentDare+1).padStart(2,"0")+
+    " 🌹";
+
+    document
+    .getElementById("dareText")
+    .innerHTML=
+    junior.dares[currentDare];
+
+    showScreen("darePage");
+}
 
 
-    if(currentJunior === juniors.length-1){
+function nextDare(){
 
-        document
-        .getElementById("nextText")
-        .innerHTML =
-        "MEET YOUR SENIORS 🌹";
+    const junior =
+    juniors[currentJunior];
+
+    currentDare++;
+
+    if(currentDare < junior.dares.length){
+
+        showDare();
 
     }else{
 
-        document
-        .getElementById("nextText")
-        .innerHTML =
-        "NEXT JUNIOR 🌹";
+        /*
+           Move directly to the next junior.
+           NO PASSWORD BETWEEN JUNIORS.
+        */
 
-    }
+        if(currentJunior < juniors.length-1){
 
+            startJunior(currentJunior+1);
 
-    showScreen("about");
+        }else{
 
-}
+            showScreen("seniorSection");
 
-
-/* ======================================
-   NEXT JUNIOR
-====================================== */
-
-function nextJunior(){
-
-    if(currentJunior < juniors.length-1){
-
-        startJunior(currentJunior+1);
-
-    }else{
-
-        showScreen("seniorSection");
+        }
 
     }
 
 }
 
 
-/* ======================================
-   MEMORIES
-====================================== */
+/* =====================================================
+   ENTER KEY FOR PASSWORD
+===================================================== */
 
-function showMemories(){
+document
+.getElementById("passwordInput")
+.addEventListener("keydown",function(event){
 
-    showScreen("memories");
+    if(event.key==="Enter"){
 
-}
+        checkPassword();
 
+    }
 
-/* ======================================
-   VIDEO
-====================================== */
-
-function showVideo(){
-
-    showScreen("videoSection");
-
-}
-
-
-/* ======================================
-   FINAL
-====================================== */
-
-function showFinal(){
-
-    showScreen("final");
-
-}
+});
 
 </script>
 
