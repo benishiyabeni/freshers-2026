@@ -24,8 +24,8 @@ html{
 
 body{
     font-family:Georgia,"Times New Roman",serif;
-    background:#fff5f7;
-    color:#3b101b;
+    background:#5c071a;
+    color:#ffe9ee;
     overflow-x:hidden;
 }
 
@@ -36,12 +36,36 @@ button{
 .page{
     min-height:100vh;
     width:100%;
+
     display:none;
+
     align-items:center;
     justify-content:center;
+
     padding:40px 20px;
+
     position:relative;
     overflow:hidden;
+
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(150,20,45,.30),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(120,10,35,.35),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #5c071a 0%,
+            #6d0b22 45%,
+            #4b0616 100%
+        );
+
+    color:#ffe9ee;
 }
 
 .page.active{
@@ -54,6 +78,7 @@ button{
         opacity:0;
         transform:translateY(15px);
     }
+
     to{
         opacity:1;
         transform:translateY(0);
@@ -69,13 +94,13 @@ button{
 
 h1{
     font-size:clamp(2.3rem,6vw,5rem);
-    color:#7b1026;
+    color:#fff0f3;
     margin-bottom:18px;
 }
 
 h2{
     font-size:clamp(2rem,4vw,3.5rem);
-    color:#7b1026;
+    color:#ffe1e8;
     margin-bottom:18px;
 }
 
@@ -97,27 +122,40 @@ p{
 .petals{
     position:fixed;
     inset:0;
+
     width:100%;
     height:100%;
+
     pointer-events:none;
     overflow:hidden;
+
     z-index:100;
 }
 
 .petal{
     position:absolute;
     top:-50px;
+
     width:13px;
     height:18px;
+
     border-radius:80% 20% 80% 20%;
-    background:linear-gradient(
-        135deg,
-        #ff8fa5,
-        #d91f43 60%,
-        #8d1830
-    );
-    opacity:.72;
-    filter:drop-shadow(0 2px 2px rgba(100,0,20,.12));
+
+    background:
+        linear-gradient(
+            135deg,
+            #b51f3d,
+            #7d0b24 60%,
+            #430512
+        );
+
+    opacity:.75;
+
+    filter:
+        drop-shadow(
+            0 2px 3px
+            rgba(0,0,0,.25)
+        );
 
     animation:
         petalFall linear infinite,
@@ -160,18 +198,24 @@ p{
 .password-btn{
 
     border:none;
+
     padding:13px 28px;
+
     border-radius:30px;
 
     background:#8d1830;
+
     color:white;
 
     font-size:1rem;
+
     cursor:pointer;
 
     margin-top:25px;
 
-    box-shadow:0 8px 20px rgba(110,10,30,.2);
+    box-shadow:
+        0 8px 20px
+        rgba(30,0,10,.30);
 
     transition:.3s;
 }
@@ -181,7 +225,8 @@ p{
 .password-btn:hover{
 
     transform:translateY(-3px);
-    background:#b32143;
+
+    background:#a91d3b;
 }
 
 .next-btn:active,
@@ -197,22 +242,22 @@ p{
 ========================================================= */
 
 #welcome{
-
     background:
         radial-gradient(
-            circle at 10% 20%,
-            rgba(255,180,200,.35),
-            transparent 25%
+            circle at 15% 15%,
+            rgba(170,25,55,.32),
+            transparent 30%
         ),
         radial-gradient(
-            circle at 90% 80%,
-            rgba(255,180,200,.35),
-            transparent 25%
+            circle at 85% 80%,
+            rgba(120,10,35,.38),
+            transparent 35%
         ),
         linear-gradient(
             135deg,
-            #fff7f8,
-            #ffe9ee
+            #5c071a 0%,
+            #6d0b22 45%,
+            #4b0616 100%
         );
 }
 
@@ -226,15 +271,21 @@ p{
     border-radius:22px;
 
     box-shadow:
-        0 15px 40px rgba(90,10,30,.18);
+        0 15px 40px
+        rgba(0,0,0,.35);
 
     margin-bottom:28px;
+
+    border:
+        1px solid
+        rgba(255,210,220,.2);
 }
 
 .small-intro{
 
     font-size:1rem;
-    color:#7d4250;
+
+    color:#efb9c4;
 
     letter-spacing:1px;
 
@@ -244,6 +295,7 @@ p{
 .names{
 
     display:flex;
+
     flex-wrap:wrap;
 
     justify-content:center;
@@ -259,19 +311,23 @@ p{
 
     padding:9px 18px;
 
-    background:rgba(255,255,255,.75);
+    background:
+        rgba(255,255,255,.08);
 
-    border:1px solid #f0bdc8;
+    border:
+        1px solid
+        rgba(255,200,215,.25);
 
     border-radius:30px;
 
-    color:#7b1026;
+    color:#ffe3e9;
 
     animation:
         floatName 3s ease-in-out infinite;
 
     box-shadow:
-        0 5px 15px rgba(120,20,40,.08);
+        0 5px 15px
+        rgba(0,0,0,.15);
 }
 
 .name:nth-child(2){
@@ -307,9 +363,9 @@ p{
     background:
         radial-gradient(
             circle at center,
-            #fff5f7 0%,
-            #fbe2e8 55%,
-            #f3c7d1 100%
+            #75102a 0%,
+            #5c071a 55%,
+            #430512 100%
         );
 }
 
@@ -326,12 +382,14 @@ p{
     display:flex;
 
     justify-content:center;
+
     align-items:flex-end;
 }
 
 #bouquetSvg{
 
     width:min(620px,95vw);
+
     height:500px;
 
     overflow:visible;
@@ -348,12 +406,14 @@ p{
 #bouquetSvg.bloom{
 
     transform:scale(1);
+
     opacity:1;
 }
 
 .stem{
 
     stroke:#2e6b38;
+
     stroke-width:7;
 
     fill:none;
@@ -361,6 +421,7 @@ p{
     stroke-linecap:round;
 
     stroke-dasharray:350;
+
     stroke-dashoffset:350;
 }
 
@@ -382,6 +443,7 @@ p{
     opacity:0;
 
     transform-box:fill-box;
+
     transform-origin:center;
 }
 
@@ -407,6 +469,7 @@ p{
 .rose{
 
     transform-box:fill-box;
+
     transform-origin:center;
 
     opacity:0;
@@ -491,18 +554,22 @@ p{
 
     border-radius:30px;
 
-    border:1px solid #dba0ad;
+    border:
+        1px solid
+        rgba(255,200,215,.35);
 
-    background:white;
+    background:
+        rgba(255,255,255,.08);
 
-    color:#8d1830;
+    color:#ffe4ea;
 
     font-size:1.05rem;
 
     cursor:pointer;
 
     box-shadow:
-        0 7px 20px rgba(120,20,40,.12);
+        0 7px 20px
+        rgba(0,0,0,.2);
 
     transition:.3s;
 }
@@ -511,19 +578,20 @@ p{
 
     transform:scale(1.05);
 
-    background:#fff0f3;
+    background:
+        rgba(255,255,255,.14);
 }
 
 .bouquet-note{
 
-    color:#7d4250;
+    color:#efb9c4;
 
     margin-top:8px;
 }
 
 
 /* =========================================================
-   PASSWORD
+   PASSWORD — SAME DEEP RED
 ========================================================= */
 
 #passwordPage{
@@ -543,19 +611,21 @@ p{
     width:min(450px,92%);
 
     background:
-        rgba(255,255,255,.1);
+        rgba(255,255,255,.08);
 
     backdrop-filter:blur(12px);
 
     border:
-        1px solid rgba(255,255,255,.2);
+        1px solid
+        rgba(255,255,255,.18);
 
     padding:40px 30px;
 
     border-radius:25px;
 
     box-shadow:
-        0 20px 60px rgba(0,0,0,.25);
+        0 20px 60px
+        rgba(0,0,0,.30);
 }
 
 .password-box h2{
@@ -596,23 +666,28 @@ p{
 
 
 /* =========================================================
-   DARK SECTION
+   DARK / MAROON SECTIONS
 ========================================================= */
 
 .dark{
 
     background:
         radial-gradient(
-            circle at 20% 20%,
-            rgba(170,20,50,.25),
+            circle at 15% 15%,
+            rgba(170,25,55,.32),
             transparent 30%
         ),
         radial-gradient(
-            circle at 80% 80%,
-            rgba(120,10,40,.3),
+            circle at 85% 80%,
+            rgba(120,10,35,.38),
             transparent 35%
         ),
-        #210710;
+        linear-gradient(
+            135deg,
+            #5c071a 0%,
+            #6d0b22 45%,
+            #4b0616 100%
+        );
 
     color:#ffe9ee;
 }
@@ -620,7 +695,7 @@ p{
 .dark h1,
 .dark h2,
 .dark h3{
-    color:#ffd5df;
+    color:#ffe1e8;
 }
 
 .dark p{
@@ -641,10 +716,11 @@ p{
     padding:35px 28px;
 
     border:
-        1px solid rgba(255,190,205,.2);
+        1px solid
+        rgba(255,210,220,.20);
 
     background:
-        rgba(255,255,255,.06);
+        rgba(20,0,8,.22);
 
     border-radius:24px;
 
@@ -655,6 +731,10 @@ p{
     flex-direction:column;
 
     justify-content:center;
+
+    box-shadow:
+        0 15px 40px
+        rgba(20,0,8,.15);
 }
 
 .dare-number{
@@ -701,6 +781,7 @@ p{
 .dot{
 
     width:9px;
+
     height:9px;
 
     border-radius:50%;
@@ -709,6 +790,7 @@ p{
 }
 
 .dot.active{
+
     background:#ef9aad;
 }
 
@@ -728,10 +810,15 @@ p{
     border-radius:25px;
 
     background:
-        rgba(255,255,255,.07);
+        rgba(20,0,8,.22);
 
     border:
-        1px solid rgba(255,190,205,.2);
+        1px solid
+        rgba(255,210,220,.20);
+
+    box-shadow:
+        0 15px 40px
+        rgba(20,0,8,.18);
 }
 
 .about-name{
@@ -767,14 +854,18 @@ p{
 
 .senior-card{
 
-    background:white;
+    background:
+        rgba(255,245,247,.96);
+
+    color:#3b101b;
 
     border-radius:20px;
 
     padding:25px 18px;
 
     box-shadow:
-        0 12px 30px rgba(100,10,30,.1);
+        0 12px 30px
+        rgba(0,0,0,.20);
 
     transition:.3s;
 }
@@ -787,6 +878,8 @@ p{
 .senior-card h3{
 
     font-size:1.3rem;
+
+    color:#8d1830;
 }
 
 .tag{
@@ -799,7 +892,7 @@ p{
 
     color:#a32443;
 
-    background:#fff0f3;
+    background:#fbe2e7;
 
     padding:6px 10px;
 
@@ -811,6 +904,8 @@ p{
 .senior-card p{
 
     font-size:.95rem;
+
+    color:#54202d;
 }
 
 
@@ -832,14 +927,16 @@ p{
 
 .memory-card{
 
-    background:white;
+    background:
+        rgba(255,245,247,.96);
 
     padding:10px;
 
     border-radius:18px;
 
     box-shadow:
-        0 10px 25px rgba(100,10,30,.1);
+        0 10px 25px
+        rgba(0,0,0,.20);
 }
 
 .memory-card img{
@@ -871,7 +968,8 @@ p{
     border-radius:22px;
 
     box-shadow:
-        0 20px 50px rgba(0,0,0,.3);
+        0 20px 50px
+        rgba(0,0,0,.35);
 
     display:flex;
 
@@ -881,11 +979,6 @@ p{
 }
 
 .video-box video{
-
-    /*
-       Portrait video:
-       It will NOT be stretched.
-    */
 
     width:auto;
 
@@ -913,19 +1006,30 @@ p{
 
     width:min(650px,94%);
 
-    background:white;
+    background:
+        rgba(255,245,247,.97);
+
+    color:#3b101b;
 
     padding:35px 30px;
 
     border-radius:24px;
 
     box-shadow:
-        0 15px 40px rgba(100,10,30,.12);
+        0 15px 40px
+        rgba(0,0,0,.22);
 }
 
 .final-box h2{
 
     font-size:2rem;
+
+    color:#7b1026;
+}
+
+.final-box p{
+
+    color:#54202d;
 }
 
 .heart{
@@ -1013,10 +1117,6 @@ p{
 
         height:180px;
     }
-
-    /*
-       Portrait video on phone
-    */
 
     .video-box{
 
@@ -1756,8 +1856,6 @@ p{
                         fill="#a74b63"
                         opacity=".25"
                     />
-
-                    <!-- ribbon -->
 
                     <path
                         d="M270 392 Q300 410 330 392"
@@ -2542,11 +2640,6 @@ p{
 
         <div class="video-box">
 
-            <!--
-                IMPORTANT:
-                YOUR VIDEO NAME IS freshers.mp4
-            -->
-
             <video
                 controls
                 playsinline
@@ -2693,10 +2786,8 @@ function showPage(pageId){
 
     });
 
-
     const target =
         document.getElementById(pageId);
-
 
     if(target){
 
@@ -2713,12 +2804,11 @@ function showPage(pageId){
 
 
 /* =========================================================
-   FALLING PETALS GENERATOR
+   FALLING PETALS
 ========================================================= */
 
 const petalsContainer =
     document.getElementById("petals");
-
 
 for(let i=0;i<32;i++){
 
@@ -2727,14 +2817,8 @@ for(let i=0;i<32;i++){
 
     petal.className = "petal";
 
-
-    /* random horizontal position */
-
     petal.style.left =
         Math.random()*100 + "%";
-
-
-    /* random size */
 
     const size =
         9 + Math.random()*9;
@@ -2745,26 +2829,16 @@ for(let i=0;i<32;i++){
     petal.style.height =
         (size*1.35) + "px";
 
-
-    /* random animation duration */
-
     petal.style.animationDuration =
         (6 + Math.random()*8) + "s," +
         (2 + Math.random()*3) + "s";
-
-
-    /* random starting delay */
 
     petal.style.animationDelay =
         (-Math.random()*12) + "s," +
         (-Math.random()*3) + "s";
 
-
-    /* slight transparency */
-
     petal.style.opacity =
         .35 + Math.random()*.45;
-
 
     petalsContainer.appendChild(petal);
 
@@ -2786,11 +2860,9 @@ function bloomBouquet(){
     const message =
         document.getElementById("bouquetMessage");
 
-
     bouquet.classList.add("bloom");
 
     button.style.display = "none";
-
 
     setTimeout(function(){
 
@@ -2808,15 +2880,16 @@ function bloomBouquet(){
 function checkPassword(){
 
     const input =
-        document.getElementById("passwordInput").value.trim();
+        document
+        .getElementById("passwordInput")
+        .value
+        .trim();
 
     const error =
         document.getElementById("passwordError");
 
-
     const correctPassword =
         "031026";
-
 
     if(input === correctPassword){
 
@@ -2836,7 +2909,7 @@ function checkPassword(){
 }
 
 
-/* ENTER KEY FOR PASSWORD */
+/* ENTER KEY */
 
 document
 .getElementById("passwordInput")
@@ -2860,7 +2933,6 @@ document
 
 const juniorDares = {
 
-
     vasavi:[
 
         "Tell us about your favourite senior so far in college. 👀",
@@ -2870,7 +2942,6 @@ const juniorDares = {
         "Speak like a robot for 30 seconds! 😂"
 
     ],
-
 
     vinutha:[
 
@@ -2882,7 +2953,6 @@ const juniorDares = {
 
     ],
 
-
     geetanjali:[
 
         "Compliment the best-looking man in the entire group. 👀❤️",
@@ -2892,7 +2962,6 @@ const juniorDares = {
         "Tell us about your favourite and most hated staff member at Manipal. 👀☕"
 
     ],
-
 
     samuksha:[
 
@@ -2908,7 +2977,7 @@ const juniorDares = {
 
 
 /* =========================================================
-   CURRENT DARE
+   DARE INDEX
 ========================================================= */
 
 const dareIndex = {
@@ -2964,16 +3033,12 @@ function startJunior(number){
 
     ];
 
-
     const junior =
         juniors[number];
 
-
     dareIndex[junior] = 0;
 
-
     loadDare(junior);
-
 
     showPage(
         juniorDarePages[junior]
@@ -2991,62 +3056,50 @@ function loadDare(junior){
     const index =
         dareIndex[junior];
 
-
     const text =
         document.getElementById(
             junior + "DareText"
         );
-
 
     const number =
         document.getElementById(
             junior + "DareNumber"
         );
 
-
     const button =
         document.getElementById(
             junior + "CompleteBtn"
         );
-
 
     const completed =
         document.getElementById(
             junior + "Completed"
         );
 
-
     const progress =
         document.getElementById(
             junior + "Progress"
         );
 
-
     text.textContent =
         juniorDares[junior][index];
-
 
     number.textContent =
         "DARE " +
         (index+1) +
         " OF 3";
 
-
     completed.textContent = "";
-
 
     button.style.display =
         "inline-block";
 
-
     progress.innerHTML = "";
-
 
     for(let i=0;i<3;i++){
 
         const dot =
             document.createElement("span");
-
 
         dot.className =
             "dot" +
@@ -3055,7 +3108,6 @@ function loadDare(junior){
                 ? " active"
                 : ""
             );
-
 
         progress.appendChild(dot);
 
@@ -3075,20 +3127,16 @@ function completeDare(junior){
             junior + "Completed"
         );
 
-
     const button =
         document.getElementById(
             junior + "CompleteBtn"
         );
 
-
     completed.textContent =
         "Dare completed! ❤️";
 
-
     button.style.display =
         "none";
-
 
     setTimeout(function(){
 
