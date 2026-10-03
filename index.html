@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
 
 <title>Freshers 2026 ❤️</title>
 
@@ -25,19 +29,25 @@ html{
 }
 
 body{
-    font-family:Georgia,"Times New Roman",serif;
 
-    /* DEEP MAROON + BLACK */
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
     background:
-        linear-gradient(
-            135deg,
-            #28050f 0%,
-            #160308 45%,
-            #080104 100%
+        radial-gradient(
+            circle at 0% 0%,
+            #3b0916 0%,
+            #2b0711 35%,
+            #210710 65%,
+            #220710 100%
         );
 
     color:#ffe9ee;
+
     overflow-x:hidden;
+
     min-height:100vh;
 }
 
@@ -47,41 +57,61 @@ body{
 ========================================================= */
 
 .page{
+
     min-height:100vh;
+
     width:100%;
+
     display:none;
+
     align-items:center;
+
     justify-content:center;
+
     padding:40px 20px;
+
     position:relative;
+
     overflow:hidden;
 
-    /* EXACT SAME STYLE ON EVERY PAGE */
     background:
-        linear-gradient(
-            135deg,
-            #28050f 0%,
-            #160308 45%,
-            #080104 100%
+        radial-gradient(
+            circle at 0% 0%,
+            #3b0916 0%,
+            #2b0711 35%,
+            #210710 65%,
+            #220710 100%
         ) !important;
 
     color:#ffe9ee;
 }
 
 .page.active{
+
     display:flex;
-    animation:pageIn .7s ease;
+
+    animation:
+        pageIn
+        .7s
+        ease;
 }
 
 @keyframes pageIn{
+
     from{
+
         opacity:0;
-        transform:translateY(12px);
+
+        transform:
+            translateY(12px);
     }
 
     to{
+
         opacity:1;
-        transform:translateY(0);
+
+        transform:
+            translateY(0);
     }
 }
 
@@ -91,9 +121,17 @@ body{
 ========================================================= */
 
 .container{
-    width:min(1000px,94%);
+
+    width:
+        min(
+            1000px,
+            94%
+        );
+
     text-align:center;
+
     position:relative;
+
     z-index:5;
 }
 
@@ -103,25 +141,45 @@ body{
 ========================================================= */
 
 h1{
-    font-size:clamp(2.3rem,6vw,5rem);
+
+    font-size:
+        clamp(
+            2.3rem,
+            6vw,
+            5rem
+        );
+
     color:#fff0f3;
+
     margin-bottom:18px;
 }
 
 h2{
-    font-size:clamp(2rem,4vw,3.5rem);
+
+    font-size:
+        clamp(
+            2rem,
+            4vw,
+            3.5rem
+        );
+
     color:#ffe1e8;
+
     margin-bottom:18px;
 }
 
 h3{
+
     color:#8d1830;
+
     margin-bottom:12px;
 }
 
 p{
+
     line-height:1.8;
-    font-size:1.14rem;
+
+    font-size:1.08rem;
 }
 
 
@@ -130,56 +188,83 @@ p{
 ========================================================= */
 
 .petals{
+
     position:fixed;
+
     top:0;
     left:0;
+
     width:100%;
     height:100%;
+
     pointer-events:none;
+
     overflow:hidden;
+
     z-index:9999;
 }
 
 .petal{
+
     position:absolute;
+
     top:-50px;
+
     width:13px;
+
     height:18px;
 
-    border-radius:80% 20% 80% 20%;
+    border-radius:
+        80% 20% 80% 20%;
 
     background:
         linear-gradient(
             135deg,
-            #9e1836 0%,
-            #5e0a20 55%,
-            #23030d 100%
+            #a71938 0%,
+            #7d102b 55%,
+            #4b0718 100%
         );
 
     opacity:.72;
 
     filter:
         drop-shadow(
-            0 2px 4px
-            rgba(0,0,0,.65)
+            0 2px 3px
+            rgba(0,0,0,.45)
         );
 
     animation:
-        petalFall linear infinite,
-        petalSwing ease-in-out infinite alternate;
+        petalFall
+        linear
+        infinite,
+
+        petalSwing
+        ease-in-out
+        infinite
+        alternate;
 }
 
 @keyframes petalFall{
 
     0%{
+
         transform:
-            translate3d(0,-60px,0)
+            translate3d(
+                0,
+                -60px,
+                0
+            )
             rotate(0deg);
     }
 
     100%{
+
         transform:
-            translate3d(100px,110vh,0)
+            translate3d(
+                100px,
+                110vh,
+                0
+            )
             rotate(720deg);
     }
 }
@@ -187,10 +272,12 @@ p{
 @keyframes petalSwing{
 
     0%{
+
         margin-left:-35px;
     }
 
     100%{
+
         margin-left:35px;
     }
 }
@@ -201,6 +288,7 @@ p{
 ========================================================= */
 
 button{
+
     font-family:inherit;
 }
 
@@ -210,7 +298,9 @@ button{
 
     border:none;
 
-    padding:13px 28px;
+    padding:
+        13px
+        28px;
 
     border-radius:30px;
 
@@ -226,22 +316,28 @@ button{
 
     box-shadow:
         0 8px 20px
-        rgba(0,0,0,.45);
+        rgba(0,0,0,.35);
 
-    transition:.3s ease;
+    transition:
+        .3s ease;
 }
 
 .next-btn:hover,
 .complete-btn:hover,
 .password-btn:hover{
-    transform:translateY(-3px);
+
+    transform:
+        translateY(-3px);
+
     background:#a91d3b;
 }
 
 .next-btn:active,
 .complete-btn:active,
 .password-btn:active{
-    transform:scale(.96);
+
+    transform:
+        scale(.96);
 }
 
 
@@ -250,18 +346,24 @@ button{
 ========================================================= */
 
 #welcome{
+
     background:
-        linear-gradient(
-            135deg,
-            #28050f 0%,
-            #160308 45%,
-            #080104 100%
+        radial-gradient(
+            circle at 0% 0%,
+            #3b0916 0%,
+            #2b0711 35%,
+            #210710 65%,
+            #220710 100%
         ) !important;
 }
 
 .welcome-image{
 
-    width:min(300px,75vw);
+    width:
+        min(
+            300px,
+            75vw
+        );
 
     height:220px;
 
@@ -271,41 +373,70 @@ button{
 
     box-shadow:
         0 15px 40px
-        rgba(0,0,0,.65);
+        rgba(0,0,0,.45);
 
     margin-bottom:28px;
 
     border:
         1px solid
-        rgba(255,210,220,.15);
+        rgba(
+            255,
+            210,
+            220,
+            .15
+        );
 }
 
 .small-intro{
-    font-size:1.18rem;
-    color:#e2a5b4;
+
+    font-size:1.08rem;
+
+    color:#d99aa9;
+
     letter-spacing:1px;
+
     margin-bottom:12px;
 }
 
 .names{
+
     display:flex;
+
     flex-wrap:wrap;
+
     justify-content:center;
+
     gap:12px;
-    margin:25px auto;
+
+    margin:
+        25px
+        auto;
+
     max-width:700px;
 }
 
 .name{
 
-    padding:9px 18px;
+    padding:
+        9px
+        18px;
 
     background:
-        rgba(255,255,255,.06);
+        rgba(
+            255,
+            255,
+            255,
+            .07
+        );
 
     border:
         1px solid
-        rgba(255,200,215,.18);
+        rgba(
+            255,
+            200,
+            215,
+            .18
+        );
 
     border-radius:30px;
 
@@ -319,7 +450,7 @@ button{
 
     box-shadow:
         0 5px 15px
-        rgba(0,0,0,.35);
+        rgba(0,0,0,.2);
 }
 
 .name:nth-child(2){
@@ -336,12 +467,17 @@ button{
 
 @keyframes floatName{
 
-    0%,100%{
-        transform:translateY(0);
+    0%,
+    100%{
+
+        transform:
+            translateY(0);
     }
 
     50%{
-        transform:translateY(-8px);
+
+        transform:
+            translateY(-8px);
     }
 }
 
@@ -351,12 +487,14 @@ button{
 ========================================================= */
 
 #bouquetPage{
+
     background:
-        linear-gradient(
-            135deg,
-            #28050f 0%,
-            #160308 45%,
-            #080104 100%
+        radial-gradient(
+            circle at 0% 0%,
+            #3b0916 0%,
+            #2b0711 35%,
+            #210710 65%,
+            #220710 100%
         ) !important;
 }
 
@@ -379,7 +517,11 @@ button{
 
 #bouquetSvg{
 
-    width:min(620px,95vw);
+    width:
+        min(
+            620px,
+            95vw
+        );
 
     height:500px;
 
@@ -389,26 +531,37 @@ button{
 
     opacity:.15;
 
-    transition:1.8s ease;
+    transition:
+        1.8s ease;
 
-    transform-origin:center bottom;
+    transform-origin:
+        center bottom;
 }
 
 #bouquetSvg.bloom{
+
     transform:scale(1);
+
     opacity:1;
 }
 
 .stem{
+
     stroke:#2e6b38;
+
     stroke-width:7;
+
     fill:none;
+
     stroke-linecap:round;
+
     stroke-dasharray:350;
+
     stroke-dashoffset:350;
 }
 
 .bloom .stem{
+
     animation:
         growStem
         1.5s
@@ -417,18 +570,24 @@ button{
 }
 
 @keyframes growStem{
+
     to{
+
         stroke-dashoffset:0;
     }
 }
 
 .leaf{
+
     opacity:0;
+
     transform-box:fill-box;
+
     transform-origin:center;
 }
 
 .bloom .leaf{
+
     animation:
         leafAppear
         .8s
@@ -439,13 +598,19 @@ button{
 @keyframes leafAppear{
 
     from{
+
         opacity:0;
-        transform:scale(0);
+
+        transform:
+            scale(0);
     }
 
     to{
+
         opacity:1;
-        transform:scale(1);
+
+        transform:
+            scale(1);
     }
 }
 
@@ -457,40 +622,59 @@ button{
 
     opacity:0;
 
-    transform:scale(.05);
+    transform:
+        scale(.05);
 }
 
 .bloom .rose{
+
     animation:
         roseBloom
         1.1s
-        cubic-bezier(.2,1.4,.4,1)
+        cubic-bezier(
+            .2,
+            1.4,
+            .4,
+            1
+        )
         forwards;
 }
 
 @keyframes roseBloom{
 
     from{
+
         opacity:0;
-        transform:scale(.05);
+
+        transform:
+            scale(.05);
     }
 
     70%{
-        transform:scale(1.08);
+
+        transform:
+            scale(1.08);
     }
 
     to{
+
         opacity:1;
-        transform:scale(1);
+
+        transform:
+            scale(1);
     }
 }
 
 .wrap{
+
     opacity:0;
-    transform-origin:center bottom;
+
+    transform-origin:
+        center bottom;
 }
 
 .bloom .wrap{
+
     animation:
         wrapAppear
         1s
@@ -502,25 +686,38 @@ button{
 @keyframes wrapAppear{
 
     from{
+
         opacity:0;
-        transform:translateY(30px);
+
+        transform:
+            translateY(30px);
     }
 
     to{
+
         opacity:1;
-        transform:translateY(0);
+
+        transform:
+            translateY(0);
     }
 }
 
 .bouquet-message{
+
     opacity:0;
-    transform:translateY(15px);
+
+    transform:
+        translateY(15px);
+
     transition:1s;
 }
 
 .bouquet-message.show{
+
     opacity:1;
-    transform:translateY(0);
+
+    transform:
+        translateY(0);
 }
 
 .tap{
@@ -529,16 +726,28 @@ button{
 
     margin-top:5px;
 
-    padding:14px 32px;
+    padding:
+        14px
+        32px;
 
     border-radius:30px;
 
     border:
         1px solid
-        rgba(255,200,215,.25);
+        rgba(
+            255,
+            200,
+            215,
+            .25
+        );
 
     background:
-        rgba(255,255,255,.07);
+        rgba(
+            255,
+            255,
+            255,
+            .07
+        );
 
     color:#ffe4ea;
 
@@ -548,23 +757,30 @@ button{
 
     box-shadow:
         0 7px 20px
-        rgba(0,0,0,.4);
+        rgba(0,0,0,.3);
 
     transition:.3s;
 }
 
 .tap:hover{
 
-    transform:scale(1.05);
+    transform:
+        scale(1.05);
 
     background:
-        rgba(255,255,255,.12);
+        rgba(
+            255,
+            255,
+            255,
+            .12
+        );
 }
 
 .bouquet-note{
+
     color:#d99aa9;
+
     margin-top:8px;
-    font-size:1.12rem;
 }
 
 
@@ -575,11 +791,12 @@ button{
 #passwordPage{
 
     background:
-        linear-gradient(
-            135deg,
-            #28050f 0%,
-            #160308 45%,
-            #080104 100%
+        radial-gradient(
+            circle at 0% 0%,
+            #3b0916 0%,
+            #2b0711 35%,
+            #210710 65%,
+            #220710 100%
         ) !important;
 
     color:white;
@@ -587,24 +804,41 @@ button{
 
 .password-box{
 
-    width:min(450px,92%);
+    width:
+        min(
+            450px,
+            92%
+        );
 
     background:
-        rgba(255,255,255,.06);
+        rgba(
+            255,
+            255,
+            255,
+            .07
+        );
 
-    backdrop-filter:blur(12px);
+    backdrop-filter:
+        blur(12px);
 
     border:
         1px solid
-        rgba(255,255,255,.14);
+        rgba(
+            255,
+            255,
+            255,
+            .14
+        );
 
-    padding:40px 30px;
+    padding:
+        40px
+        30px;
 
     border-radius:25px;
 
     box-shadow:
         0 20px 60px
-        rgba(0,0,0,.65);
+        rgba(0,0,0,.4);
 }
 
 .password-box h2{
@@ -613,14 +847,15 @@ button{
 
 .password-box p{
     color:#ffe7ed;
-    font-size:1.12rem;
 }
 
 .password-input{
 
     width:100%;
 
-    padding:14px 18px;
+    padding:
+        14px
+        18px;
 
     margin-top:22px;
 
@@ -636,8 +871,11 @@ button{
 }
 
 .password-error{
+
     color:#ffd1db;
+
     margin-top:12px;
+
     min-height:25px;
 }
 
@@ -649,11 +887,12 @@ button{
 .dark{
 
     background:
-        linear-gradient(
-            135deg,
-            #28050f 0%,
-            #160308 45%,
-            #080104 100%
+        radial-gradient(
+            circle at 0% 0%,
+            #3b0916 0%,
+            #2b0711 35%,
+            #210710 65%,
+            #220710 100%
         ) !important;
 
     color:#ffe9ee;
@@ -662,10 +901,12 @@ button{
 .dark h1,
 .dark h2,
 .dark h3{
+
     color:#ffe1e8;
 }
 
 .dark p{
+
     color:#f4d6dd;
 }
 
@@ -676,18 +917,37 @@ button{
 
 .dare-box{
 
-    width:min(720px,95%);
+    width:
+        min(
+            720px,
+            95%
+        );
 
-    margin:30px auto 0;
+    margin:
+        30px
+        auto
+        0;
 
-    padding:35px 28px;
+    padding:
+        35px
+        28px;
 
     border:
         1px solid
-        rgba(255,210,220,.18);
+        rgba(
+            255,
+            210,
+            220,
+            .18
+        );
 
     background:
-        rgba(0,0,0,.22);
+        rgba(
+            0,
+            0,
+            0,
+            .18
+        );
 
     border-radius:24px;
 
@@ -701,7 +961,7 @@ button{
 
     box-shadow:
         0 15px 40px
-        rgba(0,0,0,.45);
+        rgba(0,0,0,.25);
 }
 
 .dare-number{
@@ -730,8 +990,11 @@ button{
 }
 
 .completed-message{
+
     margin-top:15px;
+
     color:#dff8e3;
+
     min-height:25px;
 }
 
@@ -758,6 +1021,7 @@ button{
 }
 
 .dot.active{
+
     background:#d77c91;
 }
 
@@ -768,7 +1032,11 @@ button{
 
 .about-box{
 
-    width:min(800px,94%);
+    width:
+        min(
+            800px,
+            94%
+        );
 
     margin:auto;
 
@@ -777,15 +1045,25 @@ button{
     border-radius:25px;
 
     background:
-        rgba(0,0,0,.22);
+        rgba(
+            0,
+            0,
+            0,
+            .18
+        );
 
     border:
         1px solid
-        rgba(255,210,220,.18);
+        rgba(
+            255,
+            210,
+            220,
+            .18
+        );
 
     box-shadow:
         0 15px 40px
-        rgba(0,0,0,.45);
+        rgba(0,0,0,.25);
 }
 
 .about-name{
@@ -798,7 +1076,8 @@ button{
 }
 
 .about-box p{
-    font-size:1.15rem;
+
+    font-size:1.1rem;
 }
 
 
@@ -811,7 +1090,10 @@ button{
     display:grid;
 
     grid-template-columns:
-        repeat(4,1fr);
+        repeat(
+            4,
+            1fr
+        );
 
     gap:18px;
 
@@ -821,23 +1103,32 @@ button{
 .senior-card{
 
     background:
-        rgba(255,245,247,.96);
+        rgba(
+            255,
+            245,
+            247,
+            .96
+        );
 
     color:#3b101b;
 
     border-radius:20px;
 
-    padding:25px 18px;
+    padding:
+        25px
+        18px;
 
     box-shadow:
         0 12px 30px
-        rgba(0,0,0,.55);
+        rgba(0,0,0,.3);
 
     transition:.3s;
 }
 
 .senior-card:hover{
-    transform:translateY(-7px);
+
+    transform:
+        translateY(-7px);
 }
 
 .senior-card h3{
@@ -859,7 +1150,9 @@ button{
 
     background:#fbe2e7;
 
-    padding:6px 10px;
+    padding:
+        6px
+        10px;
 
     border-radius:20px;
 
@@ -868,7 +1161,7 @@ button{
 
 .senior-card p{
 
-    font-size:1rem;
+    font-size:.95rem;
 
     color:#54202d;
 }
@@ -883,7 +1176,10 @@ button{
     display:grid;
 
     grid-template-columns:
-        repeat(3,1fr);
+        repeat(
+            3,
+            1fr
+        );
 
     gap:18px;
 
@@ -893,7 +1189,12 @@ button{
 .memory-card{
 
     background:
-        rgba(255,245,247,.96);
+        rgba(
+            255,
+            245,
+            247,
+            .96
+        );
 
     padding:10px;
 
@@ -901,7 +1202,7 @@ button{
 
     box-shadow:
         0 10px 25px
-        rgba(0,0,0,.55);
+        rgba(0,0,0,.3);
 }
 
 .memory-card img{
@@ -922,11 +1223,17 @@ button{
 
 .video-box{
 
-    width:min(900px,95%);
+    width:
+        min(
+            900px,
+            95%
+        );
 
-    margin:30px auto;
+    margin:
+        30px
+        auto;
 
-    background:#050103;
+    background:#100207;
 
     padding:12px;
 
@@ -934,7 +1241,7 @@ button{
 
     box-shadow:
         0 20px 50px
-        rgba(0,0,0,.7);
+        rgba(0,0,0,.45);
 
     display:flex;
 
@@ -945,21 +1252,32 @@ button{
 
 .video-box video{
 
-    width:auto;
+    display:block;
+
+    width:100%;
+
+    max-width:850px;
 
     height:auto;
 
-    max-width:100%;
-
-    max-height:70vh;
-
-    display:block;
+    max-height:75vh;
 
     object-fit:contain;
 
     border-radius:15px;
 
     background:#000;
+
+    margin:auto;
+}
+
+.video-error{
+
+    color:#ffd1db;
+
+    font-size:.95rem;
+
+    margin-top:12px;
 }
 
 
@@ -969,20 +1287,31 @@ button{
 
 .final-box{
 
-    width:min(650px,94%);
+    width:
+        min(
+            650px,
+            94%
+        );
 
     background:
-        rgba(255,245,247,.97);
+        rgba(
+            255,
+            245,
+            247,
+            .97
+        );
 
     color:#3b101b;
 
-    padding:35px 30px;
+    padding:
+        35px
+        30px;
 
     border-radius:24px;
 
     box-shadow:
         0 15px 40px
-        rgba(0,0,0,.6);
+        rgba(0,0,0,.35);
 }
 
 .final-box h2{
@@ -993,12 +1322,26 @@ button{
 }
 
 .final-box p{
+
     color:#54202d;
 }
 
 .heart{
+
     font-size:2rem;
+
     margin-top:15px;
+}
+
+.signature{
+
+    margin-top:15px;
+
+    font-size:.95rem;
+
+    color:#8d1830;
+
+    line-height:1.8;
 }
 
 
@@ -1009,25 +1352,42 @@ button{
 @media(max-width:850px){
 
     .senior-grid{
+
         grid-template-columns:
-            repeat(2,1fr);
+            repeat(
+                2,
+                1fr
+            );
     }
 
     .memory-grid{
+
         grid-template-columns:
-            repeat(2,1fr);
+            repeat(
+                2,
+                1fr
+            );
     }
 
     .bouquet-area{
+
         height:430px;
     }
 
     #bouquetSvg{
+
         height:410px;
     }
 
     .video-box video{
+
+        width:100%;
+
+        max-width:100%;
+
         max-height:68vh;
+
+        height:auto;
     }
 }
 
@@ -1035,57 +1395,90 @@ button{
 @media(max-width:600px){
 
     .page{
-        padding:30px 14px;
+
+        padding:
+            30px
+            14px;
     }
 
     p{
-        font-size:1.05rem;
-    }
 
-    .small-intro{
-        font-size:1.08rem;
+        font-size:1rem;
     }
 
     .senior-grid,
     .memory-grid{
+
         grid-template-columns:1fr;
     }
 
     .about-box{
-        padding:28px 20px;
+
+        padding:
+            28px
+            20px;
     }
 
     .dare-box{
-        padding:28px 20px;
+
+        padding:
+            28px
+            20px;
     }
 
     .bouquet-area{
+
         height:390px;
     }
 
     #bouquetSvg{
+
         height:370px;
     }
 
     .welcome-image{
+
         height:180px;
     }
 
     .video-box{
+
         padding:8px;
+
+        width:95%;
     }
 
     .video-box video{
-        max-width:90vw;
+
+        width:100%;
+
+        max-width:100%;
+
         max-height:70vh;
-        width:auto;
+
         height:auto;
+
+        border-radius:12px;
     }
+
+    .final-box{
+
+        padding:
+            28px
+            20px;
+    }
+
+    .final-box h2{
+
+        font-size:1.8rem;
+    }
+
 }
 
 </style>
 
 </head>
+
 
 <body>
 
@@ -1094,37 +1487,47 @@ button{
      FALLING PETALS
 ========================================================= -->
 
-<div class="petals" id="petals"></div>
+<div
+    class="petals"
+    id="petals"
+></div>
+
 
 
 <!-- =========================================================
      PAGE 1 — WELCOME
 ========================================================= -->
 
-<section class="page active" id="welcome">
+<section
+    class="page active"
+    id="welcome"
+>
 
     <div class="container">
 
-        <!-- YOUR FILE LIST DOES NOT HAVE welcome.jpg,
-             SO photo1.jpg IS USED HERE -->
-
         <img
-            src="photo1.jpg"
+            src="welcome.jpg"
             alt="Freshers Welcome"
             class="welcome-image"
         >
 
         <div class="small-intro">
+
             A little surprise from your seniors
+
         </div>
 
         <h1>
+
             Welcome, Freshers! ❤️
+
         </h1>
 
         <p>
+
             Four new faces, four new stories,
             and a whole lot of memories waiting to happen.
+
         </p>
 
         <div class="names">
@@ -1151,7 +1554,9 @@ button{
             class="next-btn"
             onclick="showPage('bouquetPage')"
         >
+
             There's something for you →
+
         </button>
 
     </div>
@@ -1159,20 +1564,28 @@ button{
 </section>
 
 
+
 <!-- =========================================================
      PAGE 2 — BOUQUET
 ========================================================= -->
 
-<section class="page" id="bouquetPage">
+<section
+    class="page"
+    id="bouquetPage"
+>
 
     <div class="container">
 
         <h2>
+
             A Little Something For You 🌹
+
         </h2>
 
         <p class="bouquet-note">
+
             Tap the button and watch your bouquet bloom.
+
         </p>
 
         <div class="bouquet-area">
@@ -1204,7 +1617,6 @@ button{
 
                     </radialGradient>
 
-
                     <linearGradient
                         id="leafGreen"
                         x1="0"
@@ -1224,7 +1636,6 @@ button{
                         />
 
                     </linearGradient>
-
 
                     <linearGradient
                         id="paperPink"
@@ -1251,7 +1662,6 @@ button{
 
                     </linearGradient>
 
-
                     <linearGradient
                         id="ribbon"
                         x1="0"
@@ -1271,7 +1681,6 @@ button{
                         />
 
                     </linearGradient>
-
 
                     <filter id="roseShadow">
 
@@ -1382,7 +1791,10 @@ button{
 
                 <!-- ROSE 1 -->
 
-                <g class="rose" filter="url(#roseShadow)">
+                <g
+                    class="rose"
+                    filter="url(#roseShadow)"
+                >
 
                     <circle
                         cx="180"
@@ -1435,7 +1847,10 @@ button{
 
                 <!-- ROSE 2 -->
 
-                <g class="rose" filter="url(#roseShadow)">
+                <g
+                    class="rose"
+                    filter="url(#roseShadow)"
+                >
 
                     <circle
                         cx="300"
@@ -1488,7 +1903,10 @@ button{
 
                 <!-- ROSE 3 -->
 
-                <g class="rose" filter="url(#roseShadow)">
+                <g
+                    class="rose"
+                    filter="url(#roseShadow)"
+                >
 
                     <circle
                         cx="425"
@@ -1541,7 +1959,10 @@ button{
 
                 <!-- ROSE 4 -->
 
-                <g class="rose" filter="url(#roseShadow)">
+                <g
+                    class="rose"
+                    filter="url(#roseShadow)"
+                >
 
                     <circle
                         cx="105"
@@ -1594,7 +2015,10 @@ button{
 
                 <!-- ROSE 5 -->
 
-                <g class="rose" filter="url(#roseShadow)">
+                <g
+                    class="rose"
+                    filter="url(#roseShadow)"
+                >
 
                     <circle
                         cx="500"
@@ -1647,7 +2071,10 @@ button{
 
                 <!-- ROSE 6 -->
 
-                <g class="rose" filter="url(#roseShadow)">
+                <g
+                    class="rose"
+                    filter="url(#roseShadow)"
+                >
 
                     <circle
                         cx="230"
@@ -1700,7 +2127,10 @@ button{
 
                 <!-- ROSE 7 -->
 
-                <g class="rose" filter="url(#roseShadow)">
+                <g
+                    class="rose"
+                    filter="url(#roseShadow)"
+                >
 
                     <circle
                         cx="370"
@@ -1756,26 +2186,44 @@ button{
                 <g class="wrap">
 
                     <path
-                        d="M205 345 L395 345 L350 475 L250 475 Z"
+                        d="
+                            M205 345
+                            L395 345
+                            L350 475
+                            L250 475 Z
+                        "
                         fill="url(#paperPink)"
                         stroke="#bd7183"
                         stroke-width="2"
                     />
 
                     <path
-                        d="M235 350 L285 350 L270 475 L250 475 Z"
+                        d="
+                            M235 350
+                            L285 350
+                            L270 475
+                            L250 475 Z
+                        "
                         fill="#fff8fa"
                         opacity=".45"
                     />
 
                     <path
-                        d="M315 350 L365 350 L350 475 L330 475 Z"
+                        d="
+                            M315 350
+                            L365 350
+                            L350 475
+                            L330 475 Z
+                        "
                         fill="#a74b63"
                         opacity=".25"
                     />
 
                     <path
-                        d="M270 392 Q300 410 330 392"
+                        d="
+                            M270 392
+                            Q300 410 330 392
+                        "
                         fill="none"
                         stroke="url(#ribbon)"
                         stroke-width="13"
@@ -1783,12 +2231,20 @@ button{
                     />
 
                     <path
-                        d="M300 404 Q260 430 248 420 Q260 455 300 410"
+                        d="
+                            M300 404
+                            Q260 430 248 420
+                            Q260 455 300 410
+                        "
                         fill="url(#ribbon)"
                     />
 
                     <path
-                        d="M300 404 Q340 430 352 420 Q340 455 300 410"
+                        d="
+                            M300 404
+                            Q340 430 352 420
+                            Q340 455 300 410
+                        "
                         fill="url(#ribbon)"
                     />
 
@@ -1805,14 +2261,18 @@ button{
         >
 
             <p>
+
                 A little bouquet to begin your journey with us. ❤️
+
             </p>
 
             <button
                 class="next-btn"
                 onclick="showPage('passwordPage')"
             >
+
                 Continue →
+
             </button>
 
         </div>
@@ -1823,7 +2283,9 @@ button{
             id="tapBouquet"
             onclick="bloomBouquet()"
         >
+
             TAP ME 🌹
+
         </button>
 
     </div>
@@ -1831,20 +2293,28 @@ button{
 </section>
 
 
+
 <!-- =========================================================
      PAGE 3 — PASSWORD
 ========================================================= -->
 
-<section class="page" id="passwordPage">
+<section
+    class="page"
+    id="passwordPage"
+>
 
     <div class="password-box">
 
         <h2>
+
             One Little Secret 🔐
+
         </h2>
 
         <p>
+
             Enter the password given to you by your seniors.
+
         </p>
 
         <input
@@ -1858,7 +2328,9 @@ button{
             class="password-btn"
             onclick="checkPassword()"
         >
+
             ENTER ❤️
+
         </button>
 
         <div
@@ -1871,74 +2343,100 @@ button{
 </section>
 
 
+
 <!-- =========================================================
      PAGE 4 — MSC FAMILY
 ========================================================= -->
 
-<section class="page dark" id="familyPage">
+<section
+    class="page dark"
+    id="familyPage"
+>
 
     <div class="container">
 
         <h1>
+
             Welcome to the MSc Family ❤️
+
         </h1>
 
         <p>
+
             You are officially part of our little MSc family now.
             There will be studies, clinicals, deadlines, laughter,
             stress, crazy moments and a lot of memories.
+
         </p>
 
         <p style="margin-top:15px;">
+
             And before we continue...
             we have something special planned for you. 👀
+
         </p>
 
         <button
             class="next-btn"
             onclick="showPage('dareIntroPage')"
         >
+
             Let's begin →
+
         </button>
 
     </div>
 
 </section>
+
 
 
 <!-- =========================================================
      PAGE 5 — DARE INTRO
 ========================================================= -->
 
-<section class="page dark" id="dareIntroPage">
+<section
+    class="page dark"
+    id="dareIntroPage"
+>
 
     <div class="container">
 
         <h2>
+
             Okay Freshers... 👀
+
         </h2>
 
         <p>
+
             You will have some dares to complete.
+
         </p>
 
         <p style="margin-top:12px;">
+
             Don't worry...
             they're not too difficult. 😂
+
         </p>
 
         <p style="margin-top:12px;">
+
             Complete each dare one by one.
             Once you finish a dare, press
             <b>COMPLETED ✓</b>
             to unlock the next one.
+
         </p>
 
         <button
             class="next-btn"
             onclick="startJunior(0)"
         >
+
             I'm Ready 😈
+
         </button>
 
     </div>
@@ -1946,11 +2444,15 @@ button{
 </section>
 
 
+
 <!-- =========================================================
      VASAVI DARES
 ========================================================= -->
 
-<section class="page dark" id="vasaviDarePage">
+<section
+    class="page dark"
+    id="vasaviDarePage"
+>
 
     <div class="container">
 
@@ -1997,11 +2499,15 @@ button{
 </section>
 
 
+
 <!-- =========================================================
      VASAVI ABOUT
 ========================================================= -->
 
-<section class="page dark" id="vasaviAboutPage">
+<section
+    class="page dark"
+    id="vasaviAboutPage"
+>
 
     <div class="container">
 
@@ -2012,11 +2518,13 @@ button{
             </div>
 
             <p>
+
                 We’ve known you since your first year at Manipal.
                 You’re energetic, curious and always ready to learn.
                 And yes... a little hyperactive too! 😂
                 Even before IRC, you were already thinking about data collection.
                 Keep that energy, Vasavi. ❤️
+
             </p>
 
             <button
@@ -2033,11 +2541,15 @@ button{
 </section>
 
 
+
 <!-- =========================================================
      VINUTHA DARES
 ========================================================= -->
 
-<section class="page dark" id="vinuthaDarePage">
+<section
+    class="page dark"
+    id="vinuthaDarePage"
+>
 
     <div class="container">
 
@@ -2084,11 +2596,15 @@ button{
 </section>
 
 
+
 <!-- =========================================================
      VINUTHA ABOUT
 ========================================================= -->
 
-<section class="page dark" id="vinuthaAboutPage">
+<section
+    class="page dark"
+    id="vinuthaAboutPage"
+>
 
     <div class="container">
 
@@ -2099,12 +2615,14 @@ button{
             </div>
 
             <p>
+
                 From the very first day, you’ve been with us —
                 always so calm, but secretly super energetic! ❤️
                 And when it comes to clinicals, we see a completely
                 different Vinutha. 😂 8 o’clock duty?
                 For Vinutha, that's 7:30! ⏰
                 Always punctual, always ready. 🌹
+
             </p>
 
             <button
@@ -2121,11 +2639,15 @@ button{
 </section>
 
 
+
 <!-- =========================================================
      GEETANJALI DARES
 ========================================================= -->
 
-<section class="page dark" id="geetanjaliDarePage">
+<section
+    class="page dark"
+    id="geetanjaliDarePage"
+>
 
     <div class="container">
 
@@ -2172,11 +2694,15 @@ button{
 </section>
 
 
+
 <!-- =========================================================
      GEETANJALI ABOUT
 ========================================================= -->
 
-<section class="page dark" id="geetanjaliAboutPage">
+<section
+    class="page dark"
+    id="geetanjaliAboutPage"
+>
 
     <div class="container">
 
@@ -2187,6 +2713,7 @@ button{
             </div>
 
             <p>
+
                 Honestly... we don't know much about you yet. 👀
                 But we have a feeling you might have hated us a little... 😂
                 Maybe because we told you “Freshers is in the Simulation Lab.” 😭
@@ -2194,6 +2721,7 @@ button{
                 “Hakuna Matata”! 😂
                 You seem like a super-chill person, so we guess we'll get to
                 know much more about you in the days ahead. ❤️
+
             </p>
 
             <button
@@ -2210,11 +2738,15 @@ button{
 </section>
 
 
+
 <!-- =========================================================
      SAMUKSHA DARES
 ========================================================= -->
 
-<section class="page dark" id="samukshaDarePage">
+<section
+    class="page dark"
+    id="samukshaDarePage"
+>
 
     <div class="container">
 
@@ -2261,11 +2793,15 @@ button{
 </section>
 
 
+
 <!-- =========================================================
      SAMUKSHA ABOUT
 ========================================================= -->
 
-<section class="page dark" id="samukshaAboutPage">
+<section
+    class="page dark"
+    id="samukshaAboutPage"
+>
 
     <div class="container">
 
@@ -2276,6 +2812,7 @@ button{
             </div>
 
             <p>
+
                 Before you even entered Manipal as a PG,
                 your friend Vasavi had already given us a favourite
                 introduction about you! 😂❤️
@@ -2284,6 +2821,7 @@ button{
                 You started asking about the freshers from Day 1 itself! 👀
                 We still have a lot to know about you, but we're sure we'll
                 discover much more in the coming days. ❤️🌹
+
             </p>
 
             <button
@@ -2300,11 +2838,15 @@ button{
 </section>
 
 
+
 <!-- =========================================================
      ABOUT YOUR SENIORS
 ========================================================= -->
 
-<section class="page" id="seniorsPage">
+<section
+    class="page"
+    id="seniorsPage"
+>
 
     <div class="container">
 
@@ -2319,6 +2861,7 @@ button{
 
         <div class="senior-grid">
 
+            <!-- SUJITHA -->
 
             <div class="senior-card">
 
@@ -2331,15 +2874,19 @@ button{
                 </h3>
 
                 <p>
+
                     Looking for books?
                     You'll probably find Sujitha searching for them
                     in the library. 📚
                     Anything about data collection?
                     You know who to find. ❤️
+
                 </p>
 
             </div>
 
+
+            <!-- SNEGA -->
 
             <div class="senior-card">
 
@@ -2352,16 +2899,20 @@ button{
                 </h3>
 
                 <p>
+
                     Have doubts related to studies?
                     You can always find Snega.
                     Need help with data collection?
                     She's there too. 🌹
                     And yes... She's the "pathukkalam"
                     kind of senior. 😂
+
                 </p>
 
             </div>
 
+
+            <!-- BENISHIYA -->
 
             <div class="senior-card">
 
@@ -2374,14 +2925,18 @@ button{
                 </h3>
 
                 <p>
+
                     She can make anything creative and colourful...
                     except her enthusiasm for clinical posting. 😂
                     Prospective study people only —
                     please find Benishiya. 👀❤️
+
                 </p>
 
             </div>
 
+
+            <!-- NETHISH -->
 
             <div class="senior-card">
 
@@ -2394,11 +2949,13 @@ button{
                 </h3>
 
                 <p>
+
                     Need an IABP posting?
                     You can accompany your senior Nethish. ❤️
                     And always the last-night person before the end date. 😂
                     He might even lose the entire protocol
                     instead of saving the file. 💀
+
                 </p>
 
             </div>
@@ -2417,11 +2974,15 @@ button{
 </section>
 
 
+
 <!-- =========================================================
      MEMORIES WITH YOU GUYS
 ========================================================= -->
 
-<section class="page" id="memoriesPage">
+<section
+    class="page"
+    id="memoriesPage"
+>
 
     <div class="container">
 
@@ -2430,72 +2991,67 @@ button{
         </h2>
 
         <p>
+
             Some moments we already have...
             and many more to come.
+
         </p>
 
         <div class="memory-grid">
 
-
             <div class="memory-card">
 
                 <img
-                    src="photo1.jpg"
+                    src="./photo1.jpg"
                     alt="Memory 1"
                 >
 
             </div>
 
-
             <div class="memory-card">
 
                 <img
-                    src="photo2.jpg"
+                    src="./photo2.jpg"
                     alt="Memory 2"
                 >
 
             </div>
 
-
             <div class="memory-card">
 
                 <img
-                    src="photo3.jpg"
+                    src="./photo3.jpg"
                     alt="Memory 3"
                 >
 
             </div>
 
-
             <div class="memory-card">
 
                 <img
-                    src="photo4.jpg"
+                    src="./photo4.jpg"
                     alt="Memory 4"
                 >
 
             </div>
 
-
             <div class="memory-card">
 
                 <img
-                    src="photo5.jpg"
+                    src="./photo5.jpg"
                     alt="Memory 5"
                 >
 
             </div>
 
-
             <div class="memory-card">
 
                 <img
-                    src="photo6.jpg"
+                    src="./photo6.jpg"
                     alt="Memory 6"
                 >
 
             </div>
-
 
         </div>
 
@@ -2511,11 +3067,15 @@ button{
 </section>
 
 
+
 <!-- =========================================================
      MEMORY OF US — VIDEO
 ========================================================= -->
 
-<section class="page dark" id="memoryOfUsPage">
+<section
+    class="page dark"
+    id="memoryOfUsPage"
+>
 
     <div class="container">
 
@@ -2530,21 +3090,28 @@ button{
         <div class="video-box">
 
             <video
+                id="freshersVideo"
                 controls
                 playsinline
-                preload="metadata"
+                preload="auto"
+                width="100%"
             >
 
                 <source
-                    src="freshers.mp4"
+                    src="./freshers.mp4"
                     type="video/mp4"
                 >
 
-                Your browser does not support the video.
+                Your browser does not support HTML5 video.
 
             </video>
 
         </div>
+
+        <div
+            class="video-error"
+            id="videoError"
+        ></div>
 
         <button
             class="next-btn"
@@ -2558,11 +3125,15 @@ button{
 </section>
 
 
+
 <!-- =========================================================
      ENJOY YOUR COLLEGE DAYS
 ========================================================= -->
 
-<section class="page" id="collegePage">
+<section
+    class="page"
+    id="collegePage"
+>
 
     <div class="container">
 
@@ -2575,16 +3146,20 @@ button{
         </p>
 
         <p style="margin-top:12px;">
+
             Make mistakes, learn new things,
             laugh a lot, take pictures,
             survive the deadlines,
             and make memories that you'll remember
             long after college is over.
+
         </p>
 
         <p style="margin-top:15px;">
+
             This is just a small glimpse of us...
             there's a lot more waiting for you. ❤️
+
         </p>
 
         <button
@@ -2599,11 +3174,15 @@ button{
 </section>
 
 
+
 <!-- =========================================================
      FINAL MESSAGE
 ========================================================= -->
 
-<section class="page" id="finalPage">
+<section
+    class="page"
+    id="finalPage"
+>
 
     <div class="final-box">
 
@@ -2616,33 +3195,40 @@ button{
         </p>
 
         <p style="margin-top:12px;">
+
             We hope these little moments become
             the beginning of many beautiful memories together.
+
         </p>
 
         <p style="margin-top:12px;">
+
             Keep smiling, keep learning,
             and most importantly...
             enjoy the journey. 🌹
+
         </p>
 
         <div class="heart">
             ❤️ 🌹 ❤️
         </div>
 
-        <p
-            style="
-                margin-top:15px;
-                font-size:.9rem;
-                color:#8d1830;
-            "
-        >
-            With love, your seniors
-        </p>
+        <!-- YOUR NAMES -->
+
+        <div class="signature">
+
+            With love,<br>
+
+            <strong>
+                Snega • Beni • Nethish • Sujitha
+            </strong>
+
+        </div>
 
     </div>
 
 </section>
+
 
 
 <!-- =========================================================
@@ -2650,6 +3236,7 @@ button{
 ========================================================= -->
 
 <script>
+
 
 /* =========================================================
    PAGE NAVIGATION
@@ -2660,16 +3247,26 @@ function showPage(pageId){
     const pages =
         document.querySelectorAll(".page");
 
-    pages.forEach(page=>{
-        page.classList.remove("active");
-    });
+    pages.forEach(
+        page => {
+
+            page.classList.remove(
+                "active"
+            );
+
+        }
+    );
 
     const target =
-        document.getElementById(pageId);
+        document.getElementById(
+            pageId
+        );
 
     if(target){
 
-        target.classList.add("active");
+        target.classList.add(
+            "active"
+        );
 
         window.scrollTo({
             top:0,
@@ -2677,7 +3274,9 @@ function showPage(pageId){
         });
 
     }
+
 }
+
 
 
 /* =========================================================
@@ -2685,40 +3284,64 @@ function showPage(pageId){
 ========================================================= */
 
 const petalsContainer =
-    document.getElementById("petals");
+    document.getElementById(
+        "petals"
+    );
 
-for(let i=0;i<32;i++){
+for(
+    let i = 0;
+    i < 32;
+    i++
+){
 
     const petal =
-        document.createElement("span");
+        document.createElement(
+            "span"
+        );
 
-    petal.className="petal";
+    petal.className =
+        "petal";
 
     petal.style.left =
-        Math.random()*100+"%";
+        Math.random() * 100 + "%";
 
     const size =
-        9+Math.random()*9;
+        9 +
+        Math.random() * 9;
 
     petal.style.width =
-        size+"px";
+        size + "px";
 
     petal.style.height =
-        (size*1.35)+"px";
+        (size * 1.35) + "px";
 
     petal.style.animationDuration =
-        (6+Math.random()*8)+"s,"+
-        (2+Math.random()*3)+"s";
+
+        (6 + Math.random() * 8)
+        + "s," +
+
+        (2 + Math.random() * 3)
+        + "s";
 
     petal.style.animationDelay =
-        (-Math.random()*12)+"s,"+
-        (-Math.random()*3)+"s";
+
+        (-Math.random() * 12)
+        + "s," +
+
+        (-Math.random() * 3)
+        + "s";
 
     petal.style.opacity =
-        .35+Math.random()*.45;
 
-    petalsContainer.appendChild(petal);
+        .35 +
+        Math.random() * .45;
+
+    petalsContainer.appendChild(
+        petal
+    );
+
 }
+
 
 
 /* =========================================================
@@ -2728,24 +3351,40 @@ for(let i=0;i<32;i++){
 function bloomBouquet(){
 
     const bouquet =
-        document.getElementById("bouquetSvg");
+        document.getElementById(
+            "bouquetSvg"
+        );
 
     const button =
-        document.getElementById("tapBouquet");
+        document.getElementById(
+            "tapBouquet"
+        );
 
     const message =
-        document.getElementById("bouquetMessage");
+        document.getElementById(
+            "bouquetMessage"
+        );
 
-    bouquet.classList.add("bloom");
+    bouquet.classList.add(
+        "bloom"
+    );
 
-    button.style.display="none";
+    button.style.display =
+        "none";
 
-    setTimeout(function(){
+    setTimeout(
+        function(){
 
-        message.classList.add("show");
+            message.classList.add(
+                "show"
+            );
 
-    },3000);
+        },
+        3000
+    );
+
 }
+
 
 
 /* =========================================================
@@ -2756,29 +3395,43 @@ function checkPassword(){
 
     const input =
         document
-        .getElementById("passwordInput")
+        .getElementById(
+            "passwordInput"
+        )
         .value
         .trim();
 
     const error =
-        document.getElementById("passwordError");
+        document.getElementById(
+            "passwordError"
+        );
 
     const correctPassword =
         "031026";
 
-    if(input===correctPassword){
+    if(
+        input ===
+        correctPassword
+    ){
 
-        error.textContent="";
+        error.textContent =
+            "";
 
-        showPage("familyPage");
+        showPage(
+            "familyPage"
+        );
 
-    }else{
+    }
+
+    else{
 
         error.textContent =
             "Wrong password... try again ❤️";
 
     }
+
 }
+
 
 
 /* =========================================================
@@ -2786,24 +3439,62 @@ function checkPassword(){
 ========================================================= */
 
 document
-.getElementById("passwordInput")
-.addEventListener(
-    "keydown",
-    function(event){
+    .getElementById(
+        "passwordInput"
+    )
+    .addEventListener(
+        "keydown",
+        function(event){
 
-        if(event.key==="Enter"){
-            checkPassword();
+            if(
+                event.key ===
+                "Enter"
+            ){
+
+                checkPassword();
+
+            }
+
         }
+    );
 
-    }
-);
+
+
+/* =========================================================
+   VIDEO ERROR CHECK
+========================================================= */
+
+const freshersVideo =
+    document.getElementById(
+        "freshersVideo"
+    );
+
+const videoError =
+    document.getElementById(
+        "videoError"
+    );
+
+if(freshersVideo){
+
+    freshersVideo.addEventListener(
+        "error",
+        function(){
+
+            videoError.textContent =
+                "The video could not be played. Please make sure freshers.mp4 is uploaded in the same folder as index.html.";
+
+        }
+    );
+
+}
+
 
 
 /* =========================================================
    DARES
 ========================================================= */
 
-const juniorDares={
+const juniorDares = {
 
     vasavi:[
 
@@ -2848,46 +3539,67 @@ const juniorDares={
 };
 
 
+
 /* =========================================================
    DARE INDEX
 ========================================================= */
 
-const dareIndex={
+const dareIndex = {
 
     vasavi:0,
+
     vinutha:0,
+
     geetanjali:0,
+
     samuksha:0
 
 };
+
 
 
 /* =========================================================
    DARE PAGES
 ========================================================= */
 
-const juniorDarePages={
+const juniorDarePages = {
 
-    vasavi:"vasaviDarePage",
-    vinutha:"vinuthaDarePage",
-    geetanjali:"geetanjaliDarePage",
-    samuksha:"samukshaDarePage"
+    vasavi:
+        "vasaviDarePage",
+
+    vinutha:
+        "vinuthaDarePage",
+
+    geetanjali:
+        "geetanjaliDarePage",
+
+    samuksha:
+        "samukshaDarePage"
 
 };
+
 
 
 /* =========================================================
    ABOUT PAGES
 ========================================================= */
 
-const juniorAboutPages={
+const juniorAboutPages = {
 
-    vasavi:"vasaviAboutPage",
-    vinutha:"vinuthaAboutPage",
-    geetanjali:"geetanjaliAboutPage",
-    samuksha:"samukshaAboutPage"
+    vasavi:
+        "vasaviAboutPage",
+
+    vinutha:
+        "vinuthaAboutPage",
+
+    geetanjali:
+        "geetanjaliAboutPage",
+
+    samuksha:
+        "samukshaAboutPage"
 
 };
+
 
 
 /* =========================================================
@@ -2896,11 +3608,14 @@ const juniorAboutPages={
 
 function startJunior(number){
 
-    const juniors=[
+    const juniors = [
 
         "vasavi",
+
         "vinutha",
+
         "geetanjali",
+
         "samuksha"
 
     ];
@@ -2908,15 +3623,19 @@ function startJunior(number){
     const junior =
         juniors[number];
 
-    dareIndex[junior]=0;
+    dareIndex[junior] =
+        0;
 
-    loadDare(junior);
+    loadDare(
+        junior
+    );
 
     showPage(
         juniorDarePages[junior]
     );
 
 }
+
 
 
 /* =========================================================
@@ -2930,55 +3649,81 @@ function loadDare(junior){
 
     const text =
         document.getElementById(
-            junior+"DareText"
+            junior +
+            "DareText"
         );
 
     const number =
         document.getElementById(
-            junior+"DareNumber"
+            junior +
+            "DareNumber"
         );
 
     const button =
         document.getElementById(
-            junior+"CompleteBtn"
+            junior +
+            "CompleteBtn"
         );
 
     const completed =
         document.getElementById(
-            junior+"Completed"
+            junior +
+            "Completed"
         );
 
     const progress =
         document.getElementById(
-            junior+"Progress"
+            junior +
+            "Progress"
         );
 
     text.textContent =
-        juniorDares[junior][index];
+        juniorDares[
+            junior
+        ][index];
 
     number.textContent =
-        "DARE "+(index+1)+" OF 3";
 
-    completed.textContent="";
+        "DARE " +
+        (index + 1) +
+        " OF 3";
 
-    button.style.display="inline-block";
+    completed.textContent =
+        "";
 
-    progress.innerHTML="";
+    button.style.display =
+        "inline-block";
 
-    for(let i=0;i<3;i++){
+    progress.innerHTML =
+        "";
+
+    for(
+        let i = 0;
+        i < 3;
+        i++
+    ){
 
         const dot =
-            document.createElement("span");
+            document.createElement(
+                "span"
+            );
 
         dot.className =
-            "dot"+
-            (i===index ? " active":"");
+            "dot" +
+            (
+                i === index
+                ? " active"
+                : ""
+            );
 
-        progress.appendChild(dot);
+        progress.appendChild(
+            dot
+        );
 
     }
 
 }
+
 
 
 /* =========================================================
@@ -2989,40 +3734,56 @@ function completeDare(junior){
 
     const completed =
         document.getElementById(
-            junior+"Completed"
+            junior +
+            "Completed"
         );
 
     const button =
         document.getElementById(
-            junior+"CompleteBtn"
+            junior +
+            "CompleteBtn"
         );
 
     completed.textContent =
         "Dare completed! ❤️";
 
-    button.style.display="none";
+    button.style.display =
+        "none";
 
-    setTimeout(function(){
+    setTimeout(
+        function(){
 
-        if(dareIndex[junior]<2){
+            if(
+                dareIndex[junior] < 2
+            ){
 
-            dareIndex[junior]++;
+                dareIndex[junior]++;
 
-            loadDare(junior);
+                loadDare(
+                    junior
+                );
 
-        }else{
+            }
 
-            showPage(
-                juniorAboutPages[junior]
-            );
+            else{
 
-        }
+                showPage(
+                    juniorAboutPages[
+                        junior
+                    ]
+                );
 
-    },900);
+            }
+
+        },
+        900
+    );
 
 }
+
 
 </script>
 
 </body>
+
 </html>
